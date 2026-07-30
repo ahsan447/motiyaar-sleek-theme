@@ -327,7 +327,7 @@
         "card_style": "",
         "card_image_ratio": "adapt",
         "content_alignment": "left",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_gap": "medium",
         "row_gap": "medium",
         "enable_slider": false,
