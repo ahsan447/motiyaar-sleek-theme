@@ -607,37 +607,37 @@
         "tab_pcLDec": {
           "type": "tab",
           "settings": {
-            "title": "Example title",
-            "description": "<p>Use this section to promote products that are on sale or part of a special promotion by prominently and attractively showcasing selected items.</p>",
+            "title": "Top Selling",
+            "description": "",
             "products": [],
-            "collection": ""
+            "collection": "featured"
           }
         },
         "tab_NLRDMg": {
           "type": "tab",
           "settings": {
-            "title": "Example title",
-            "description": "<p>Use this section to promote products that are on sale or part of a special promotion by prominently and attractively showcasing selected items.</p>",
+            "title": "Key Chains",
+            "description": "",
             "products": [],
-            "collection": ""
+            "collection": "keychains"
           }
         },
         "tab_hhgdKc": {
           "type": "tab",
           "settings": {
-            "title": "Example title",
-            "description": "<p>Use this section to promote products that are on sale or part of a special promotion by prominently and attractively showcasing selected items.</p>",
+            "title": "Necklace",
+            "description": "",
             "products": [],
-            "collection": ""
+            "collection": "neckalce"
           }
         },
         "tab_PQhFrR": {
           "type": "tab",
           "settings": {
-            "title": "Example title",
-            "description": "<p>Use this section to promote products that are on sale or part of a special promotion by prominently and attractively showcasing selected items.</p>",
+            "title": "Charms",
+            "description": "",
             "products": [],
-            "collection": ""
+            "collection": "charms"
           }
         }
       },
