@@ -52,6 +52,7 @@
         },
         "slide_pEkPxY": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "color_scheme": "scheme-1",
             "image_overlay_opacity": 0,
