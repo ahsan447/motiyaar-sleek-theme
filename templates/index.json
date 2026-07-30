@@ -26,7 +26,7 @@
             "subheading": "Add a tagline",
             "description": "",
             "description_size": "text-base",
-            "button_label": "Button label",
+            "button_label": "Explore",
             "button_link": "shopify://collections/best-sellers",
             "button_style": "btn--primary"
           }
@@ -45,7 +45,7 @@
             "subheading": "Add a tagline",
             "description": "",
             "description_size": "text-base",
-            "button_label": "Button label",
+            "button_label": "",
             "button_link": "shopify://collections/featured",
             "button_style": "btn--primary"
           }
