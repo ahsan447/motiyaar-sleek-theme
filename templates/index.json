@@ -87,6 +87,134 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "scrolling_promotion_htQpcB": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "image_ptN74r": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Icons_copy_Premium_Packaging.svg",
+            "image_height": 32,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 90
+          }
+        },
+        "text_eJYFM7": {
+          "type": "text",
+          "settings": {
+            "text": "Pakistan’s 1st award winning Artificial Jewellery brand",
+            "text_link": "",
+            "text_size": "h3",
+            "font_weight": "font-body",
+            "font_style": "normal",
+            "letter_spacing": 0,
+            "text_opacity": 100,
+            "text_style": "normal",
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "image_TrTByN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Icons_copy_Premium_Packaging.svg",
+            "image_height": 32,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 32
+          }
+        },
+        "text_QcbBQ9": {
+          "type": "text",
+          "settings": {
+            "text": "Pakistan’s 1st award winning Artificial Jewellery brand",
+            "text_link": "",
+            "text_size": "h3",
+            "font_weight": "font-body",
+            "font_style": "normal",
+            "letter_spacing": 0,
+            "text_opacity": 100,
+            "text_style": "normal",
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "image_rMjhMM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Icons_copy_Premium_Packaging.svg",
+            "image_height": 32,
+            "image_rounded": true,
+            "image_link": "",
+            "image_height_mobile": 32
+          }
+        },
+        "text_qrqedj": {
+          "type": "text",
+          "settings": {
+            "text": "Pakistan’s 1st award winning Artificial Jewellery brand",
+            "text_link": "",
+            "text_size": "h3",
+            "font_weight": "font-body",
+            "font_style": "normal",
+            "letter_spacing": 0,
+            "text_opacity": 100,
+            "text_style": "normal",
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "image_9EAm3A": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Icons_copy_Premium_Packaging.svg",
+            "image_height": 32,
+            "image_rounded": true,
+            "image_link": "",
+            "image_height_mobile": 32
+          }
+        },
+        "text_K7hiEY": {
+          "type": "text",
+          "settings": {
+            "text": "Pakistan’s 1st award winning Artificial Jewellery brand",
+            "text_link": "",
+            "text_size": "h3",
+            "font_weight": "font-body",
+            "font_style": "normal",
+            "letter_spacing": 0,
+            "text_opacity": 100,
+            "text_style": "normal",
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_ptN74r",
+        "text_eJYFM7",
+        "image_TrTByN",
+        "text_QcbBQ9",
+        "image_rMjhMM",
+        "text_qrqedj",
+        "image_9EAm3A",
+        "text_K7hiEY"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "vertical_alignment": "center",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.2,
+        "h_spacing": 50,
+        "v_spacing": 26,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_divider": true,
+        "divider_layout": "vertical"
+      }
+    },
     "product_tabs_iJHLzK": {
       "type": "product-tabs",
       "blocks": {
@@ -138,50 +266,6 @@
         "tabs_nav_style": "design-1",
         "padding_top": 100,
         "padding_bottom": 0,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
-    "highlight_text_with_image_9KLzcX": {
-      "type": "highlight-text-with-image",
-      "blocks": {
-        "image_URaWGC": {
-          "type": "image",
-          "settings": {
-            "image_link": "",
-            "image_width": 220,
-            "image_width_mobile": 110
-          }
-        },
-        "image_DyKWHM": {
-          "type": "image",
-          "settings": {
-            "image_link": "",
-            "image_width": 220,
-            "image_width_mobile": 110
-          }
-        },
-        "image_NGQQmW": {
-          "type": "image",
-          "settings": {
-            "image_link": "",
-            "image_width": 220,
-            "image_width_mobile": 110
-          }
-        }
-      },
-      "block_order": [
-        "image_URaWGC",
-        "image_DyKWHM",
-        "image_NGQQmW"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "text": "Highlight products, [img1] a collection, or [img2] images alongside a brand message [img3]",
-        "heading_size": "hd1",
-        "alignment": "center",
-        "padding_top": 100,
-        "padding_bottom": 100,
         "show_section_divider": false,
         "divider_width": "fixed"
       }
@@ -249,6 +333,50 @@
         "enable_slider": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "highlight_text_with_image_9KLzcX": {
+      "type": "highlight-text-with-image",
+      "blocks": {
+        "image_URaWGC": {
+          "type": "image",
+          "settings": {
+            "image_link": "",
+            "image_width": 220,
+            "image_width_mobile": 110
+          }
+        },
+        "image_DyKWHM": {
+          "type": "image",
+          "settings": {
+            "image_link": "",
+            "image_width": 220,
+            "image_width_mobile": 110
+          }
+        },
+        "image_NGQQmW": {
+          "type": "image",
+          "settings": {
+            "image_link": "",
+            "image_width": 220,
+            "image_width_mobile": 110
+          }
+        }
+      },
+      "block_order": [
+        "image_URaWGC",
+        "image_DyKWHM",
+        "image_NGQQmW"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "text": "Highlight products, [img1] a collection, or [img2] images alongside a brand message [img3]",
+        "heading_size": "hd1",
+        "alignment": "center",
         "padding_top": 100,
         "padding_bottom": 100,
         "show_section_divider": false,
@@ -477,130 +605,6 @@
         "divider_width": "fixed"
       }
     },
-    "scrolling_promotion_htQpcB": {
-      "type": "scrolling-promotion",
-      "blocks": {
-        "image_p6c9Fb": {
-          "type": "image",
-          "settings": {
-            "image_height": 80,
-            "image_rounded": true,
-            "image_link": "",
-            "image_height_mobile": 90
-          }
-        },
-        "text_eJYFM7": {
-          "type": "text",
-          "settings": {
-            "text": "Tell customers about a promotion",
-            "text_link": "",
-            "text_size": "h2",
-            "font_weight": "font-body",
-            "font_style": "normal",
-            "letter_spacing": 0,
-            "text_opacity": 100,
-            "text_style": "normal",
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "image_i3axe6": {
-          "type": "image",
-          "settings": {
-            "image_height": 80,
-            "image_rounded": true,
-            "image_link": "",
-            "image_height_mobile": 90
-          }
-        },
-        "text_QcbBQ9": {
-          "type": "text",
-          "settings": {
-            "text": "Tell customers about a promotion",
-            "text_link": "",
-            "text_size": "h2",
-            "font_weight": "font-body",
-            "font_style": "normal",
-            "letter_spacing": 0,
-            "text_opacity": 100,
-            "text_style": "normal",
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "image_rMjhMM": {
-          "type": "image",
-          "settings": {
-            "image_height": 80,
-            "image_rounded": true,
-            "image_link": "",
-            "image_height_mobile": 90
-          }
-        },
-        "text_qrqedj": {
-          "type": "text",
-          "settings": {
-            "text": "Tell customers about a promotion",
-            "text_link": "",
-            "text_size": "h2",
-            "font_weight": "font-body",
-            "font_style": "normal",
-            "letter_spacing": 0,
-            "text_opacity": 100,
-            "text_style": "normal",
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "image_9EAm3A": {
-          "type": "image",
-          "settings": {
-            "image_height": 80,
-            "image_rounded": true,
-            "image_link": "",
-            "image_height_mobile": 90
-          }
-        },
-        "text_K7hiEY": {
-          "type": "text",
-          "settings": {
-            "text": "Tell customers about a promotion",
-            "text_link": "",
-            "text_size": "h2",
-            "font_weight": "font-body",
-            "font_style": "normal",
-            "letter_spacing": 0,
-            "text_opacity": 100,
-            "text_style": "normal",
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "image_p6c9Fb",
-        "text_eJYFM7",
-        "image_i3axe6",
-        "text_QcbBQ9",
-        "image_rMjhMM",
-        "text_qrqedj",
-        "image_9EAm3A",
-        "text_K7hiEY"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "vertical_alignment": "center",
-        "direction": "left",
-        "pause_on_hover": true,
-        "speed": 0.2,
-        "h_spacing": 50,
-        "v_spacing": 26,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "show_divider": true,
-        "divider_layout": "vertical"
-      }
-    },
     "featured_products_tab_yYcGgw": {
       "type": "featured-products-tab",
       "blocks": {
@@ -671,14 +675,14 @@
   },
   "order": [
     "slideshow_q3U4Jn",
+    "scrolling_promotion_htQpcB",
     "product_tabs_iJHLzK",
-    "highlight_text_with_image_9KLzcX",
     "collection_list_Pr36qH",
+    "highlight_text_with_image_9KLzcX",
     "products_bundle_cFjE73",
     "multicolumn_mQAQbW",
     "custom_content_rhXbV3",
     "products_showcase_9KVeQe",
-    "scrolling_promotion_htQpcB",
     "featured_products_tab_yYcGgw"
   ]
 }
