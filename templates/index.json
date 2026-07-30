@@ -653,7 +653,7 @@
         "heading": "Featured products tab",
         "heading_size": "h1",
         "heading_highlight_style": "none",
-        "subheading": "Add a tagline",
+        "subheading": "",
         "description": "",
         "description_size": "text-base",
         "limit": 4,
