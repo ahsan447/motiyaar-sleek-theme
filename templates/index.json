@@ -100,15 +100,15 @@
         "tab_9cGBUe": {
           "type": "tab",
           "settings": {
-            "title": "Anklets",
-            "collection": "anklets"
+            "title": "Premium",
+            "collection": "premium-collection"
           }
         },
         "tab_AfgNn8": {
           "type": "tab",
           "settings": {
-            "title": "Tab name",
-            "collection": ""
+            "title": "Holders",
+            "collection": "charm-holders"
           }
         }
       },
@@ -128,14 +128,14 @@
         "column_gap": "extra-small",
         "row_gap": "inherit",
         "grid_layout": "standard",
-        "pcard_image_ratio": "",
+        "pcard_image_ratio": "1/1",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "show_all_button_on_top": true,
-        "button_label": "Button label",
-        "button_link": "",
+        "button_label": "View All",
+        "button_link": "shopify://collections/all",
         "button_style": "btn--underline",
-        "tabs_nav_style": "design-2",
+        "tabs_nav_style": "design-1",
         "padding_top": 100,
         "padding_bottom": 0,
         "show_section_divider": false,
