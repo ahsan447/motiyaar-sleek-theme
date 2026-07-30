@@ -1,0 +1,322 @@
+{% comment %}
+  Renders product variant-picker
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} Id of the product form to which the variant picker is associated.
+  - update_url: {Boolean} whether or not to update url when changing variants. If false, the url isn't updated. Default: true (optional).
+  Usage:
+  {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
+{%- unless product.has_only_default_variant -%}
+  {% liquid
+    assign size_option_name = block.settings.size_title | downcase
+    assign size_chart_content = product.metafields.foxtheme.size_chart
+    assign size_chart_modal_id = 'SizeChartModal-' | append: block.id
+
+    if size_chart_content == blank and block.settings.size_chart_from_page != blank
+      assign size_chart_content = pages[block.settings.size_chart_from_page].content
+    endif
+  %}
+  <script src="{{ 'variant-selects.js' | asset_url }}" defer="defer"></script>
+  <script>
+      var product_variants_data = [
+    {% for variant in product.variants %}
+    {
+      available: {{ variant.available | json }},
+      id: {{ variant.id | json }},
+      inventory_policy: {{ variant.inventory_policy | json }},
+      inventory_management: {{ variant.inventory_management | json }},
+      inventory_quantity: {{ variant.inventory_quantity | json }},
+      options: {{ variant.options | json }},
+      incoming: {{ variant.incoming | json }},
+      next_incoming_date: {{ variant.next_incoming_date | json }},
+      store_availabilities: {{ variant.store_availabilities | json }},
+      price: {{ variant.price | money_with_currency | json }},
+      {% if variant.compare_at_price > variant.price %}
+      compare_price: {{ variant.compare_at_price | money_with_currency | json }},
+      {% endif %}
+      grab_price: {{ variant.price | divided_by: 4 | money_with_currency | json  }},
+      atom_price: {{ variant.price | divided_by: 3 | money_with_currency | json  }},
+      notice: {% if variant.metafields.custom.pre_order_notice %}'{{variant.metafields.custom.pre_order_notice|html}}'{% else %}null{% endif %}
+    }{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  ]
+  </script>
+ <script>
+    function updatePreorderBadge(variantId) {
+    // Remove existing badges if any
+    const existingBadges = document.querySelectorAll('.preorder-badge');
+    existingBadges.forEach((badge) => badge.remove());
+
+    // Remove existing notice if any
+    const existingNotice = document.querySelector('.variant-notice');
+    if (existingNotice) {
+      existingNotice.remove();
+    }
+
+    if (variantId) {
+      // Find matching variant
+      const matchingVariant = product_variants_data.find((variant) => variant.id.toString() === variantId);
+
+      if (
+        matchingVariant &&
+        matchingVariant.inventory_policy === 'continue' &&
+        matchingVariant.inventory_quantity <= 10
+      ) {
+        // Create badge
+        const badge = document.createElement('span');
+        badge.className = 'preorder-badge';
+        badge.textContent = 'Pre-order';
+        badge.style.cssText =
+          'background: #ff6b6b; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; margin-right: 10px; display: inline-block;';
+
+        // Add badge to title
+        const titleElement = document.querySelector('h1.product__title.h1');
+        if (titleElement) {
+          titleElement.insertBefore(badge.cloneNode(true), titleElement.firstChild);
+        }
+
+        // Add badge to all form labels
+        const formLabels = document.querySelectorAll('.product-form__input .form__label');
+        formLabels.forEach((label) => {
+          // Only add if it doesn't already have a badge
+          if (!label.querySelector('.preorder-badge')) {
+            label.insertBefore(badge.cloneNode(true), label.firstChild);
+          }
+        });
+
+        // Add preorder text to Add to Cart button
+        const addToCartButton = document.querySelector('.product-form__submit span.addtocart');
+        if (addToCartButton) {
+          addToCartButton.textContent = 'Pre-order Now';
+        }
+
+        // Add notice message if it exists
+        if (matchingVariant.notice) {
+          const buyButtonsBlock = document.querySelector('.product__block.product__block--buy_buttons');
+          if (buyButtonsBlock) {
+            const noticeElement = document.createElement('div');
+            noticeElement.className = 'variant-notice';
+            noticeElement.style.cssText =
+              'background: #fff3cd; color: #856404; padding: 10px; border-radius: 4px; margin-bottom: 15px; font-size: 14px;';
+            noticeElement.textContent = matchingVariant.notice;
+            buyButtonsBlock.insertBefore(noticeElement, buyButtonsBlock.firstChild);
+          }
+        }
+      } 
+    }
+  }
+
+  // Function to get variant ID from URL
+  function getVariantIdFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('variant');
+  }
+
+  // Wait for DOM to be fully loaded
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initial check
+    updatePreorderBadge(getVariantIdFromUrl());
+
+    // Listen for radio button changes
+    document.querySelectorAll('.product-form__input input[type=radio]').forEach((radio) => {
+      radio.addEventListener('change', function () {
+        // Wait a short moment for URL to update
+        setTimeout(() => {
+          updatePreorderBadge(getVariantIdFromUrl());
+        }, 100);
+      });
+    });
+
+    // Create MutationObserver to watch for URL changes
+    let lastUrl = window.location.href;
+    const observer = new MutationObserver(function (mutations) {
+      const currentUrl = window.location.href;
+      if (currentUrl !== lastUrl && currentUrl.includes('variant=')) {
+        lastUrl = currentUrl;
+        updatePreorderBadge(getVariantIdFromUrl());
+      }
+    });
+
+    // Start observing the document with the configured parameters
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+    });
+  });
+  </script>
+  <variant-selects
+    id="variant-selects-{{ section.id }}"
+    data-section="{{ section.id }}"
+    data-url="{{ product.url }}"
+    data-update-url="{% if update_url == false %}false{% else %}true{% endif %}"
+    data-all-variant="{% for variant in product.variants %}
+    {%- assign variant_json = variant | json | replace: '}', '' -%}
+    {%- if forloop.first -%}[{%- else -%},{%- endif -%}
+    {{ variant_json }},
+    'inventory_policy': '{{ variant.inventory_policy }}',
+    'inventory_quantity': {{ variant.inventory_quantity | default: 0 }}}
+    {%- if forloop.last -%}]{%- endif -%}
+  {% endfor %}"
+  >
+    {%- for option in product.options_with_values -%}
+      {%- liquid
+        assign option_name_downcase = option.name | downcase
+        assign swatch_count = option.values | map: 'swatch' | compact | size
+        assign picker_type = block.settings.picker_type
+
+        assign attach_size_chart = false
+        if size_option_name contains option_name_downcase
+          assign attach_size_chart = true
+        endif
+
+        if block.settings.picker_type == 'button' and settings.color_swatch_trigger != blank
+          assign color_swatch_trigger = settings.color_swatch_trigger | downcase | split: ','
+          assign has_color = color_swatch_trigger | where: option_name_downcase | first
+          unless block.settings.swatch_type == 'text'
+            if has_color != blank
+              assign picker_type = 'color'
+            elsif option_name_downcase contains 'colour'
+              assign color_swatch_trigger = color_swatch_trigger | replace: 'color', 'colour'
+              assign has_color = color_swatch_trigger | where: option_name_downcase | first
+              if has_color != blank
+                assign picker_type = 'color'
+              endif
+            endif
+          endunless
+        endif
+
+        if swatch_count > 0
+          if block.settings.picker_type == 'dropdown'
+            assign picker_type = 'swatch_dropdown'
+          else
+            if block.settings.swatch_type == 'shopify_swatch'
+              assign picker_type = 'swatch'
+            elsif block.settings.swatch_type == 'variant_image' or block.settings.swatch_type == 'color_swatch'
+              assign picker_type = 'color'
+            else
+              assign picker_type = 'button'
+            endif
+          endif
+        endif
+
+        assign wrap_class = 'product-form__input product-form__input--' | append: picker_type
+        case picker_type
+          when 'swatch', 'color', 'button'
+            assign is_fieldset_tag = true
+            assign wrap_class = wrap_class | append: ' js flex flex-wrap'
+            assign button_style = block.settings.button_style | default: 'standard'
+
+            if picker_type == 'button'
+              assign wrap_class = wrap_class | append: ' gap-3'
+              assign wrap_class = wrap_class | append: ' product-form__input--button-' | append: button_style
+            else
+              assign wrap_class = wrap_class | append: ' gap-4'
+              assign wrap_class = wrap_class | append: ' product-form__input--button-' | append: button_style
+            endif
+          else
+            assign is_fieldset_tag = false
+        endcase
+
+        assign tag_fieldset = 'fieldset'
+        assign tag_legend = 'legend'
+        unless is_fieldset_tag
+          assign tag_fieldset = 'div'
+          assign tag_legend = 'label'
+        endunless
+      -%}
+      <{{ tag_fieldset }}
+        class="{{ wrap_class }}"
+        {% if picker_type == 'color' %}
+          data-swatch-type="{{ block.settings.swatch_type }}"
+        {% endif %}
+        style="--swatch-size: {{ block.settings.button_size | default: '40px' }}px;"
+      >
+        <{{ tag_legend }}
+          {% unless is_fieldset_tag %}
+            for="Option-{{ section.id }}-{{ forloop.index0 }}"
+          {% endunless %}
+          class="form__label"
+        >
+          <div class="flex flex-wrap gap-2">
+            <span class="font-body-bold">{{ option.name }}:</span>
+            <span data-selected-swatch-value="{{ option.name }}">
+              {{- option.selected_value -}}
+            </span>
+          </div>
+          {%- if size_chart_content != blank and attach_size_chart -%}
+            <button
+              class="open-size-chart no-js-hidden btn--link tracking-normal"
+              aria-controls="{{ size_chart_modal_id }}"
+              aria-haspopup="dialog"
+            >
+              {{ 'products.product.open_size_chart' | t }}
+            </button>
+          {%- endif -%}
+        </{{ tag_legend }}>
+        {%- case picker_type -%}
+          {%- when 'swatch', 'color', 'button' -%}
+            {% render 'product-variant-options',
+              product: product,
+              option: option,
+              block: block,
+              picker_type: picker_type
+            %}
+          {%- else -%}
+            <div class="select">
+              {%- if picker_type == 'swatch_dropdown' -%}
+                <span
+                  data-selected-value
+                  class="dropdown-swatch"
+                >
+                  {% comment %} {% render 'swatch', swatch: option.selected_value.swatch %} {% endcomment %}
+                </span>
+              {%- endif -%}
+              <select
+                id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                class="form-control form-control--select"
+                name="options[{{ option.name | escape }}]"
+                form="{{ product_form_id }}"
+              >
+                {% render 'product-variant-options',
+                  product: product,
+                  option: option,
+                  block: block,
+                  picker_type: picker_type
+                %}
+              </select>
+              {%- render 'icon-caret-down' -%}
+            </div>
+        {%- endcase -%}
+      </{{ tag_fieldset }}>
+    {%- endfor -%}
+    <script type="application/json" data-selected-variant>
+      {{ product.selected_or_first_available_variant | json }}
+    </script>
+    <script type="application/json" data-all-variant>
+      {{ product.variants | json }}
+    </script>
+  </variant-selects>
+  {%- if size_chart_content != blank -%}
+    <div id="SizeChart-{{ section.id }}">
+      <basic-modal id="{{ size_chart_modal_id }}" class="drawer modal" style="--modal-width: 77rem;">
+        <div class="fixed-overlay" aria-controls="{{ size_chart_modal_id }}"></div>
+        <div class="drawer__inner">
+          <button
+            class="drawer__close-btn"
+            aria-controls="{{ size_chart_modal_id }}"
+            aria-label="{{ 'accessibility.close' | t }}"
+          >
+            {% render 'icon-close' %}
+          </button>
+          <div class="drawer__body v-scrollable h-full rte">
+            {{ size_chart_content }}
+          </div>
+        </div>
+      </basic-modal>
+    </div>
+  {%- endif -%}
+{%- endunless -%}
