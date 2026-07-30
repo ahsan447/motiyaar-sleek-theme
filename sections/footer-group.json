@@ -14,24 +14,11 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "newsletter_3qCrWc": {
-          "type": "newsletter",
-          "settings": {
-            "block_width": 25,
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1",
-            "newsletter_description": "<p>Be the first to know about new collections and exclusive offers.</p>",
-            "newsletter_term": "<p>By subscribing you agree to the <a href=\"#\">Terms of Use</a> & <a href=\"#\">Privacy Policy.</a></p>",
-            "newsletter_text_alignment": "left",
-            "form_width": 465,
-            "order_first": true
-          }
-        },
         "menu_DEKGYP": {
           "type": "menu",
           "settings": {
             "block_width": 23,
-            "heading": "Quick links",
+            "heading": "Explore",
             "heading_size": "h4",
             "menu": "shop",
             "open_default": false,
@@ -42,7 +29,7 @@
           "type": "menu",
           "settings": {
             "block_width": 23,
-            "heading": "Quick links",
+            "heading": "Top Collections",
             "heading_size": "h4",
             "menu": "categories-menu",
             "open_default": false,
@@ -53,19 +40,30 @@
           "type": "menu",
           "settings": {
             "block_width": 25,
-            "heading": "Quick links",
+            "heading": "Useful Links",
             "heading_size": "h4",
             "menu": "featured-menu",
+            "open_default": false,
+            "show_divider": false
+          }
+        },
+        "menu_gX8YGc": {
+          "type": "menu",
+          "settings": {
+            "block_width": 25,
+            "heading": "Customer Care",
+            "heading_size": "h4",
+            "menu": "right",
             "open_default": false,
             "show_divider": false
           }
         }
       },
       "block_order": [
-        "newsletter_3qCrWc",
         "menu_DEKGYP",
         "menu_4eCrBB",
-        "menu_XFAeNk"
+        "menu_XFAeNk",
+        "menu_gX8YGc"
       ],
       "custom_css": [
         ".form-control {--color-border: var(--color-field);}"
