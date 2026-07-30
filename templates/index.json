@@ -314,7 +314,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-2",
-        "layout": "split",
+        "layout": "standard",
         "subheading": "",
         "heading": "Top Collections",
         "heading_size": "h1",
