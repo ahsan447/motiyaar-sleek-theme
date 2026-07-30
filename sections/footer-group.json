@@ -70,13 +70,13 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "enable_follow_on_shop": true,
-        "show_social": true,
-        "enable_country_selector": true,
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
         "enable_language_selector": false,
-        "payment_enable": true,
+        "payment_enable": false,
         "footer_bottom_menu": "",
-        "show_section_divider": true,
+        "show_section_divider": false,
         "divider_width": "full"
       }
     },
