@@ -27,7 +27,7 @@
             "description": "",
             "description_size": "text-base",
             "button_label": "Button label",
-            "button_link": "",
+            "button_link": "shopify://collections/best-sellers",
             "button_style": "btn--primary"
           }
         },
@@ -46,7 +46,7 @@
             "description": "",
             "description_size": "text-base",
             "button_label": "Button label",
-            "button_link": "",
+            "button_link": "shopify://collections/featured",
             "button_style": "btn--primary"
           }
         },
