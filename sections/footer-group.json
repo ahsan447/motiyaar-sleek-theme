@@ -53,7 +53,7 @@
             "block_width": 25,
             "heading": "Customer Care",
             "heading_size": "h4",
-            "menu": "right",
+            "menu": "customer-account-main-menu",
             "open_default": false,
             "show_divider": false
           }
