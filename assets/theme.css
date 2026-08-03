@@ -5847,7 +5847,7 @@ body:not(.header-pinned) .header-scrolled .header {
 
 @media (min-width: 1024px) {
   .header--left-center {
-    --header-grid-template: "logo navigation icons" / minmax(0, 1fr) fit-content(70%) minmax(0, 1fr);
+    --header-grid-template: "logo navigation icons" / minmax(0, 0.4fr) fit-content(90%) minmax(0, 1fr);
   }
   .header--center-left {
     --header-grid-template: "navigation logo icons" / minmax(0, 1fr) auto minmax(0, 1fr);
