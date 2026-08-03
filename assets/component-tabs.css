@@ -66,7 +66,33 @@
   padding: 0 0 0.4rem;
   font-size: var(--font-body-size);
   line-height: var(--font-body-line-height);
+  padding: .9rem 1.6rem;
+  border: 1px solid rgb(230,230,230) !important;
+  background: rgb(255,255,255) !important;
+  color: rgb(0,0,0) !important;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 999px;
+  text-transform: capitalize;
 }
+
+.index-template .tabs__nav-design-1 .tabs__tab:before {
+  content: none;
+}
+
+.index-template .tabs__nav-design-1 .tabs__tab[aria-selected="true"],
+.index-template .tabs__nav-design-1 .tabs__tab[aria-selected="true"] span,
+.index-template .tabs__nav-design-1 .tabs__tab:hover,
+.index-template .tabs__nav-design-1 .tabs__tab:hover span {
+  background: rgb(0,0,0) !important;
+  color: rgb(255,255,255) !important;
+}
+
+.index-template .tabs__nav {
+  gap: .8rem;
+}
+
 .tabs__nav-design-1 .tabs__tab:before {
   content: "";
   display: block;

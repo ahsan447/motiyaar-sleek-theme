@@ -101,23 +101,25 @@
 }
 
 .trust-hero__badges {
-  margin-top: 3.2rem;
+  margin-top: 0;
   padding-top: 2.4rem;
-  border-top: 0.1rem solid rgba(var(--color-foreground, 17, 17, 17), 0.1);
+  border-top: none;
   gap: 1.6rem 2.4rem;
   justify-content: space-between;
 }
 .trust-hero__badge {
   gap: 0.8rem;
   flex: 1 1 auto;
-  justify-content: center;
 }
 .trust-hero__badge .icon,
 .trust-hero__badge .icon-lock {
   flex-shrink: 0;
+  width: 50px;
+  height: 50px;
 }
 .trust-hero__badge-label {
   white-space: nowrap;
+  font-size: 18px;
 }
 @media (max-width: 767.98px) {
   .trust-hero__badges {
@@ -128,5 +130,10 @@
   }
   .trust-hero__badge-label {
     white-space: normal;
+    font-size: calc(var(--font-body-size) * .9);
+  }
+
+  .index-template .tabs__nav-design-1 + .section__footer  {
+    display: none;
   }
 }

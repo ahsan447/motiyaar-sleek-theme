@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -8,37 +17,46 @@
         "text_niHbzP": {
           "type": "text",
           "settings": {
-            "text": "TELL CUSTOMERS ABOUT A PROMOTION",
+            "text": "Designed with Purpose. Crafted with Care.",
             "text_link": "",
             "text_size": "text-base",
             "font_weight": "font-heading",
             "font_style": "normal",
             "letter_spacing": 0,
-            "text_style": "normal"
+            "text_opacity": 100,
+            "text_style": "normal",
+            "use_custom_color": false,
+            "custom_color": "#000000"
           }
         },
         "text_t3BcT4": {
           "type": "text",
           "settings": {
-            "text": "TELL CUSTOMERS ABOUT A PROMOTION",
+            "text": "Free Delivery on Order  above 2500 PKR",
             "text_link": "",
             "text_size": "text-base",
             "font_weight": "font-heading",
             "font_style": "normal",
             "letter_spacing": 0,
-            "text_style": "normal"
+            "text_opacity": 100,
+            "text_style": "normal",
+            "use_custom_color": false,
+            "custom_color": "#000000"
           }
         },
         "text_QCAxbn": {
           "type": "text",
           "settings": {
-            "text": "TELL CUSTOMERS ABOUT A PROMOTION",
+            "text": "Fine Jewelry Designed to Be Loved, Worn, and Remembered Forever",
             "text_link": "",
             "text_size": "text-base",
             "font_weight": "font-heading",
             "font_style": "normal",
             "letter_spacing": 0,
-            "text_style": "normal"
+            "text_opacity": 100,
+            "text_style": "normal",
+            "use_custom_color": false,
+            "custom_color": "#000000"
           }
         }
       },
@@ -52,21 +70,47 @@
         "vertical_alignment": "center",
         "direction": "left",
         "pause_on_hover": false,
-        "show_divider": false,
         "speed": 0.5,
         "h_spacing": 60,
         "v_spacing": 0,
         "padding_top": 12,
-        "padding_bottom": 12
+        "padding_bottom": 12,
+        "show_divider": false,
+        "divider_layout": "vertical"
       }
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "product_list_HjGqXJ": {
+          "type": "product_list",
+          "settings": {
+            "menu_title": "Shop",
+            "collections": [],
+            "menu_columns": 3,
+            "show_menu_column_divider": true,
+            "promotions_width": 54,
+            "number_of_columns": 3,
+            "product_list": [
+              "black-pearl-golden-chain-bracelet",
+              "blossom-bow-necklace",
+              "bold-cuban-link-anklet"
+            ],
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_list_HjGqXJ"
+      ],
       "settings": {
+        "container": "fixed",
         "color_scheme": "scheme-1",
+        "menu": "new-header-menu",
         "menu_mobile": "",
         "header_layout": "left-center",
         "sticky_header": "always",
+        "menu_trigger": "hover",
         "show_sperator_line": true,
         "enable_transparent_header": false,
         "transparent_header_color": "#ffffff",

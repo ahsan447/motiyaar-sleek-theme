@@ -3859,7 +3859,18 @@ input:is([type=radio])::after {
   align-items: center;
   justify-content: center;
   width: 100%;
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 999px;
 }
+
+.product-card__add-to-bag-btn:hover {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
 .product-card__quickview {
   position: absolute;
   top: 2rem;

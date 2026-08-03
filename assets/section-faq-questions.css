@@ -35,6 +35,8 @@
 .faq-questions__question {
   font-size: 1.5rem;
   font-weight: 600;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 .faq-questions__summary .icon-plus-toggle {
   color: rgb(var(--color-primary));
@@ -56,11 +58,27 @@
   }
   .faq-questions__summary.accordion-details__summary {
     padding: 1.4rem 2rem;
+    gap: 1.2rem;
   }
   .faq-questions__question {
     font-size: 1.3rem;
   }
   .faq-questions__answer.accordion-details__content {
     padding: 0 2rem 1.6rem;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .faq-questions__item {
+    border-radius: 2.4rem;
+  }
+  .faq-questions__summary.accordion-details__summary {
+    padding: 1.2rem 1.6rem;
+  }
+  .faq-questions__question {
+    font-size: 1.2rem;
+  }
+  .faq-questions__answer.accordion-details__content {
+    padding: 0 1.6rem 1.4rem;
   }
 }

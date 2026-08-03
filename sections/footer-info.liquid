@@ -2,7 +2,7 @@
 
 {%- liquid
   assign motion_delay = 50
-  assign payment_badges = section.settings.payment_badges | newline_to_br | split: '<br />'
+  assign payment_icon_blocks = section.blocks | where: 'type', 'payment_icon'
 -%}
 
 {% render 'divider',
@@ -44,39 +44,32 @@
             </motion-element>
             {%- assign motion_delay = motion_delay | plus: 50 -%}
           {%- when 'link_column' -%}
-            <motion-element
-              class="footer-info__col block"
-              data-motion="fade-up"
-              data-motion-delay="{{ motion_delay }}"
-              {{ block.shopify_attributes }}
-            >
-              {%- if block.settings.heading != blank -%}
-                <p class="footer-info__col-heading">{{ block.settings.heading }}</p>
-              {%- endif -%}
-              <ul class="footer-info__links list-unstyled">
-                {%- for i in (1..6) -%}
-                  {%- assign text_key = 'link_' | append: i | append: '_text' -%}
-                  {%- assign url_key = 'link_' | append: i | append: '_url' -%}
-                  {%- assign link_text = block.settings[text_key] -%}
-                  {%- assign link_url = block.settings[url_key] -%}
-                  {%- if link_text != blank -%}
+            {%- liquid
+              assign column_heading = block.settings.heading
+              if column_heading == blank
+                assign column_heading = linklists[block.settings.menu].title
+              endif
+            -%}
+            {%- if block.settings.menu != blank -%}
+              <motion-element
+                class="footer-info__col block"
+                data-motion="fade-up"
+                data-motion-delay="{{ motion_delay }}"
+                {{ block.shopify_attributes }}
+              >
+                {%- if column_heading != blank -%}
+                  <p class="footer-info__col-heading">{{ column_heading }}</p>
+                {%- endif -%}
+                <ul class="footer-info__links list-unstyled">
+                  {%- for link in block.settings.menu.links -%}
                     <li>
-                      <a
-                        class="footer-info__link"
-                        {% if link_url != blank %}
-                          href="{{ link_url }}"
-                        {% else %}
-                          role="link" aria-disabled="true"
-                        {% endif %}
-                      >
-                        {{- link_text -}}
-                      </a>
+                      <a class="footer-info__link" href="{{ link.url }}">{{ link.title }}</a>
                     </li>
-                  {%- endif -%}
-                {%- endfor -%}
-              </ul>
-            </motion-element>
-            {%- assign motion_delay = motion_delay | plus: 50 -%}
+                  {%- endfor -%}
+                </ul>
+              </motion-element>
+              {%- assign motion_delay = motion_delay | plus: 50 -%}
+            {%- endif -%}
         {%- endcase -%}
       {%- endfor -%}
     </div>
@@ -86,12 +79,17 @@
         &copy; {{ 'now' | date: '%Y' }}
         {%- if section.settings.copyright_text != blank %} {{ section.settings.copyright_text }}{% endif -%}
       </p>
-      {%- if section.settings.show_payment_badges and payment_badges.size > 0 -%}
+      {%- if section.settings.show_payment_badges and payment_icon_blocks.size > 0 -%}
         <ul class="footer-info__payment list-unstyled flex flex-wrap items-center">
-          {%- for badge in payment_badges -%}
-            {%- assign badge = badge | strip -%}
-            {%- if badge != blank -%}
-              <li class="footer-info__payment-badge">{{ badge }}</li>
+          {%- for block in payment_icon_blocks -%}
+            {%- if block.settings.icon != blank -%}
+              <li class="footer-info__payment-badge" {{ block.shopify_attributes }}>
+                {{
+                  block.settings.icon
+                  | image_url: width: 160
+                  | image_tag: loading: 'lazy', alt: block.settings.label, class: 'footer-info__payment-icon'
+                }}
+              </li>
             {%- endif -%}
           {%- endfor -%}
         </ul>
@@ -104,6 +102,7 @@
 {
   "name": "Footer info",
   "class": "section",
+  "max_blocks": 24,
   "enabled_on": {
     "groups": ["footer"]
   },
@@ -139,14 +138,8 @@
       "type": "checkbox",
       "id": "show_payment_badges",
       "label": "Show payment badges",
+      "info": "Add payment icon blocks below to control which logos appear.",
       "default": true
-    },
-    {
-      "type": "textarea",
-      "id": "payment_badges",
-      "label": "Payment badges",
-      "info": "One badge per line",
-      "default": "Cash on delivery\nEasypaisa\nJazzCash\nDebit / credit card"
     },
     {
       "type": "header",
@@ -271,72 +264,31 @@
           "type": "text",
           "id": "heading",
           "label": "t:sections.all.heading.label",
+          "info": "Leave blank to use the menu's own title.",
           "default": "Shop"
         },
         {
-          "type": "header",
-          "content": "Links"
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu",
+          "info": "Create this menu under Online Store > Navigation, then select it here."
+        }
+      ]
+    },
+    {
+      "type": "payment_icon",
+      "name": "Payment icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
         },
         {
           "type": "text",
-          "id": "link_1_text",
-          "label": "Link 1 label"
-        },
-        {
-          "type": "url",
-          "id": "link_1_url",
-          "label": "Link 1 link"
-        },
-        {
-          "type": "text",
-          "id": "link_2_text",
-          "label": "Link 2 label"
-        },
-        {
-          "type": "url",
-          "id": "link_2_url",
-          "label": "Link 2 link"
-        },
-        {
-          "type": "text",
-          "id": "link_3_text",
-          "label": "Link 3 label"
-        },
-        {
-          "type": "url",
-          "id": "link_3_url",
-          "label": "Link 3 link"
-        },
-        {
-          "type": "text",
-          "id": "link_4_text",
-          "label": "Link 4 label"
-        },
-        {
-          "type": "url",
-          "id": "link_4_url",
-          "label": "Link 4 link"
-        },
-        {
-          "type": "text",
-          "id": "link_5_text",
-          "label": "Link 5 label"
-        },
-        {
-          "type": "url",
-          "id": "link_5_url",
-          "label": "Link 5 link"
-        },
-        {
-          "type": "text",
-          "id": "link_6_text",
-          "label": "Link 6 label",
-          "info": "Leave the link blank to show plain text (e.g. store hours)."
-        },
-        {
-          "type": "url",
-          "id": "link_6_url",
-          "label": "Link 6 link"
+          "id": "label",
+          "label": "Label (alt text)",
+          "default": "Payment method"
         }
       ]
     }
@@ -350,37 +302,69 @@
         "type": "link_column",
         "settings": {
           "heading": "Shop",
-          "link_1_text": "New in",
-          "link_2_text": "Adjustable rings",
-          "link_3_text": "Statement rings",
-          "link_4_text": "Under Rs. 1,500",
-          "link_5_text": "Gifting"
+          "menu": "footer"
         }
       },
       {
         "type": "link_column",
         "settings": {
           "heading": "Help",
-          "link_1_text": "Track your order",
-          "link_2_text": "Shipping & COD",
-          "link_3_text": "7-day exchange",
-          "link_4_text": "Ring size guide",
-          "link_5_text": "Care & plating promise"
+          "menu": "footer"
         }
       },
       {
         "type": "link_column",
         "settings": {
           "heading": "Contact",
-          "link_1_text": "WhatsApp 0300 000 0000",
-          "link_1_url": "https://wa.me/923000000000",
-          "link_2_text": "hello@motiyaar.com",
-          "link_2_url": "mailto:hello@motiyaar.com",
-          "link_3_text": "Instagram",
-          "link_3_url": "https://instagram.com",
-          "link_4_text": "TikTok",
-          "link_4_url": "https://tiktok.com",
-          "link_5_text": "Mon–Sat, 11am–8pm"
+          "menu": "footer"
+        }
+      },
+      {
+        "type": "payment_icon",
+        "settings": {
+          "label": "Meezan Bank"
+        }
+      },
+      {
+        "type": "payment_icon",
+        "settings": {
+          "label": "Nayapay"
+        }
+      },
+      {
+        "type": "payment_icon",
+        "settings": {
+          "label": "Soneri Bank"
+        }
+      },
+      {
+        "type": "payment_icon",
+        "settings": {
+          "label": "Easypaisa"
+        }
+      },
+      {
+        "type": "payment_icon",
+        "settings": {
+          "label": "JazzCash"
+        }
+      },
+      {
+        "type": "payment_icon",
+        "settings": {
+          "label": "American Express"
+        }
+      },
+      {
+        "type": "payment_icon",
+        "settings": {
+          "label": "Mastercard"
+        }
+      },
+      {
+        "type": "payment_icon",
+        "settings": {
+          "label": "Visa"
         }
       }
     ]

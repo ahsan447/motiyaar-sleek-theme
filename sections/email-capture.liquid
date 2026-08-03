@@ -2,8 +2,10 @@
 
 {%- liquid
   assign motion_delay = 50
-  assign default_placeholder = section.settings.placeholder | default: 'newsletter.label' | t
-  assign default_button_label = section.settings.button_label | default: 'newsletter.button_label' | t
+  assign default_placeholder = 'newsletter.label' | t
+  assign default_placeholder = section.settings.placeholder | default: default_placeholder
+  assign default_button_label = 'newsletter.button_label' | t
+  assign default_button_label = section.settings.button_label | default: default_button_label
   assign form_id = 'EmailCapture-' | append: section.id
 -%}
 

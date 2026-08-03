@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -9,7 +18,7 @@
           "type": "brand",
           "settings": {
             "heading": "MOTIYAAR",
-            "text": "<p>Everyday gold-plated jewellery made in Lahore. Designed to be worn, not saved for weddings.<\/p>",
+            "text": "<p>Everyday gold-plated jewellery made in Lahore. Designed to be worn, not saved for weddings.</p>",
             "show_rating": true,
             "rating_stars": "5-stars",
             "rating_text": "4.8 from 2,140 reviews"
@@ -19,48 +28,61 @@
           "type": "link_column",
           "settings": {
             "heading": "Shop",
-            "link_1_text": "New in",
-            "link_1_url": "",
-            "link_2_text": "Adjustable rings",
-            "link_2_url": "",
-            "link_3_text": "Statement rings",
-            "link_3_url": "",
-            "link_4_text": "Under Rs. 1,500",
-            "link_4_url": "",
-            "link_5_text": "Gifting",
-            "link_5_url": ""
+            "menu": "footer-shop"
           }
         },
         "link_column_help": {
           "type": "link_column",
           "settings": {
             "heading": "Help",
-            "link_1_text": "Track your order",
-            "link_1_url": "",
-            "link_2_text": "Shipping & COD",
-            "link_2_url": "",
-            "link_3_text": "7-day exchange",
-            "link_3_url": "",
-            "link_4_text": "Ring size guide",
-            "link_4_url": "",
-            "link_5_text": "Care & plating promise",
-            "link_5_url": ""
+            "menu": "footer-help"
           }
         },
         "link_column_contact": {
           "type": "link_column",
           "settings": {
             "heading": "Contact",
-            "link_1_text": "WhatsApp 0300 000 0000",
-            "link_1_url": "https:\/\/wa.me\/923000000000",
-            "link_2_text": "hello@motiyaar.com",
-            "link_2_url": "mailto:hello@motiyaar.com",
-            "link_3_text": "Instagram",
-            "link_3_url": "https:\/\/instagram.com",
-            "link_4_text": "TikTok",
-            "link_4_url": "https:\/\/tiktok.com",
-            "link_5_text": "Mon–Sat, 11am–8pm",
-            "link_5_url": ""
+            "menu": "footer-contact"
+          }
+        },
+        "payment_meezan": {
+          "type": "payment_icon",
+          "settings": {
+            "icon": "shopify://shop_images/Easypaisa_Logo.png",
+            "label": "Easypaisa"
+          }
+        },
+        "payment_nayapay": {
+          "type": "payment_icon",
+          "settings": {
+            "icon": "shopify://shop_images/Nayapay_Logo.png",
+            "label": "Nayapay"
+          }
+        },
+        "payment_jazzcash": {
+          "type": "payment_icon",
+          "settings": {
+            "icon": "shopify://shop_images/soneri-bank-logo.png",
+            "label": "Soneri Bank"
+          }
+        },
+        "payment_amex": {
+          "type": "payment_icon",
+          "settings": {
+            "icon": "shopify://shop_images/cash-on-delivery.png",
+            "label": "American Express"
+          }
+        },
+        "payment_mastercard": {
+          "type": "payment_icon",
+          "settings": {
+            "label": "Mastercard"
+          }
+        },
+        "payment_visa": {
+          "type": "payment_icon",
+          "settings": {
+            "label": "Visa"
           }
         }
       },
@@ -68,14 +90,21 @@
         "brand_1",
         "link_column_shop",
         "link_column_help",
-        "link_column_contact"
+        "link_column_contact",
+        "payment_meezan",
+        "payment_nayapay",
+        "payment_jazzcash",
+        "payment_amex",
+        "payment_mastercard",
+        "payment_visa"
       ],
       "settings": {
         "color_scheme": "scheme-inverse",
         "accent_color": "#d8a35c",
         "copyright_text": "Motiyaar · Lahore, Pakistan",
         "show_payment_badges": true,
-        "payment_badges": "Cash on delivery\nEasypaisa\nJazzCash\nDebit \/ credit card",
+        "padding_top": 60,
+        "padding_bottom": 40,
         "show_section_divider": false,
         "divider_width": "full"
       }
@@ -105,14 +134,15 @@
           "type": "products",
           "settings": {
             "text": "Products",
-            "collection": ""
+            "collection": "best-sellers"
           }
         },
         "link_mJ6QMc": {
           "type": "link",
+          "disabled": true,
           "settings": {
             "text": "About",
-            "url": "shopify:\/\/pages\/about",
+            "url": "shopify://pages/about",
             "icon": "map-pin"
           }
         }

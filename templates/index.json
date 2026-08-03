@@ -1,1 +1,649 @@
-{"sections":{"slideshow_q3U4Jn":{"type":"slideshow","blocks":{"slide_JhU8hg":{"type":"slide","settings":{"color_scheme":"scheme-1","image_overlay_opacity":0,"content_position":"middle-left","text_alignment":"center","title":"Image slide","heading_size":"hd1","subheading":"Add a tagline","description":"","description_size":"text-base","button_label":"Button label","button_link":"","button_style":"btn--primary"}},"slide_U9bPyj":{"type":"slide","settings":{"color_scheme":"scheme-1","image_overlay_opacity":0,"content_position":"middle-right","text_alignment":"center","title":"Image slide","heading_size":"hd1","subheading":"Add a tagline","description":"","description_size":"text-base","button_label":"Button label","button_link":"","button_style":"btn--primary"}},"slide_pEkPxY":{"type":"slide","settings":{"color_scheme":"scheme-1","image_overlay_opacity":0,"content_position":"middle-left","text_alignment":"center","title":"Image slide","heading_size":"hd1","subheading":"Add a tagline","description":"","description_size":"text-base","button_label":"Button label","button_link":"","button_style":"btn--primary"}}},"block_order":["slide_JhU8hg","slide_U9bPyj","slide_pEkPxY"],"settings":{"container":"full","layout":"centered","slide_height":"adapt","show_dots":true,"autoplay":true,"autoplay_delay":5,"controls_position":"below","show_text_below":true,"text_alignment_mobile":"center","accessibility_info":"Slideshow about our brand"}},"category_pills_bK5xQn":{"type":"category-pills","blocks":{"category_item_aXk73Q":{"type":"category_item","settings":{"color_scheme":"","icon":"🏅","text":"Best Sellers","link":""}},"category_item_n8Rq2Z":{"type":"category_item","settings":{"color_scheme":"","icon":"💎","text":"Under Rs. 1,000","link":""}},"category_item_vT4mPx":{"type":"category_item","settings":{"color_scheme":"","icon":"✨","text":"Under Rs. 1,500","link":""}},"category_item_hK9wLb":{"type":"category_item","settings":{"color_scheme":"","icon":"🎁","text":"Gifts Under Rs. 2,000","link":""}},"category_item_rF2sYc":{"type":"category_item","settings":{"color_scheme":"","icon":"🎀","text":"Personalised","link":""}},"category_item_eD6pNa":{"type":"category_item","settings":{"color_scheme":"","icon":"☀️","text":"New Arrivals","link":""}}},"block_order":["category_item_aXk73Q","category_item_n8Rq2Z","category_item_vT4mPx","category_item_hK9wLb","category_item_rF2sYc","category_item_eD6pNa"],"settings":{"color_scheme":"scheme-1","item_alignment":"left","swipe_on_mobile":true,"padding_top":24,"padding_bottom":24,"show_section_divider":true,"divider_width":"full"}},"shop_by_category_mV7hTx":{"type":"shop-by-category","blocks":{"grid_image_Qw1a2B":{"type":"grid_image","settings":{"image":"","link":""}},"grid_image_Rt3c4D":{"type":"grid_image","settings":{"image":"","link":""}},"grid_image_Sy5e6F":{"type":"grid_image","settings":{"image":"","link":""}},"grid_image_Tu7g8H":{"type":"grid_image","settings":{"image":"","link":""}}},"block_order":["grid_image_Qw1a2B","grid_image_Rt3c4D","grid_image_Sy5e6F","grid_image_Tu7g8H"],"settings":{"color_scheme":"scheme-2","heading":"Shop by category","heading_size":"hd2","collection":"","link_label":"","link":"","main_image":"","main_image_link":"","padding_top":60,"padding_bottom":60,"show_section_divider":false,"divider_width":"fixed"}},"product_tabs_iJHLzK":{"type":"product-tabs","blocks":{"tab_Yz8Mnz":{"type":"tab","settings":{"title":"Tab name","collection":"bras"}},"tab_9cGBUe":{"type":"tab","settings":{"title":"Tab name","collection":""}},"tab_AfgNn8":{"type":"tab","settings":{"title":"Tab name","collection":""}}},"block_order":["tab_Yz8Mnz","tab_9cGBUe","tab_AfgNn8"],"settings":{"color_scheme":"","header_layout":"horizontal","heading":"","heading_size":"h1","heading_highlight_style":"none","limit":4,"columns":4,"column_gap":"extra-small","row_gap":"inherit","grid_layout":"standard","pcard_image_ratio":"","columns_mobile":"2","swipe_on_mobile":false,"show_all_button_on_top":true,"button_label":"Button label","button_link":"","button_style":"btn--underline","tabs_nav_style":"design-2","padding_top":100,"padding_bottom":0,"show_section_divider":false,"divider_width":"fixed"}},"highlight_text_with_image_9KLzcX":{"type":"highlight-text-with-image","blocks":{"image_URaWGC":{"type":"image","settings":{"image_link":"","image_width":220,"image_width_mobile":110}},"image_DyKWHM":{"type":"image","settings":{"image_link":"","image_width":220,"image_width_mobile":110}},"image_NGQQmW":{"type":"image","settings":{"image_link":"","image_width":220,"image_width_mobile":110}}},"block_order":["image_URaWGC","image_DyKWHM","image_NGQQmW"],"settings":{"color_scheme":"","text":"Highlight products, [img1] a collection, or [img2] images alongside a brand message [img3]","heading_size":"hd1","alignment":"center","padding_top":100,"padding_bottom":100,"show_section_divider":false,"divider_width":"fixed"}},"collection_list_Pr36qH":{"type":"collection-list","blocks":{"featured_collection_VHfaMD":{"type":"featured_collection","settings":{"collection":"","title":"","description":""}},"featured_collection_H3VHEr":{"type":"featured_collection","settings":{"collection":"","title":"","description":""}},"featured_collection_ytHAXL":{"type":"featured_collection","settings":{"collection":"","title":"","description":""}},"featured_collection_inyzwk":{"type":"featured_collection","settings":{"collection":"","title":"","description":""}}},"block_order":["featured_collection_VHfaMD","featured_collection_H3VHEr","featured_collection_ytHAXL","featured_collection_inyzwk"],"settings":{"color_scheme":"scheme-2","layout":"split","subheading":"Add a tagline","heading":"Collections","heading_size":"h1","heading_highlight_style":"none","description":"<p>This area is used to describe your collection's details.</p>","text_size":"text-base","card_color_inherited":false,"show_product_count":true,"show_icon":true,"card_style":"","card_image_ratio":"adapt","content_alignment":"left","columns_desktop":3,"column_gap":"medium","row_gap":"medium","enable_slider":true,"columns_mobile":"1","swipe_on_mobile":true,"padding_top":100,"padding_bottom":100,"show_section_divider":false,"divider_width":"fixed"}},"products_bundle_cFjE73":{"type":"products-bundle","blocks":{"product_tNmVzg":{"type":"product","settings":{"product":"","color_scheme":"","horizontal_position":77,"vertical_position":48}},"product_63XUQd":{"type":"product","settings":{"product":"","color_scheme":"","horizontal_position":45,"vertical_position":54}},"product_bNtrwr":{"type":"product","settings":{"product":"","color_scheme":"","horizontal_position":19,"vertical_position":41}}},"block_order":["product_tNmVzg","product_63XUQd","product_bNtrwr"],"settings":{"color_scheme":"","heading":"Build Your Own Basket","heading_size":"h1","heading_highlight_style":"none","subheading":"Bundle & save","description":"","padding_top":100,"padding_bottom":0,"show_section_divider":false,"divider_width":"fixed"}},"multicolumn_mQAQbW":{"type":"multicolumn","blocks":{"column_6be7nJ":{"type":"column","settings":{"image_width":"extra-large","title":"","heading_size":"h4","text":"<p>“Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.”</p>","text_size":"text-lg","button_label":"","button_style":"btn--underline","button_link":"","mobile_layout":"inherit"}},"column_m4RcYP":{"type":"column","settings":{"image_width":"extra-large","title":"","heading_size":"h4","text":"<p>“Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.”</p>","text_size":"text-lg","button_label":"","button_style":"btn--underline","button_link":"","mobile_layout":"inherit"}},"column_bRpkxq":{"type":"column","settings":{"image_width":"extra-large","title":"","heading_size":"h4","text":"<p>“Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.”</p>","text_size":"text-lg","button_label":"","button_style":"btn--underline","button_link":"","mobile_layout":"inherit"}}},"block_order":["column_6be7nJ","column_m4RcYP","column_bRpkxq"],"settings":{"color_scheme":"","heading":"Multicolumn","heading_size":"h1","heading_highlight_style":"none","subheading":"","description":"","text_size":"text-base","column_alignment":"center","columns_desktop":3,"column_gap":"large","columns_mobile":"1","swipe_on_mobile":true,"padding_top":100,"padding_bottom":100,"show_section_divider":false,"divider_width":"fixed"}},"card_images_YfYkKC":{"type":"card-images","blocks":{"image_card_wqEYFA":{"type":"image_card","settings":{"color_scheme":"","image_overlay_opacity":0,"heading":"Image card","heading_size":"hd2","subheading":"Add a tagline","description":"<p>Tell your brand's story through images</p>","description_size":"text-lg","button_label":"Button label","button_style":"btn--primary","content_position":"middle-left","content_alignment":"left","content_spacing":"large","card_link":"","content_position_mobile":"top-center","content_alignment_mobile":"center"}},"image_card_gQwfAa":{"type":"image_card","settings":{"color_scheme":"","image_overlay_opacity":0,"heading":"Image card","heading_size":"hd2","subheading":"Add a tagline","description":"<p>Tell your brand's story through images</p>","description_size":"text-lg","button_label":"Button label","button_style":"btn--primary","content_position":"middle-left","content_alignment":"left","content_spacing":"large","card_link":"","content_position_mobile":"top-center","content_alignment_mobile":"center"}},"image_card_944yhH":{"type":"image_card","settings":{"color_scheme":"","image_overlay_opacity":0,"heading":"Image card","heading_size":"hd2","subheading":"Add a tagline","description":"<p>Tell your brand's story through images</p>","description_size":"text-lg","button_label":"Button label","button_style":"btn--primary","content_position":"middle-left","content_alignment":"left","content_spacing":"large","card_link":"","content_position_mobile":"top-center","content_alignment_mobile":"center"}}},"block_order":["image_card_wqEYFA","image_card_gQwfAa","image_card_944yhH"],"settings":{"color_scheme":"","subheading":"","heading":"Card images","heading_size":"h1","heading_highlight_style":"none","description":"","description_size":"text-base","image_ratio":"adapt","enable_equal_height":false,"columns_desktop":2,"column_gap":"extra-small","enable_slider":true,"padding_top":100,"padding_bottom":0,"show_section_divider":true,"divider_width":"full"}},"feature_list_cW3d9c":{"type":"feature-list","blocks":{"feature_item_VbCwL3":{"type":"feature_item","settings":{"color_scheme":"","icon":"check","icon_style":"btn--secondary","text":"Feature item"}},"feature_item_NzxQGa":{"type":"feature_item","settings":{"color_scheme":"","icon":"check","icon_style":"btn--secondary","text":"Feature item"}},"feature_item_yyNV9A":{"type":"feature_item","settings":{"color_scheme":"","icon":"check","icon_style":"btn--secondary","text":"Feature item"}},"feature_item_gBgLft":{"type":"feature_item","settings":{"color_scheme":"","icon":"check","icon_style":"btn--secondary","text":"Feature item"}},"feature_item_R8A8eX":{"type":"feature_item","settings":{"color_scheme":"","icon":"check","icon_style":"btn--secondary","text":"Feature item"}}},"block_order":["feature_item_VbCwL3","feature_item_NzxQGa","feature_item_yyNV9A","feature_item_gBgLft","feature_item_R8A8eX"],"settings":{"color_scheme":"scheme-7","subheading":"","heading":"","heading_size":"h2","heading_highlight_style":"none","description":"","text_size":"text-base","item_alignment":"center","icon_size":"extra-medium","swipe_on_mobile":true,"padding_top":100,"padding_bottom":0,"show_section_divider":false,"divider_width":"fixed"}},"rich_text_7rBwdd":{"type":"rich-text","blocks":{"heading_cUbnWW":{"type":"heading","settings":{"heading":"Talk about your brand","heading_size":"h1","heading_highlight_style":"none"}},"button_PeGbeL":{"type":"button","settings":{"button_label":"Button label","button_link":"","button_style":"btn--underline"}}},"block_order":["heading_cUbnWW","button_PeGbeL"],"settings":{"color_scheme":"","content_alignment":"center","padding_top":60,"padding_bottom":0,"show_section_divider":false,"divider_width":"fixed"}},"custom_content_rhXbV3":{"type":"custom-content","blocks":{"image_card_g7LinJ":{"type":"image_card","settings":{"color_scheme":"scheme-inverse","image_ratio":"adapt","image_overlay_opacity":0,"heading":"Image card","heading_size":"h1","heading_highlight_style":"none","subheading":"Add a tagline","description":"","button_label":"Button label","button_style":"btn--primary","content_position":"top-center","content_alignment":"center","content_spacing":"large","card_link":"","color_scheme_mobile":"scheme-inverse","show_text_below":false,"content_alignment_mobile":"center","width":"50%","alignment":"start","block_custom_class":""}},"collections_Q3fY6f":{"type":"collections","settings":{"collection_list":[],"hide_collection_name":false,"button_label":"","button_style":"btn--primary","limit":4,"columns":2,"column_gap":"extra-small","row_gap":"inherit","enable_slider":true,"pcard_image_ratio":"","columns_mobile":"2","swipe_on_mobile":false,"width":"50%","alignment":"start","block_custom_class":""}}},"block_order":["image_card_g7LinJ","collections_Q3fY6f"],"settings":{"container":"fixed","color_scheme":"","enable_sticky_column":true,"heading":"","heading_size":"h1","heading_highlight_style":"none","subheading":"","description":"","column_gap":"large","row_gap":"inherit","swipe_on_mobile":false,"columns_mobile":"1","padding_top":100,"padding_bottom":0,"show_section_divider":false,"divider_width":"fixed"}},"image_with_text_MgddA8":{"type":"image-with-text","blocks":{"subheading_XLgqVJ":{"type":"subheading","settings":{"subheading":"Add a tagline"}},"heading_J7mctK":{"type":"heading","settings":{"heading":"Talk about your brand","heading_size":"hd1","heading_highlight_style":"none"}},"text_A3Dahr":{"type":"text","settings":{"text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>","text_size":"text-lg"}},"button_jAUX49":{"type":"button","settings":{"button_label":"Button label","button_link":"","button_style":"btn--primary"}}},"block_order":["subheading_XLgqVJ","heading_J7mctK","text_A3Dahr","button_jAUX49"],"settings":{"section_color_scheme":"","color_scheme":"scheme-4","image_height":"adapt","layout":"text_first","desktop_content_position":"center","desktop_content_alignment":"center","enable_parallax":false,"parallax_direction":"vertical","mobile_content_alignment":"left","padding_top":100,"padding_bottom":0,"show_section_divider":false,"divider_width":"fixed"}},"products_showcase_9KVeQe":{"type":"products-showcase","settings":{"color_scheme":"","heading":"Products showcase","heading_size":"h2","heading_highlight_style":"none","products":[],"pcard_title_size":"hd2","pcard_description_display":"3-lines","pcard_description_size":"text-lg","pcard_image_ratio":"3/4","pcard_show_vendor":true,"pcard_show_type":false,"pcard_button_label":"Button label","padding_top":100,"padding_bottom":100,"show_section_divider":false,"divider_width":"fixed"}},"scrolling_promotion_htQpcB":{"type":"scrolling-promotion","blocks":{"image_p6c9Fb":{"type":"image","settings":{"image_height":80,"image_rounded":true,"image_link":"","image_height_mobile":90}},"text_eJYFM7":{"type":"text","settings":{"text":"Tell customers about a promotion","text_link":"","text_size":"h2","font_weight":"font-body","font_style":"normal","letter_spacing":0,"text_opacity":100,"text_style":"normal","use_custom_color":false,"custom_color":"#000000"}},"image_i3axe6":{"type":"image","settings":{"image_height":80,"image_rounded":true,"image_link":"","image_height_mobile":90}},"text_QcbBQ9":{"type":"text","settings":{"text":"Tell customers about a promotion","text_link":"","text_size":"h2","font_weight":"font-body","font_style":"normal","letter_spacing":0,"text_opacity":100,"text_style":"normal","use_custom_color":false,"custom_color":"#000000"}},"image_rMjhMM":{"type":"image","settings":{"image_height":80,"image_rounded":true,"image_link":"","image_height_mobile":90}},"text_qrqedj":{"type":"text","settings":{"text":"Tell customers about a promotion","text_link":"","text_size":"h2","font_weight":"font-body","font_style":"normal","letter_spacing":0,"text_opacity":100,"text_style":"normal","use_custom_color":false,"custom_color":"#000000"}},"image_9EAm3A":{"type":"image","settings":{"image_height":80,"image_rounded":true,"image_link":"","image_height_mobile":90}},"text_K7hiEY":{"type":"text","settings":{"text":"Tell customers about a promotion","text_link":"","text_size":"h2","font_weight":"font-body","font_style":"normal","letter_spacing":0,"text_opacity":100,"text_style":"normal","use_custom_color":false,"custom_color":"#000000"}}},"block_order":["image_p6c9Fb","text_eJYFM7","image_i3axe6","text_QcbBQ9","image_rMjhMM","text_qrqedj","image_9EAm3A","text_K7hiEY"],"settings":{"color_scheme":"","vertical_alignment":"center","direction":"left","pause_on_hover":true,"speed":0.2,"h_spacing":50,"v_spacing":26,"padding_top":0,"padding_bottom":0,"show_divider":true,"divider_layout":"vertical"}},"featured_products_tab_yYcGgw":{"type":"featured-products-tab","blocks":{"tab_pcLDec":{"type":"tab","settings":{"title":"Example title","description":"<p>Use this section to promote products that are on sale or part of a special promotion by prominently and attractively showcasing selected items.</p>","products":[],"collection":""}},"tab_NLRDMg":{"type":"tab","settings":{"title":"Example title","description":"<p>Use this section to promote products that are on sale or part of a special promotion by prominently and attractively showcasing selected items.</p>","products":[],"collection":""}},"tab_hhgdKc":{"type":"tab","settings":{"title":"Example title","description":"<p>Use this section to promote products that are on sale or part of a special promotion by prominently and attractively showcasing selected items.</p>","products":[],"collection":""}},"tab_PQhFrR":{"type":"tab","settings":{"title":"Example title","description":"<p>Use this section to promote products that are on sale or part of a special promotion by prominently and attractively showcasing selected items.</p>","products":[],"collection":""}}},"block_order":["tab_pcLDec","tab_NLRDMg","tab_hhgdKc","tab_PQhFrR"],"settings":{"color_scheme":"","enable_video_autoplay":true,"heading":"Featured products tab","heading_size":"h1","heading_highlight_style":"none","subheading":"Add a tagline","description":"","description_size":"text-base","limit":4,"column_gap":"medium","row_gap":"inherit","pcard_image_ratio":"3/4","pcard_thumbnail_ratio":"","swipe_on_mobile":true,"padding_top":100,"padding_bottom":100,"show_section_divider":false,"divider_width":"fixed"}},"testimonials_8JHr3L":{"type":"testimonials","blocks":{"testimonial_dhi3Xf":{"type":"testimonial","settings":{"text":"<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>","author":"Author's name","bio":"","product":"","icon":"none"}},"testimonial_D7Mq7i":{"type":"testimonial","settings":{"text":"<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>","author":"Author's name","bio":"","product":"","icon":"none"}},"testimonial_33tAjm":{"type":"testimonial","settings":{"text":"<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>","author":"Author's name","bio":"","product":"","icon":"none"}},"testimonial_dDRMwy":{"type":"testimonial","settings":{"text":"<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>","author":"Author's name","bio":"","product":"","icon":"none"}},"testimonial_RgfDDw":{"type":"testimonial","settings":{"text":"<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>","author":"Author's name","bio":"","product":"","icon":"none"}},"testimonial_abi6JN":{"type":"testimonial","settings":{"text":"<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>","author":"Author's name","bio":"","product":"","icon":"none"}}},"block_order":["testimonial_dhi3Xf","testimonial_D7Mq7i","testimonial_33tAjm","testimonial_dDRMwy","testimonial_RgfDDw","testimonial_abi6JN"],"settings":{"color_scheme":"scheme-2","heading":"Testimonials","heading_size":"h2","heading_highlight_style":"none","subheading":"","description":"","text_size":"text-base","card_color_scheme":"","card_layout":"1","columns_desktop":4,"column_gap":"medium","enable_slider":true,"columns_mobile":"1","swipe_on_mobile":true,"padding_top":100,"padding_bottom":80,"show_section_divider":false,"divider_width":"fixed"}},"customer_reviews_Rv3wKp":{"type":"customer-reviews","blocks":{"review_Nh82Ta":{"type":"review","settings":{"rating":"5-stars","product_name":"ZIRCON HEART NECKLACE","quote":"Wore this to my cousin's wedding and got so many compliments. Packaging was gorgeous too.","author":"Fatima A.","location":"Lahore","show_verified_badge":true,"review_time":"3 days ago"}},"review_Bq91Ux":{"type":"review","settings":{"rating":"5-stars","product_name":"PERSONALIZED BIRTHSTONE NECKLACE","quote":"Ordered with my sister's name. She cried. Worth every rupee.","author":"Mariam S.","location":"Karachi","show_verified_badge":true,"review_time":"1 week ago"}},"review_Cf47Lm":{"type":"review","settings":{"rating":"4-stars","product_name":"GOLD BEAR NECKLACE","quote":"Super cute, exactly as shown. Delivery was fast. Minus one star only because I wanted more colour options.","author":"Layla R.","location":"Islamabad","show_verified_badge":true,"review_time":"2 weeks ago"}}},"block_order":["review_Nh82Ta","review_Bq91Ux","review_Cf47Lm"],"settings":{"color_scheme":"scheme-1","card_color_scheme":"scheme-1","subheading":"","heading":"What Customers Are Saying","heading_size":"h1","heading_highlight_style":"none","description":"","description_size":"text-base","columns_desktop":3,"column_gap":"medium","autoplay":false,"autoplay_delay":5,"padding_top":80,"padding_bottom":80,"show_section_divider":false,"divider_width":"fixed"}},"worn_by_you_qXyZ12":{"type":"worn-by-you","blocks":{"photo_hLp1Aa":{"type":"photo","settings":{"quote":"Perfect for wedding season.","customer_name":"Zainab","customer_location":"Lahore","show_badge":true}},"photo_bNq2Cd":{"type":"photo","settings":{"quote":"My everyday stack.","customer_name":"Saba","customer_location":"Karachi","show_badge":true}},"photo_fRt3Ez":{"type":"photo","settings":{"quote":"The packaging is 10/10.","customer_name":"Mahnoor","customer_location":"Islamabad","show_badge":true}}},"block_order":["photo_hLp1Aa","photo_bNq2Cd","photo_fRt3Ez"],"settings":{"color_scheme":"scheme-1","subheading":"","heading":"Worn By You","heading_size":"h1","heading_highlight_style":"none","description":"<p>Real customers. Real jewellery. Real outfits.</p>","description_size":"text-base","image_ratio":"3/4","columns_desktop":3,"column_gap":"medium","padding_top":80,"padding_bottom":80,"show_section_divider":false,"divider_width":"fixed"}},"collapsible_tabs_KNKLiF":{"type":"collapsible-tabs","blocks":{"collapsible_item_t7UtgE":{"type":"collapsible_item","settings":{"icon":"none","heading":"Collapsible tab heading","content":"<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>","custom_liquid":"","page":"","open":true}},"collapsible_item_AMx7Wd":{"type":"collapsible_item","settings":{"icon":"none","heading":"Collapsible tab heading","content":"<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>","custom_liquid":"","page":"","open":false}},"collapsible_item_rUAHxc":{"type":"collapsible_item","settings":{"icon":"none","heading":"Collapsible tab heading","content":"<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>","custom_liquid":"","page":"","open":false}},"collapsible_item_JCwmkt":{"type":"collapsible_item","settings":{"icon":"none","heading":"Collapsible tab heading","content":"<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>","custom_liquid":"","page":"","open":false}},"image_card_jbgAcV":{"type":"image_card","settings":{"color_scheme":"scheme-1","desktop_image_position":"left","image_width":50,"alignment":"start","image_ratio":"adapt","image_overlay_opacity":0,"heading":"","heading_size":"h1","subheading":"","description":"","button_label":"","button_style":"btn--primary","content_position":"bottom-center","content_alignment":"center","content_spacing":"medium","card_link":"","order_first":true}}},"block_order":["collapsible_item_t7UtgE","collapsible_item_AMx7Wd","collapsible_item_rUAHxc","collapsible_item_JCwmkt","image_card_jbgAcV"],"settings":{"container":"fixed","color_scheme":"scheme-2","header_layout":"standing-column","heading":"Collapsible tabs","heading_size":"h2","heading_highlight_style":"none","subheading":"","description":"<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p><p>Share information about your brand with your customers. </p>","text_size":"text-base","button_label":"Button label","button_link":"","button_style":"btn--primary","column_gap":"large","row_gap":"large","item_style":"card","item_color_scheme":"scheme-1","item_heading_font":"heading","item_heading_size":"h5","item_icon_size":"extra-large","padding_top":60,"padding_bottom":100,"show_section_divider":false,"divider_width":"fixed"}},"rich_text_J3XnPC":{"type":"rich-text","blocks":{"heading_jLVTiL":{"type":"heading","settings":{"heading":"Talk about your brand","heading_size":"h1","heading_highlight_style":"none"}},"button_jYDXnF":{"type":"button","settings":{"button_label":"Button label","button_link":"","button_style":"btn--underline"}}},"block_order":["heading_jLVTiL","button_jYDXnF"],"settings":{"color_scheme":"","content_alignment":"center","padding_top":100,"padding_bottom":0,"show_section_divider":false,"divider_width":"fixed"}},"custom_content_dxQmWd":{"type":"custom-content","blocks":{"image_card_cGCnqG":{"type":"image_card","settings":{"color_scheme":"","image_ratio":"adapt","image_overlay_opacity":0,"heading":"Image card","heading_size":"h2","heading_highlight_style":"none","subheading":"","description":"","button_label":"Button label","button_style":"btn--primary","content_position":"bottom-center","content_alignment":"center","content_spacing":"large","card_link":"","color_scheme_mobile":"","show_text_below":false,"content_alignment_mobile":"center","width":"33%","alignment":"center","block_custom_class":""}},"image_card_6PehkE":{"type":"image_card","settings":{"color_scheme":"","image_ratio":"adapt","image_overlay_opacity":0,"heading":"Image card","heading_size":"h2","heading_highlight_style":"none","subheading":"","description":"","button_label":"Button label","button_style":"btn--primary","content_position":"bottom-center","content_alignment":"center","content_spacing":"large","card_link":"","color_scheme_mobile":"","show_text_below":false,"content_alignment_mobile":"center","width":"33%","alignment":"center","block_custom_class":""}},"image_card_GKVG6K":{"type":"image_card","settings":{"color_scheme":"","image_ratio":"adapt","image_overlay_opacity":0,"heading":"Image card","heading_size":"h2","heading_highlight_style":"none","subheading":"","description":"","button_label":"Button label","button_style":"btn--primary","content_position":"bottom-center","content_alignment":"center","content_spacing":"large","card_link":"","color_scheme_mobile":"","show_text_below":false,"content_alignment_mobile":"center","width":"33%","alignment":"center","block_custom_class":""}}},"block_order":["image_card_cGCnqG","image_card_6PehkE","image_card_GKVG6K"],"settings":{"container":"fixed","color_scheme":"","enable_sticky_column":false,"heading":"","heading_size":"h1","heading_highlight_style":"none","subheading":"","description":"","column_gap":"medium","row_gap":"inherit","swipe_on_mobile":true,"columns_mobile":"1","padding_top":60,"padding_bottom":100,"show_section_divider":false,"divider_width":"fixed"}},"trust_hero_Rn5aWx":{"type":"trust-hero","blocks":{"subheading_Tb1a01":{"type":"subheading","settings":{"subheading":"EVERYDAY JEWELLERY, MADE TO BE NOTICED"}},"heading_Tb1a02":{"type":"heading","settings":{"heading":"The expensive look. Without the expensive price.","heading_size":"hd3","heading_highlight_style":"none"}},"text_Tb1a03":{"type":"text","settings":{"text":"<p>Gift-ready jewellery for everyday wear and special moments, starting from Rs. 950.</p>","text_size":"text-lg"}},"buttons_Tb1a04":{"type":"buttons","settings":{"button_1_label":"Shop best sellers","button_1_link":"","button_1_style":"btn--primary","button_2_label":"Shop under Rs. 1,500","button_2_link":"","button_2_style":"btn--secondary"}},"rating_Tb1a05":{"type":"rating","settings":{"stars":"5-stars","rating_text":"4.9/5 stars","review_text":"Loved by 10,000+ customers"}},"quote_Tb1a06":{"type":"quote","settings":{"quote":"Beautiful jewellery for everyday wear and special moments.","author":"Aisha"}},"quote_Tb1a07":{"type":"quote","settings":{"quote":"Fast shipping and stunning, gift-ready packaging.","author":"Bilal"}},"quote_Tb1a08":{"type":"quote","settings":{"quote":"Exactly the quality I expected — highly recommend!","author":"Mariam"}},"trust_badge_Tb1a09":{"type":"trust_badge","settings":{"icon":"seal-check","label":"Quality Checked"}},"trust_badge_Tb1a10":{"type":"trust_badge","settings":{"icon":"gift","label":"Gift-Ready Packaging"}},"trust_badge_Tb1a11":{"type":"trust_badge","settings":{"icon":"lock","label":"Secure Checkout"}},"trust_badge_Tb1a12":{"type":"trust_badge","settings":{"icon":"truck","label":"Nationwide Delivery"}}},"block_order":["subheading_Tb1a01","heading_Tb1a02","text_Tb1a03","buttons_Tb1a04","rating_Tb1a05","quote_Tb1a06","quote_Tb1a07","quote_Tb1a08","trust_badge_Tb1a09","trust_badge_Tb1a10","trust_badge_Tb1a11","trust_badge_Tb1a12"],"settings":{"section_color_scheme":"scheme-1","color_scheme":"scheme-1","image":"","image_height":"adapt","layout":"text_first","desktop_content_position":"center","enable_parallax":false,"parallax_direction":"vertical","padding_top":60,"padding_bottom":60,"show_section_divider":false,"divider_width":"fixed"}},"trust_badges_Ab12Cd":{"type":"trust-badges","blocks":{"badge_Ab12Ce":{"type":"badge","settings":{"icon":"check-circle","icon_style":"btn--secondary","heading":"Quality Checked","text":"Every piece is inspected before dispatch."}},"badge_Ab12Cf":{"type":"badge","settings":{"icon":"gift","icon_style":"btn--secondary","heading":"Gift-Ready Packaging","text":"Ready to make their moment feel special."}},"badge_Ab12Cg":{"type":"badge","settings":{"icon":"lock","icon_style":"btn--secondary","heading":"Secure Checkout","text":"Your payment details stay protected."}},"badge_Ab12Ch":{"type":"badge","settings":{"icon":"truck","icon_style":"btn--secondary","heading":"Nationwide Delivery","text":"Carefully delivered across Pakistan."}}},"block_order":["badge_Ab12Ce","badge_Ab12Cf","badge_Ab12Cg","badge_Ab12Ch"],"settings":{"color_scheme":"scheme-1","columns_desktop":"4","icon_size":"medium","padding_top":40,"padding_bottom":40,"show_section_divider":false,"divider_width":"fixed"}},"email_capture_pR8tWq":{"type":"email-capture","settings":{"color_scheme":"scheme-inverse","box_width":780,"subheading":"","heading":"Get First Access, Not More Spam","heading_size":"h1","heading_highlight_style":"none","description":"<p>New drops, limited pieces and private offers — sent occasionally.</p>","text_size":"text-base","placeholder":"Enter your email address","button_label":"Unlock First Access","button_style":"btn--white","terms_text":"<p>No spam. Unsubscribe any time.</p>","padding_top":60,"padding_bottom":60,"show_section_divider":false,"divider_width":"fixed"}}},"order":["trust_hero_Rn5aWx","trust_badges_Ab12Cd","slideshow_q3U4Jn","category_pills_bK5xQn","shop_by_category_mV7hTx","product_tabs_iJHLzK","highlight_text_with_image_9KLzcX","collection_list_Pr36qH","products_bundle_cFjE73","multicolumn_mQAQbW","card_images_YfYkKC","feature_list_cW3d9c","rich_text_7rBwdd","custom_content_rhXbV3","image_with_text_MgddA8","products_showcase_9KVeQe","scrolling_promotion_htQpcB","featured_products_tab_yYcGgw","testimonials_8JHr3L","customer_reviews_Rv3wKp","worn_by_you_qXyZ12","collapsible_tabs_KNKLiF","rich_text_J3XnPC","custom_content_dxQmWd","email_capture_pR8tWq"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "trust_hero_Rn5aWx": {
+      "type": "trust-hero",
+      "blocks": {
+        "subheading_Tb1a01": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "EVERYDAY JEWELLERY, MADE TO BE NOTICED"
+          }
+        },
+        "heading_Tb1a02": {
+          "type": "heading",
+          "settings": {
+            "heading": "The expensive look. Without the expensive price.",
+            "heading_size": "hd3",
+            "heading_highlight_style": "none"
+          }
+        },
+        "text_Tb1a03": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gift-ready jewellery for everyday wear and special moments, starting from Rs. 950.</p>",
+            "text_size": "text-lg"
+          }
+        },
+        "buttons_Tb1a04": {
+          "type": "buttons",
+          "settings": {
+            "button_1_label": "Shop best sellers",
+            "button_1_link": "shopify://collections/best-sellers",
+            "button_1_style": "btn--primary",
+            "button_2_label": "Shop under Rs. 1,500",
+            "button_2_link": "shopify://collections/under-rs-000",
+            "button_2_style": "btn--secondary"
+          }
+        },
+        "rating_Tb1a05": {
+          "type": "rating",
+          "settings": {
+            "stars": "5-stars",
+            "rating_text": "4.9/5 stars",
+            "review_text": "Loved by 10,000+ customers"
+          }
+        },
+        "quote_Tb1a06": {
+          "type": "quote",
+          "settings": {
+            "quote": "Beautiful jewellery for everyday wear and special moments.",
+            "author": "Aisha"
+          }
+        },
+        "quote_Tb1a07": {
+          "type": "quote",
+          "settings": {
+            "quote": "Fast shipping and stunning, gift-ready packaging.",
+            "author": "Bilal"
+          }
+        },
+        "quote_Tb1a08": {
+          "type": "quote",
+          "settings": {
+            "quote": "Exactly the quality I expected — highly recommend!",
+            "author": "Mariam"
+          }
+        },
+        "trust_badge_Tb1a09": {
+          "type": "trust_badge",
+          "settings": {
+            "icon": "seal-check",
+            "label": "Quality Checked"
+          }
+        },
+        "trust_badge_Tb1a10": {
+          "type": "trust_badge",
+          "settings": {
+            "icon": "gift",
+            "label": "Gift-Ready Packaging"
+          }
+        },
+        "trust_badge_Tb1a11": {
+          "type": "trust_badge",
+          "settings": {
+            "icon": "lock",
+            "label": "Secure Checkout"
+          }
+        },
+        "trust_badge_Tb1a12": {
+          "type": "trust_badge",
+          "settings": {
+            "icon": "truck",
+            "label": "Nationwide Delivery"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_Tb1a01",
+        "heading_Tb1a02",
+        "text_Tb1a03",
+        "buttons_Tb1a04",
+        "rating_Tb1a05",
+        "quote_Tb1a06",
+        "quote_Tb1a07",
+        "quote_Tb1a08",
+        "trust_badge_Tb1a09",
+        "trust_badge_Tb1a10",
+        "trust_badge_Tb1a11",
+        "trust_badge_Tb1a12"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "image": "shopify://shop_images/Tulip_bracelet_2026-05-08_at_21.30.57_2_2cad29d7-d29f-46d0-88d0-287fbf3b5258.jpg",
+        "image_height": "adapt",
+        "layout": "text_first",
+        "desktop_content_position": "center",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "category_pills_bK5xQn": {
+      "type": "category-pills",
+      "blocks": {
+        "category_item_aXk73Q": {
+          "type": "category_item",
+          "settings": {
+            "color_scheme": "",
+            "icon": "🏅",
+            "text": "Best Sellers",
+            "link": "shopify://collections/best-sellers"
+          }
+        },
+        "category_item_n8Rq2Z": {
+          "type": "category_item",
+          "settings": {
+            "color_scheme": "",
+            "icon": "💎",
+            "text": "Under Rs. 1,000",
+            "link": "shopify://collections/under-rs-000"
+          }
+        },
+        "category_item_vT4mPx": {
+          "type": "category_item",
+          "settings": {
+            "color_scheme": "",
+            "icon": "✨",
+            "text": "Under Rs. 1,500",
+            "link": "shopify://collections/under-rs-2000"
+          }
+        },
+        "category_item_hK9wLb": {
+          "type": "category_item",
+          "settings": {
+            "color_scheme": "",
+            "icon": "🎁",
+            "text": "Gifts Under Rs. 2,000",
+            "link": "shopify://collections/under-rs-2000"
+          }
+        },
+        "category_item_rF2sYc": {
+          "type": "category_item",
+          "settings": {
+            "color_scheme": "",
+            "icon": "🎀",
+            "text": "Personalised",
+            "link": "shopify://collections/premium-collection"
+          }
+        },
+        "category_item_eD6pNa": {
+          "type": "category_item",
+          "settings": {
+            "color_scheme": "",
+            "icon": "☀️",
+            "text": "New Arrivals",
+            "link": "shopify://collections/neckalce"
+          }
+        }
+      },
+      "block_order": [
+        "category_item_aXk73Q",
+        "category_item_n8Rq2Z",
+        "category_item_vT4mPx",
+        "category_item_hK9wLb",
+        "category_item_rF2sYc",
+        "category_item_eD6pNa"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "item_alignment": "left",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "show_section_divider": true,
+        "divider_width": "full"
+      }
+    },
+    "product_tabs_Bt7fWk": {
+      "type": "product-tabs",
+      "blocks": {
+        "tab_Bt01aA": {
+          "type": "tab",
+          "settings": {
+            "title": "",
+            "collection": "best-sellers"
+          }
+        },
+        "tab_Bt02bB": {
+          "type": "tab",
+          "settings": {
+            "title": "",
+            "collection": "bracelets"
+          }
+        },
+        "tab_Bt03cC": {
+          "type": "tab",
+          "settings": {
+            "title": "",
+            "collection": "earnings"
+          }
+        }
+      },
+      "block_order": [
+        "tab_Bt01aA",
+        "tab_Bt02bB",
+        "tab_Bt03cC"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "header_layout": "horizontal",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_highlight_style": "none",
+        "limit": 4,
+        "columns": 4,
+        "column_gap": "small",
+        "row_gap": "inherit",
+        "grid_layout": "standard",
+        "pcard_image_ratio": "3/4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_all_button_on_top": true,
+        "button_label": "View All",
+        "button_link": "/collections/all",
+        "button_style": "btn--underline",
+        "tabs_nav_style": "design-1",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "worn_by_you_qXyZ12": {
+      "type": "worn-by-you",
+      "blocks": {
+        "photo_hLp1Aa": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/WhatsAppImage2026-07-31at8.48.30PM_1.jpg",
+            "quote": "Perfect for wedding season.",
+            "customer_name": "Zainab",
+            "customer_location": "Lahore",
+            "show_badge": true
+          }
+        },
+        "photo_bNq2Cd": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/WhatsAppImage2026-07-31at8.48.30PM_2.jpg",
+            "quote": "My everyday stack.",
+            "customer_name": "Saba",
+            "customer_location": "Karachi",
+            "show_badge": true
+          }
+        },
+        "photo_fRt3Ez": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/WhatsAppImage2026-07-31at8.48.29PM.jpg",
+            "quote": "The packaging is 10/10.",
+            "customer_name": "Mahnoor",
+            "customer_location": "Islamabad",
+            "show_badge": true
+          }
+        }
+      },
+      "block_order": [
+        "photo_hLp1Aa",
+        "photo_bNq2Cd",
+        "photo_fRt3Ez"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "subheading": "",
+        "heading": "Worn By You",
+        "heading_size": "h1",
+        "heading_highlight_style": "none",
+        "description": "<p>Real customers. Real jewellery. Real outfits.</p>",
+        "description_size": "text-base",
+        "image_ratio": "3/4",
+        "columns_desktop": 3,
+        "column_gap": "medium",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "shop_by_category_mV7hTx": {
+      "type": "shop-by-category",
+      "blocks": {
+        "grid_image_Qw1a2B": {
+          "type": "grid_image",
+          "settings": {
+            "image": "shopify://shop_images/WhatsAppImage2026-07-31at8.48.30PM.jpg",
+            "link": "shopify://collections/bundles"
+          }
+        },
+        "grid_image_Rt3c4D": {
+          "type": "grid_image",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2026-07-30_at_9.03.22_PM_1.jpg",
+            "link": "shopify://collections/bracelets"
+          }
+        },
+        "grid_image_Sy5e6F": {
+          "type": "grid_image",
+          "settings": {
+            "image": "shopify://shop_images/WhatsAppImage2026-07-30at9.03.18PM.jpg",
+            "link": "shopify://collections/featured"
+          }
+        },
+        "grid_image_Tu7g8H": {
+          "type": "grid_image",
+          "settings": {
+            "image": "shopify://shop_images/WhatsAppImage2026-07-30at4.29.38PM_1.jpg",
+            "link": "shopify://collections/charm-holders"
+          }
+        }
+      },
+      "block_order": [
+        "grid_image_Qw1a2B",
+        "grid_image_Rt3c4D",
+        "grid_image_Sy5e6F",
+        "grid_image_Tu7g8H"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "Shop by category",
+        "heading_size": "hd2",
+        "collection": "best-sellers",
+        "link_label": "",
+        "link": "",
+        "main_image": "shopify://shop_images/WhatsAppImage2026-07-30at4.27.48PM_1.jpg",
+        "main_image_link": "shopify://collections/best-sellers",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "personalized_gift_Pg8qWn": {
+      "type": "personalized-gift",
+      "blocks": {
+        "feature_Pg01aB": {
+          "type": "feature",
+          "settings": {
+            "color_scheme": "",
+            "label": "Budget Friendly",
+            "value": "Under Rs. 1,500"
+          }
+        },
+        "feature_Pg02cD": {
+          "type": "feature",
+          "settings": {
+            "color_scheme": "",
+            "label": "Thoughtful Details",
+            "value": "Personalised Gifts"
+          }
+        }
+      },
+      "block_order": [
+        "feature_Pg01aB",
+        "feature_Pg02cD"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "subheading": "",
+        "heading": "A Gift That Does Not Feel Last-Minute",
+        "heading_size": "h2",
+        "heading_highlight_style": "none",
+        "description": "<p>Every Motiyaar piece arrives in our signature premium packaging—beautifully boxed and ready to make someone's day.</p>",
+        "product": "banana-charm",
+        "badge_text": "Bundle & Save 15%",
+        "custom_description": "<p>Includes our Best-Selling necklace, earrings & bracelet.</p>",
+        "button_label": "Add Set to Cart",
+        "card_color_scheme": "scheme-1",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "trust_badges_Ab12Cd": {
+      "type": "trust-badges",
+      "blocks": {
+        "badge_Ab12Ce": {
+          "type": "badge",
+          "settings": {
+            "icon": "check-circle",
+            "icon_style": "btn--secondary",
+            "heading": "Quality Checked",
+            "text": "Every piece is inspected before dispatch."
+          }
+        },
+        "badge_Ab12Cf": {
+          "type": "badge",
+          "settings": {
+            "icon": "gift",
+            "icon_style": "btn--secondary",
+            "heading": "Gift-Ready Packaging",
+            "text": "Ready to make their moment feel special."
+          }
+        },
+        "badge_Ab12Cg": {
+          "type": "badge",
+          "settings": {
+            "icon": "lock",
+            "icon_style": "btn--secondary",
+            "heading": "Secure Checkout",
+            "text": "Your payment details stay protected."
+          }
+        },
+        "badge_Ab12Ch": {
+          "type": "badge",
+          "settings": {
+            "icon": "truck",
+            "icon_style": "btn--secondary",
+            "heading": "Nationwide Delivery",
+            "text": "Carefully delivered across Pakistan."
+          }
+        }
+      },
+      "block_order": [
+        "badge_Ab12Ce",
+        "badge_Ab12Cf",
+        "badge_Ab12Cg",
+        "badge_Ab12Ch"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "columns_desktop": "4",
+        "icon_size": "medium",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "faq_questions_Fq3mZx": {
+      "type": "faq-questions",
+      "blocks": {
+        "question_Fq01aB": {
+          "type": "question",
+          "settings": {
+            "question": "Is this real gold?",
+            "answer": "<p>Our jewellery is crafted with high-quality gold plating over premium base metals, giving you a real-gold look that lasts.</p>",
+            "open": false
+          }
+        },
+        "question_Fq02cD": {
+          "type": "question",
+          "settings": {
+            "question": "Will the colour fade?",
+            "answer": "<p>With proper care — avoiding water, perfume and harsh chemicals — the colour is designed to stay vibrant for a long time.</p>",
+            "open": false
+          }
+        },
+        "question_Fq03eF": {
+          "type": "question",
+          "settings": {
+            "question": "Is it safe for sensitive skin?",
+            "answer": "<p>Yes, our pieces are nickel-free and hypoallergenic, making them safe for everyday wear on sensitive skin.</p>",
+            "open": false
+          }
+        },
+        "question_Fq04gH": {
+          "type": "question",
+          "settings": {
+            "question": "Will it look like the photos?",
+            "answer": "<p>Absolutely. All our product photos are true to life, so what you see is exactly what you get.</p>",
+            "open": false
+          }
+        },
+        "question_Fq05iJ": {
+          "type": "question",
+          "settings": {
+            "question": "Do you offer cash on delivery?",
+            "answer": "<p>Yes, cash on delivery is available nationwide alongside secure online payment options.</p>",
+            "open": false
+          }
+        },
+        "question_Fq06kL": {
+          "type": "question",
+          "settings": {
+            "question": "What if the ring doesn't fit?",
+            "answer": "<p>No worries — we offer easy exchanges so you can get the perfect fit.</p>",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "question_Fq01aB",
+        "question_Fq02cD",
+        "question_Fq03eF",
+        "question_Fq04gH",
+        "question_Fq05iJ",
+        "question_Fq06kL"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-8",
+        "subheading": "Before you order",
+        "heading": "Questions we get every day",
+        "heading_size": "h2",
+        "link_label": "Ask us on WhatsApp",
+        "link_url": "",
+        "item_color_scheme": "scheme-1",
+        "columns_desktop": "2",
+        "column_gap": "medium",
+        "row_gap": "medium",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "customer_reviews_Rv3wKp": {
+      "type": "customer-reviews",
+      "blocks": {
+        "review_Nh82Ta": {
+          "type": "review",
+          "settings": {
+            "rating": "5-stars",
+            "product_name": "ZIRCON HEART NECKLACE",
+            "quote": "Wore this to my cousin's wedding and got so many compliments. Packaging was gorgeous too.",
+            "author": "Fatima A.",
+            "location": "Lahore",
+            "show_verified_badge": true,
+            "review_time": "3 days ago"
+          }
+        },
+        "review_Bq91Ux": {
+          "type": "review",
+          "settings": {
+            "rating": "5-stars",
+            "product_name": "PERSONALIZED BIRTHSTONE NECKLACE",
+            "quote": "Ordered with my sister's name. She cried. Worth every rupee.",
+            "author": "Mariam S.",
+            "location": "Karachi",
+            "show_verified_badge": true,
+            "review_time": "1 week ago"
+          }
+        },
+        "review_Cf47Lm": {
+          "type": "review",
+          "settings": {
+            "rating": "4-stars",
+            "product_name": "GOLD BEAR NECKLACE",
+            "quote": "Super cute, exactly as shown. Delivery was fast. Minus one star only because I wanted more colour options.",
+            "author": "Layla R.",
+            "location": "Islamabad",
+            "show_verified_badge": true,
+            "review_time": "2 weeks ago"
+          }
+        }
+      },
+      "block_order": [
+        "review_Nh82Ta",
+        "review_Bq91Ux",
+        "review_Cf47Lm"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "card_color_scheme": "scheme-1",
+        "subheading": "",
+        "heading": "What Customers Are Saying",
+        "heading_size": "h1",
+        "heading_highlight_style": "none",
+        "description": "",
+        "description_size": "text-base",
+        "columns_desktop": 3,
+        "column_gap": "medium",
+        "autoplay": false,
+        "autoplay_delay": 5,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "email_capture_pR8tWq": {
+      "type": "email-capture",
+      "settings": {
+        "color_scheme": "scheme-inverse",
+        "box_width": 780,
+        "subheading": "",
+        "heading": "Get First Access, Not More Spam",
+        "heading_size": "h1",
+        "heading_highlight_style": "none",
+        "description": "<p>New drops, limited pieces and private offers — sent occasionally.</p>",
+        "text_size": "text-base",
+        "placeholder": "Enter your email address",
+        "button_label": "Unlock First Access",
+        "button_style": "btn--white",
+        "terms_text": "<p>No spam. Unsubscribe any time.</p>",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "trust_hero_Rn5aWx",
+    "category_pills_bK5xQn",
+    "product_tabs_Bt7fWk",
+    "worn_by_you_qXyZ12",
+    "shop_by_category_mV7hTx",
+    "personalized_gift_Pg8qWn",
+    "trust_badges_Ab12Cd",
+    "faq_questions_Fq3mZx",
+    "customer_reviews_Rv3wKp",
+    "email_capture_pR8tWq"
+  ]
+}
