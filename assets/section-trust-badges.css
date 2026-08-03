@@ -20,6 +20,16 @@
 .trust-badges__icon .icon {
   margin: 0;
 }
+.trust-badges__icon--image {
+  padding: 0;
+  border: none;
+}
+.trust-badges__icon--image img {
+  width: 4.8rem;
+  height: 4.8rem;
+  object-fit: contain;
+  display: block;
+}
 
 .trust-badges__heading {
   margin: 0;
