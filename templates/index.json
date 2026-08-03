@@ -222,23 +222,39 @@
             "collection": "best-sellers"
           }
         },
+        "tab_dxUzdQ": {
+          "type": "tab",
+          "settings": {
+            "title": "",
+            "collection": "under-rs-000"
+          }
+        },
+        "tab_EHir3g": {
+          "type": "tab",
+          "settings": {
+            "title": "",
+            "collection": "under-rs-2000"
+          }
+        },
         "tab_Bt02bB": {
           "type": "tab",
           "settings": {
             "title": "",
-            "collection": "bracelets"
+            "collection": "rings"
           }
         },
         "tab_Bt03cC": {
           "type": "tab",
           "settings": {
             "title": "",
-            "collection": "earnings"
+            "collection": "new-arrivals"
           }
         }
       },
       "block_order": [
         "tab_Bt01aA",
+        "tab_dxUzdQ",
+        "tab_EHir3g",
         "tab_Bt02bB",
         "tab_Bt03cC"
       ],
