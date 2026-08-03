@@ -5,12 +5,14 @@
   flex-wrap: wrap;
   gap: 1.2rem 2.4rem;
   margin-bottom: 2.4rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(var(--color-foreground), 0.12);
 }
 
 .sbc__heading {
   margin: 0;
+}
+
+.sbc__heading h2 {
+  font-size: 40px;
 }
 
 .sbc__link {
@@ -78,12 +80,16 @@
   }
 }
 
-@media (max-width: 479px) {
+@media (max-width: 749px) {
   .sbc__side {
     gap: 0.8rem;
   }
 
   .sbc__grid {
     gap: 0.8rem;
+  }
+
+  .sbc__heading h2 {
+    font-size: 28px;
   }
 }
