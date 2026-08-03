@@ -67,7 +67,7 @@
   font-size: var(--font-body-size);
   line-height: var(--font-body-line-height);
   padding: .9rem 1.6rem;
-  border: 1px solid rgb(230,230,230) !important;
+  border: 1px solid #333 !important;
   background: rgb(255,255,255) !important;
   color: rgb(0,0,0) !important;
   text-decoration: none;
