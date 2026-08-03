@@ -42,7 +42,7 @@
 }
 .footer-info__rating-stars {
   gap: 0.2rem;
-  color: var(--footer-info-accent, #d8a35c);
+  color: #d8a35c;
 }
 .footer-info__rating-stars .icon-star {
   width: 1.4rem;
