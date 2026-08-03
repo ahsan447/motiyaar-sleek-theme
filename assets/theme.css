@@ -1600,7 +1600,7 @@ video-element[suspended] ~ * {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color: var(--color-cart-bubble);
+  background-color: #000
   color: #fff;
   display: inline-flex;
   align-items: center;

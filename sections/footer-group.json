@@ -100,7 +100,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-inverse",
-        "accent_color": "#d8a35c",
+        "accent_color": "#FFFFFF",
         "copyright_text": "Motiyaar · Lahore, Pakistan",
         "show_payment_badges": true,
         "padding_top": 60,
