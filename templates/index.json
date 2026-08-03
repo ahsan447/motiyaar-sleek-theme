@@ -75,6 +75,7 @@
         },
         "trust_badge_Tb1a09": {
           "type": "trust_badge",
+          "disabled": true,
           "settings": {
             "icon": "seal-check",
             "label": "Quality Checked"
@@ -82,6 +83,7 @@
         },
         "trust_badge_Tb1a10": {
           "type": "trust_badge",
+          "disabled": true,
           "settings": {
             "icon": "gift",
             "label": "Gift-Ready Packaging"
@@ -89,6 +91,7 @@
         },
         "trust_badge_Tb1a11": {
           "type": "trust_badge",
+          "disabled": true,
           "settings": {
             "icon": "lock",
             "label": "Secure Checkout"
@@ -96,6 +99,7 @@
         },
         "trust_badge_Tb1a12": {
           "type": "trust_badge",
+          "disabled": true,
           "settings": {
             "icon": "truck",
             "label": "Nationwide Delivery"

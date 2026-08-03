@@ -75,6 +75,12 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": true,
+    "products_recommendations": [
+      "banana-charm",
+      "birthstone-silver-charms",
+      "black-pearl-golden-chain-bracelet",
+      "blossom-bow-necklace"
+    ],
     "currency_code_enabled": false,
     "preorder_threshold": 10,
     "buttons_uppercase": false,
