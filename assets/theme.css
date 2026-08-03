@@ -5968,7 +5968,7 @@ body:not(.header-pinned) .header-scrolled .header {
 }
 .mega-menu__item-wrapper {
   padding-inline-start: 2rem;
-  border-inline-start: 0.1rem solid rgb(var(--color-border));
+  border-inline-start: none;
 }
 .mega-menu__product-list--header {
   margin-block-end: 1.2rem;
