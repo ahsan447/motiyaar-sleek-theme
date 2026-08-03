@@ -1,0 +1,123 @@
+.footer-info__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.6rem 2.4rem;
+}
+@media screen and (min-width: 700px) {
+  .footer-info__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer-info__grid {
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 4rem 3rem;
+  }
+}
+
+.footer-info__brand-name {
+  margin: 0 0 1.2rem;
+  font-family: var(--font-heading-family);
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.footer-info__brand-text {
+  margin: 0 0 2rem;
+  max-width: 32rem;
+  color: rgba(var(--color-foreground), 0.65);
+  line-height: 1.6;
+}
+.footer-info__brand-text p {
+  margin: 0;
+}
+
+.footer-info__rating {
+  gap: 0.8rem;
+  padding: 0.9rem 1.6rem;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.18);
+  border-radius: 999px;
+}
+.footer-info__rating-stars {
+  gap: 0.2rem;
+  color: var(--footer-info-accent, #d8a35c);
+}
+.footer-info__rating-stars .icon-star {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.footer-info__rating-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.footer-info__col-heading {
+  margin: 0 0 1.6rem;
+  color: var(--footer-info-accent, #d8a35c);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-info__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-info__link {
+  color: rgba(var(--color-foreground), 0.75);
+  text-decoration: none;
+  transition: color var(--duration-default, 200ms) ease;
+}
+.footer-info__link:hover {
+  color: rgb(var(--color-foreground));
+}
+.footer-info__link[aria-disabled='true'] {
+  cursor: default;
+}
+
+.footer-info__bottom {
+  flex-wrap: wrap;
+  gap: 1.6rem 2.4rem;
+  margin-top: 4rem;
+  padding-top: 2.4rem;
+  border-top: 0.1rem solid rgba(var(--color-foreground), 0.14);
+}
+
+.footer-info__copyright {
+  margin: 0;
+  color: rgba(var(--color-foreground), 0.6);
+  font-size: 1.3rem;
+}
+
+.footer-info__payment {
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-info__payment-badge {
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background-color: rgba(var(--color-foreground), 0.08);
+  color: rgba(var(--color-foreground), 0.75);
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 699.98px) {
+  .footer-info__bottom {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-info__payment {
+    justify-content: center;
+  }
+}

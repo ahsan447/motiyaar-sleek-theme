@@ -3839,6 +3839,27 @@ input:is([type=radio])::after {
   align-items: flex-start;
   gap: 0.6rem;
 }
+.product-card__badge--right {
+  inset-inline-start: auto;
+  inset-inline-end: 1.2rem;
+}
+.product-card__badge--right .f-badge {
+  text-transform: uppercase;
+}
+.product-card__stock-status {
+  margin: 0;
+  font-size: calc(var(--font-body-size) * 0.85);
+  color: var(--color-badge-sale, #c32b2b);
+}
+.product-card__add-to-bag {
+  margin-top: 0.6rem;
+}
+.product-card__add-to-bag-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 .product-card__quickview {
   position: absolute;
   top: 2rem;

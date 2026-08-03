@@ -2,71 +2,81 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "footer": {
-      "type": "footer",
+    "footer_info": {
+      "type": "footer-info",
       "blocks": {
-        "newsletter_3qCrWc": {
-          "type": "newsletter",
+        "brand_1": {
+          "type": "brand",
           "settings": {
-            "block_width": 41,
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1",
-            "newsletter_description": "<p>Be the first to know about new collections and exclusive offers.<\/p>",
-            "newsletter_term": "<p>By subscribing you agree to the <a href=\"#\">Terms of Use<\/a> & <a href=\"#\">Privacy Policy.<\/a><\/p>",
-            "newsletter_text_alignment": "left",
-            "form_width": 465,
-            "order_first": true
+            "heading": "MOTIYAAR",
+            "text": "<p>Everyday gold-plated jewellery made in Lahore. Designed to be worn, not saved for weddings.<\/p>",
+            "show_rating": true,
+            "rating_stars": "5-stars",
+            "rating_text": "4.8 from 2,140 reviews"
           }
         },
-        "image_text_F3FNhx": {
-          "type": "image_text",
+        "link_column_shop": {
+          "type": "link_column",
           "settings": {
-            "block_width": 25,
-            "heading": "About",
-            "heading_size": "h4",
-            "image_width": 150,
-            "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>",
-            "button_label": "Button label",
-            "button_link": "",
-            "open_default": false
+            "heading": "Shop",
+            "link_1_text": "New in",
+            "link_1_url": "",
+            "link_2_text": "Adjustable rings",
+            "link_2_url": "",
+            "link_3_text": "Statement rings",
+            "link_3_url": "",
+            "link_4_text": "Under Rs. 1,500",
+            "link_4_url": "",
+            "link_5_text": "Gifting",
+            "link_5_url": ""
           }
         },
-        "menu_DEKGYP": {
-          "type": "menu",
+        "link_column_help": {
+          "type": "link_column",
           "settings": {
-            "block_width": 17,
-            "heading": "Quick links",
-            "heading_size": "h4",
-            "open_default": false
+            "heading": "Help",
+            "link_1_text": "Track your order",
+            "link_1_url": "",
+            "link_2_text": "Shipping & COD",
+            "link_2_url": "",
+            "link_3_text": "7-day exchange",
+            "link_3_url": "",
+            "link_4_text": "Ring size guide",
+            "link_4_url": "",
+            "link_5_text": "Care & plating promise",
+            "link_5_url": ""
           }
         },
-        "menu_4eCrBB": {
-          "type": "menu",
+        "link_column_contact": {
+          "type": "link_column",
           "settings": {
-            "block_width": 17,
-            "heading": "Quick links",
-            "heading_size": "h4",
-            "open_default": false
+            "heading": "Contact",
+            "link_1_text": "WhatsApp 0300 000 0000",
+            "link_1_url": "https:\/\/wa.me\/923000000000",
+            "link_2_text": "hello@motiyaar.com",
+            "link_2_url": "mailto:hello@motiyaar.com",
+            "link_3_text": "Instagram",
+            "link_3_url": "https:\/\/instagram.com",
+            "link_4_text": "TikTok",
+            "link_4_url": "https:\/\/tiktok.com",
+            "link_5_text": "Mon–Sat, 11am–8pm",
+            "link_5_url": ""
           }
         }
       },
       "block_order": [
-        "newsletter_3qCrWc",
-        "image_text_F3FNhx",
-        "menu_DEKGYP",
-        "menu_4eCrBB"
-      ],
-      "custom_css": [
-        ".form-control {--color-border: var(--color-field);}"
+        "brand_1",
+        "link_column_shop",
+        "link_column_help",
+        "link_column_contact"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "enable_follow_on_shop": true,
-        "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": false,
-        "payment_enable": true,
-        "show_section_divider": true,
+        "color_scheme": "scheme-inverse",
+        "accent_color": "#d8a35c",
+        "copyright_text": "Motiyaar · Lahore, Pakistan",
+        "show_payment_badges": true,
+        "payment_badges": "Cash on delivery\nEasypaisa\nJazzCash\nDebit \/ credit card",
+        "show_section_divider": false,
         "divider_width": "full"
       }
     },
@@ -121,7 +131,7 @@
     }
   },
   "order": [
-    "footer",
+    "footer_info",
     "mobile_sticky_bar_aYhgJK"
   ]
 }

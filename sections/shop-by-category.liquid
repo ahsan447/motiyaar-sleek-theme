@@ -1,0 +1,297 @@
+{{ 'section-shop-by-category.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign collection = section.settings.collection
+  assign top_link = section.settings.link
+  assign top_link_label = section.settings.link_label
+
+  if collection != blank
+    if top_link == blank
+      assign top_link = collection.url
+    endif
+    if top_link_label == blank
+      assign top_link_label = 'All ' | append: collection.all_products_count | append: ' pieces'
+    endif
+  endif
+
+  assign main_link = section.settings.main_image_link
+  if main_link == blank
+    assign main_link = top_link
+  endif
+-%}
+{% render 'divider',
+  show_divider: section.settings.show_section_divider,
+  divider_width: section.settings.divider_width
+%}
+<div
+  class="section section--shop-by-category section--padding page-width color-{{ section.settings.color_scheme }}"
+  style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="sbc__header">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="sbc__heading {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if top_link_label != blank -%}
+      <a
+        class="sbc__link text-subheading reversed-link"
+        {% if top_link != blank %}
+          href="{{ top_link }}"
+        {% else %}
+          aria-disabled="true"
+          tabindex="-1"
+        {% endif %}
+      >
+        {{- top_link_label -}}
+      </a>
+    {%- endif -%}
+  </div>
+  <div class="sbc__grid">
+    <a
+      class="sbc__main blocks-radius"
+      {% if main_link != blank %}
+        href="{{ main_link }}"
+      {% else %}
+        aria-disabled="true"
+        tabindex="-1"
+      {% endif %}
+    >
+      {%- if section.settings.main_image != blank -%}
+        {{
+          section.settings.main_image
+          | image_url: width: 1200
+          | image_tag:
+            loading: 'lazy',
+            fetchpriority: 'low',
+            class: 'sbc__main-media motion-reduce',
+            widths: '375, 550, 750, 1100, 1500, 1780, 2000',
+            sizes: '(min-width: 768px) 40vw, 100vw',
+            is: 'image-lazy'
+        }}
+      {%- else -%}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg sbc__main-media' }}
+      {%- endif -%}
+    </a>
+    <div class="sbc__side">
+      {%- for i in (1..4) -%}
+        {%- liquid
+          assign block = section.blocks[forloop.index0]
+          assign item_image = blank
+          assign item_link = top_link
+          if block != blank
+            assign item_image = block.settings.image
+            if block.settings.link != blank
+              assign item_link = block.settings.link
+            endif
+          endif
+        -%}
+        <a
+          class="sbc__side-item blocks-radius"
+          {% if item_link != blank %}
+            href="{{ item_link }}"
+          {% else %}
+            aria-disabled="true"
+            tabindex="-1"
+          {% endif %}
+          {% if block != blank %}
+            {{ block.shopify_attributes }}
+          {% endif %}
+        >
+          {%- if item_image != blank -%}
+            {{
+              item_image
+              | image_url: width: 700
+              | image_tag:
+                loading: 'lazy',
+                fetchpriority: 'low',
+                class: 'sbc__side-media motion-reduce',
+                widths: '275, 375, 550, 750, 1100',
+                sizes: '(min-width: 768px) 20vw, 50vw',
+                is: 'image-lazy'
+            }}
+          {%- else -%}
+            {%- liquid
+              assign current = i | plus: 1
+            -%}
+            {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg sbc__side-media' }}
+          {%- endif -%}
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "t:sections.shop-by-category.name",
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.general.name"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.section_header.content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "t:sections.all.heading.label",
+      "default": "Shop by category"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "t:sections.all.text_size.heading.label",
+      "default": "hd2",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.text_size.options__h2.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.text_size.options__h1.label"
+        },
+        {
+          "value": "hd3",
+          "label": "t:sections.all.text_size.options__hd3.label"
+        },
+        {
+          "value": "hd2",
+          "label": "t:sections.all.text_size.options__hd2.label"
+        },
+        {
+          "value": "hd1",
+          "label": "t:sections.all.text_size.options__hd1.label"
+        }
+      ]
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.all.collection.label",
+      "info": "t:sections.shop-by-category.settings.collection.info"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "t:sections.all.button.button_label.label",
+      "info": "t:sections.shop-by-category.settings.link_label.info"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:sections.all.link.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.shop-by-category.settings.main_image.header"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "t:sections.all.image.label"
+    },
+    {
+      "type": "url",
+      "id": "main_image_link",
+      "label": "t:sections.all.link.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 60,
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 60,
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.divider.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_section_divider",
+      "default": false,
+      "label": "t:sections.all.divider.settings.show_divider.label"
+    },
+    {
+      "type": "select",
+      "id": "divider_width",
+      "options": [
+        {
+          "value": "fixed",
+          "label": "t:sections.all.container.options__fixed.label"
+        },
+        {
+          "value": "full",
+          "label": "t:sections.all.container.options__full.label"
+        }
+      ],
+      "default": "fixed",
+      "label": "t:sections.all.divider.settings.divider_width.label"
+    }
+  ],
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "grid_image",
+      "name": "t:sections.shop-by-category.blocks.grid_image.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.all.image.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.all.link.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.shop-by-category.name",
+      "blocks": [
+        {
+          "type": "grid_image"
+        },
+        {
+          "type": "grid_image"
+        },
+        {
+          "type": "grid_image"
+        },
+        {
+          "type": "grid_image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

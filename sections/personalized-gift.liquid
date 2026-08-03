@@ -1,0 +1,402 @@
+{{ 'section-personalized-gift.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign card_product = section.settings.product
+  assign feature_blocks = section.blocks | where: 'type', 'feature'
+  assign motion_delay = 50
+
+  assign loading = 'lazy'
+  assign fetchpriority = 'auto'
+  if section.index <= 2
+    assign loading = 'eager'
+    assign fetchpriority = 'high'
+  endif
+
+  assign button_label = section.settings.button_label
+  if button_label == blank
+    assign button_label = 'products.product.add_to_cart' | t
+  endif
+-%}
+
+{% render 'divider',
+  show_divider: section.settings.show_section_divider,
+  divider_width: section.settings.divider_width
+%}
+
+<div
+  class="section section-{{ section.id }} section--padding personalized-gift color-{{ section.settings.color_scheme }}"
+  style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="page-width">
+    <div class="personalized-gift__wrapper f-grid f-grid-1-cols lg:f-grid-2-cols items-center">
+      <div class="personalized-gift__content">
+        {%- if section.settings.subheading != blank -%}
+          <motion-element
+            data-motion="fade-up"
+            data-motion-delay="{{ motion_delay }}"
+            class="personalized-gift__subheading text-subheading block"
+          >
+            {{- section.settings.subheading -}}
+          </motion-element>
+          {%- assign motion_delay = motion_delay | plus: 50 -%}
+        {%- endif -%}
+
+        {%- if section.settings.heading != blank -%}
+          <h2 class="personalized-gift__heading {{ section.settings.heading_size }}">
+            <motion-element class="block" data-motion="fade-up" data-motion-delay="{{ motion_delay }}">
+              {% render 'highlight-text',
+                text: section.settings.heading,
+                style: section.settings.heading_highlight_style
+              %}
+            </motion-element>
+          </h2>
+          {%- assign motion_delay = motion_delay | plus: 50 -%}
+        {%- endif -%}
+
+        {%- if section.settings.description != blank -%}
+          <motion-element
+            data-motion="fade-up"
+            data-motion-delay="{{ motion_delay }}"
+            class="personalized-gift__description rte block"
+          >
+            {{- section.settings.description -}}
+          </motion-element>
+          {%- assign motion_delay = motion_delay | plus: 50 -%}
+        {%- endif -%}
+
+        {%- if feature_blocks.size > 0 -%}
+          <motion-element
+            data-motion="fade-up"
+            data-motion-delay="{{ motion_delay }}"
+            class="personalized-gift__features flex flex-wrap"
+          >
+            {%- for block in feature_blocks -%}
+              <div
+                class="personalized-gift__feature blocks-radius-md color-{{ block.settings.color_scheme }}"
+                {{ block.shopify_attributes }}
+              >
+                {%- if block.settings.label != blank -%}
+                  <p class="personalized-gift__feature-label text-sm">{{ block.settings.label }}</p>
+                {%- endif -%}
+                {%- if block.settings.value != blank -%}
+                  <p class="personalized-gift__feature-value h5">{{ block.settings.value }}</p>
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </motion-element>
+          {%- assign motion_delay = motion_delay | plus: 50 -%}
+        {%- endif -%}
+      </div>
+
+      <motion-element
+        data-motion="fade-up"
+        data-motion-delay="150"
+        class="block personalized-gift__card-wrap"
+      >
+        <div class="personalized-gift__card blocks-radius color-{{ section.settings.card_color_scheme }}">
+          <div class="personalized-gift__card-media">
+            <div class="media-wrapper blocks-radius-md" style="--aspect-ratio: 0.82;">
+              {%- if section.settings.image != blank -%}
+                {{
+                  section.settings.image
+                  | image_url: width: 800
+                  | image_tag:
+                    loading: loading,
+                    fetchpriority: fetchpriority,
+                    widths: '165, 275, 360, 535, 750, 800',
+                    sizes: '(min-width: 1024px) 240px, (min-width: 768px) 200px, 40vw',
+                    is: 'image-lazy'
+                }}
+              {%- elsif card_product.featured_image -%}
+                {{
+                  card_product.featured_image
+                  | image_url: width: 800
+                  | image_tag:
+                    loading: loading,
+                    fetchpriority: fetchpriority,
+                    widths: '165, 275, 360, 535, 750, 800',
+                    sizes: '(min-width: 1024px) 240px, (min-width: 768px) 200px, 40vw',
+                    is: 'image-lazy'
+                }}
+              {%- else -%}
+                {{- 'product-4' | placeholder_svg_tag: 'placeholder-svg' -}}
+              {%- endif -%}
+            </div>
+          </div>
+          <div class="personalized-gift__card-content">
+            {%- if section.settings.badge_text != blank -%}
+              <span class="personalized-gift__card-badge">{{ section.settings.badge_text }}</span>
+            {%- endif -%}
+            <h3 class="personalized-gift__card-title h4">
+              {%- if card_product != blank -%}
+                <a href="{{ card_product.url }}">{{ card_product.title }}</a>
+              {%- else -%}
+                {{ 'onboarding.product_title' | t }}
+              {%- endif -%}
+            </h3>
+            {%- if section.settings.custom_description != blank -%}
+              <div class="personalized-gift__card-description rte text-sm">
+                {{- section.settings.custom_description -}}
+              </div>
+            {%- endif -%}
+            {%- if card_product != blank -%}
+              {% render 'price', product: card_product, use_variant: true, price_class: 'personalized-gift__card-price' %}
+            {%- endif -%}
+
+            {%- if card_product != blank and card_product.selected_or_first_available_variant != blank -%}
+              {%- form 'product', card_product, class: 'product-form', novalidate: 'novalidate', data-type: 'add-to-cart-form', is: 'product-form' -%}
+                <input
+                  type="hidden"
+                  name="id"
+                  value="{{ card_product.selected_or_first_available_variant.id }}"
+                  class="product-variant-id"
+                >
+                <div class="product-form__buttons">
+                  <button
+                    type="submit"
+                    name="add"
+                    class="personalized-gift__card-button btn btn--primary w-full"
+                    {% if card_product.selected_or_first_available_variant.available == false -%}
+                      disabled
+                    {%- endif %}
+                  >
+                    <span>
+                      {%- if card_product.selected_or_first_available_variant.available == false -%}
+                        {{ 'products.product.sold_out' | t }}
+                      {%- else -%}
+                        {{ button_label }}
+                      {%- endif -%}
+                    </span>
+                    {%- render 'loading-spinner' -%}
+                  </button>
+                </div>
+                <div class="product-form__error-message blocks-radius-md alert alert--error" role="alert" hidden></div>
+              {%- endform -%}
+            {%- else -%}
+              <div class="product-form">
+                <div class="product-form__buttons">
+                  <button
+                    type="button"
+                    class="personalized-gift__card-button btn btn--primary w-full"
+                    aria-disabled="true"
+                    disabled
+                  >
+                    <span>{{ button_label }}</span>
+                  </button>
+                </div>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </motion-element>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Personalized gift",
+  "class": "section section-personalized-gift",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.general.name"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.section_header.content"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "t:sections.all.subheading.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "A Gift That Does Not Feel Last-Minute",
+      "label": "t:sections.all.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "t:sections.all.text_size.heading.label",
+      "default": "h2",
+      "options": [
+        { "value": "h6", "label": "t:sections.all.text_size.options__h6.label" },
+        { "value": "h5", "label": "t:sections.all.text_size.options__h5.label" },
+        { "value": "h4", "label": "t:sections.all.text_size.options__h4.label" },
+        { "value": "h3", "label": "t:sections.all.text_size.options__h3.label" },
+        { "value": "h2", "label": "t:sections.all.text_size.options__h2.label" },
+        { "value": "h1", "label": "t:sections.all.text_size.options__h1.label" },
+        { "value": "hd3", "label": "t:sections.all.text_size.options__hd3.label" },
+        { "value": "hd2", "label": "t:sections.all.text_size.options__hd2.label" },
+        { "value": "hd1", "label": "t:sections.all.text_size.options__hd1.label" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.highlight_text.header.content"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.all.highlight_text.paragraph.content"
+    },
+    {
+      "type": "select",
+      "id": "heading_highlight_style",
+      "label": "t:sections.all.highlight_text.settings.highlight_style.label",
+      "options": [
+        { "value": "none", "label": "t:sections.all.highlight_text.settings.highlight_style.options__1.label" },
+        { "value": "underline", "label": "t:sections.all.highlight_text.settings.highlight_style.options__2.label" }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "default": "<p>Every Motiyaar piece arrives in our signature premium packaging—beautifully boxed and ready to make someone's day.</p>",
+      "label": "t:sections.all.description.label"
+    },
+    {
+      "type": "header",
+      "content": "Gift card"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "t:sections.all.product.label",
+      "info": "Used for the product title, price and add to cart button."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.all.image.label",
+      "info": "Optional. Overrides the product's featured image."
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "Bundle & Save 15%"
+    },
+    {
+      "type": "richtext",
+      "id": "custom_description",
+      "label": "Card description",
+      "default": "<p>Includes our Best-Selling necklace, earrings & bracelet.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:sections.all.button.button_label.label",
+      "default": "Add Set to Cart"
+    },
+    {
+      "type": "color_scheme",
+      "id": "card_color_scheme",
+      "label": "Card color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.divider.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_section_divider",
+      "default": false,
+      "label": "t:sections.all.divider.settings.show_divider.label"
+    },
+    {
+      "type": "select",
+      "id": "divider_width",
+      "options": [
+        { "value": "fixed", "label": "t:sections.all.container.options__fixed.label" },
+        { "value": "full", "label": "t:sections.all.container.options__full.label" }
+      ],
+      "default": "fixed",
+      "label": "t:sections.all.divider.settings.divider_width.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature box",
+      "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Budget Friendly"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value",
+          "default": "Under Rs. 1,500"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Personalized gift",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "label": "Budget Friendly",
+            "value": "Under Rs. 1,500"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "label": "Thoughtful Details",
+            "value": "Personalised Gifts"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

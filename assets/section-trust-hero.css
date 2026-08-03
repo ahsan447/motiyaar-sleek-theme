@@ -1,0 +1,132 @@
+.trust-hero__media {
+  min-height: 100%;
+}
+.trust-hero__inner {
+  --padding-x: 2rem;
+  --padding-y: 4rem;
+}
+@media (min-width: 768px) {
+  .trust-hero__inner {
+    --padding-x: 2rem;
+    --padding-y: 3.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .trust-hero__inner {
+    --padding-x: 4.8rem;
+    --padding-y: 4.8rem;
+  }
+}
+@media (min-width: 1280px) {
+  .trust-hero__inner {
+    --padding-x: 6.4rem;
+    --padding-y: 5.6rem;
+  }
+}
+.trust-hero:not(.color-inherit) .trust-hero__inner {
+  padding: var(--padding-y) var(--padding-x);
+}
+@media (max-width: 767.98px) {
+  .trust-hero.color-inherit .trust-hero__inner {
+    padding-top: 2.4rem;
+  }
+}
+@media (min-width: 768px) {
+  .trust-hero--text-first .trust-hero__inner {
+    padding-inline-end: var(--padding-x);
+    order: -1;
+  }
+}
+@media (min-width: 768px) {
+  .trust-hero--image-first .trust-hero__inner {
+    padding-inline-start: var(--padding-x);
+  }
+}
+
+.trust-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.trust-hero__heading {
+  margin: 0.4rem 0;
+}
+
+.trust-hero__buttons {
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.trust-hero__rating {
+  gap: 0.6rem 1.2rem;
+  margin-top: 0.4rem;
+}
+.trust-hero__stars {
+  gap: 0.2rem;
+  color: #c9a227;
+}
+.trust-hero__stars .icon-star {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.trust-hero__rating-value {
+  font-weight: 600;
+}
+.trust-hero__rating-reviews {
+  opacity: 0.7;
+}
+
+.trust-hero__quotes {
+  grid-template-columns: 1fr;
+  gap: 1.6rem 2.4rem;
+  margin-top: 0.8rem;
+  padding-top: 1.6rem;
+  border-top: 0.1rem solid rgba(var(--color-foreground, 17, 17, 17), 0.1);
+}
+@media (min-width: 768px) {
+  .trust-hero__quotes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.trust-hero__quote-text {
+  margin: 0 0 0.6rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+.trust-hero__quote-author {
+  margin: 0;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.trust-hero__badges {
+  margin-top: 3.2rem;
+  padding-top: 2.4rem;
+  border-top: 0.1rem solid rgba(var(--color-foreground, 17, 17, 17), 0.1);
+  gap: 1.6rem 2.4rem;
+  justify-content: space-between;
+}
+.trust-hero__badge {
+  gap: 0.8rem;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+.trust-hero__badge .icon,
+.trust-hero__badge .icon-lock {
+  flex-shrink: 0;
+}
+.trust-hero__badge-label {
+  white-space: nowrap;
+}
+@media (max-width: 767.98px) {
+  .trust-hero__badges {
+    justify-content: center;
+  }
+  .trust-hero__badge {
+    flex: 1 1 calc(50% - 1.2rem);
+  }
+  .trust-hero__badge-label {
+    white-space: normal;
+  }
+}

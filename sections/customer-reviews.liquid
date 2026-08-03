@@ -1,0 +1,401 @@
+{{ 'section-customer-reviews.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'customer-reviews.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign items_desktop = section.settings.columns_desktop
+  assign autoplay = 0
+  if section.settings.autoplay
+    assign autoplay = section.settings.autoplay_delay | times: 1000
+  endif
+  assign motion_delay = 50
+-%}
+
+{% render 'divider',
+  show_divider: section.settings.show_section_divider,
+  divider_width: section.settings.divider_width
+%}
+
+<div
+  class="section section--padding customer-reviews color-{{ section.settings.color_scheme }}"
+  style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="page-width">
+    {% render 'section-heading',
+      section_settings: section.settings,
+      header_alignment: 'center',
+      header_alignment_mobile: 'center',
+      motion_delay: motion_delay
+    %}
+
+    <customer-reviews-slider
+      class="customer-reviews__slider block"
+      data-section-id="{{ section.id }}"
+      data-items-desktop="{{ items_desktop }}"
+      {% if autoplay > 0 %}
+        data-autoplay="{{ autoplay }}"
+      {% endif %}
+    >
+      <div class="customer-reviews__items swiper f-grid--gap-{{ section.settings.column_gap }}">
+        <div class="swiper-wrapper">
+          {%- for block in section.blocks -%}
+            {%- liquid
+              assign rating = block.settings.rating
+              assign product_name = block.settings.product_name
+              assign quote = block.settings.quote
+              assign author = block.settings.author
+              assign location = block.settings.location
+              assign review_time = block.settings.review_time
+            -%}
+            <div class="swiper-slide" data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+              <motion-element
+                data-motion="fade-up"
+                data-motion-delay="{{ motion_delay }}"
+                class="review-card block h-full color-{{ section.settings.card_color_scheme }} blocks-radius"
+              >
+                {%- if rating != 'none' -%}
+                  <div class="review-card__stars flex items-center" role="img" aria-label="{{ rating | replace: '-', ' ' }}">
+                    {% render 'icon-testimonial', icon_name: rating, size: 'small' %}
+                  </div>
+                {%- endif -%}
+                {%- if product_name != blank -%}
+                  <p class="review-card__product text-sm">{{ product_name }}</p>
+                {%- endif -%}
+                {%- if quote != blank -%}
+                  <p class="review-card__quote font-heading font-italic">&ldquo;{{ quote }}&rdquo;</p>
+                {%- endif -%}
+                <div class="review-card__footer">
+                  {%- if author != blank or location != blank -%}
+                    <div class="review-card__author flex items-center flex-wrap gap-x-2">
+                      {%- if author != blank -%}
+                        <span class="review-card__author-name">{{ author }}</span>
+                      {%- endif -%}
+                      {%- if location != blank -%}
+                        <span class="review-card__dot">&bull;</span>
+                        <span class="review-card__location text-subtext">{{ location }}</span>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                  <div class="review-card__meta flex items-center justify-between flex-wrap gap-x-2">
+                    {%- if block.settings.show_verified_badge -%}
+                      <span class="review-card__verified flex items-center gap-x-1">
+                        {%- render 'icon-check', size: 'small' -%}
+                        <span>{{ 'sections.customer_reviews.verified_purchase' | t }}</span>
+                      </span>
+                    {%- else -%}
+                      <span></span>
+                    {%- endif -%}
+                    {%- if review_time != blank -%}
+                      <span class="review-card__time text-subtext">{{ review_time }}</span>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </motion-element>
+            </div>
+            {%- assign motion_delay = motion_delay | plus: 50 -%}
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <div class="customer-reviews__controls flex items-center justify-center">
+        <button
+          type="button"
+          class="swiper-btn-prev btn btn--icon-circle shrink-0"
+          name="previous"
+          aria-label="{{ 'general.slider.previous_slide' | t }}"
+        >
+          {%- render 'icon-slider-prev' -%}
+        </button>
+        <div class="customer-reviews__pagination swiper-pagination"></div>
+        <button
+          type="button"
+          class="swiper-btn-next btn btn--icon-circle shrink-0"
+          name="next"
+          aria-label="{{ 'general.slider.next_slide' | t }}"
+        >
+          {%- render 'icon-slider-next' -%}
+        </button>
+      </div>
+    </customer-reviews-slider>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Customer reviews",
+  "tag": "section",
+  "class": "section section-customer-reviews",
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.general.name"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "card_color_scheme",
+      "label": "Card color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.section_header.content"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "t:sections.all.subheading.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "What Customers Are Saying",
+      "label": "t:sections.all.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "t:sections.all.text_size.heading.label",
+      "default": "h1",
+      "options": [
+        { "value": "h6", "label": "t:sections.all.text_size.options__h6.label" },
+        { "value": "h5", "label": "t:sections.all.text_size.options__h5.label" },
+        { "value": "h4", "label": "t:sections.all.text_size.options__h4.label" },
+        { "value": "h3", "label": "t:sections.all.text_size.options__h3.label" },
+        { "value": "h2", "label": "t:sections.all.text_size.options__h2.label" },
+        { "value": "h1", "label": "t:sections.all.text_size.options__h1.label" },
+        { "value": "hd3", "label": "t:sections.all.text_size.options__hd3.label" },
+        { "value": "hd2", "label": "t:sections.all.text_size.options__hd2.label" },
+        { "value": "hd1", "label": "t:sections.all.text_size.options__hd1.label" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.highlight_text.header.content"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.all.highlight_text.paragraph.content"
+    },
+    {
+      "type": "select",
+      "id": "heading_highlight_style",
+      "label": "t:sections.all.highlight_text.settings.highlight_style.label",
+      "options": [
+        { "value": "none", "label": "t:sections.all.highlight_text.settings.highlight_style.options__1.label" },
+        { "value": "underline", "label": "t:sections.all.highlight_text.settings.highlight_style.options__2.label" }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:sections.all.description.label"
+    },
+    {
+      "type": "select",
+      "id": "description_size",
+      "label": "t:sections.all.text_size.description.label",
+      "default": "text-base",
+      "options": [
+        { "value": "text-sm", "label": "t:sections.all.text_size.options__small.label" },
+        { "value": "text-base", "label": "t:sections.all.text_size.options__base.label" },
+        { "value": "text-lg", "label": "t:sections.all.text_size.options__large.label" },
+        { "value": "text-inherit", "label": "t:sections.all.text_size.options__inherit.label" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.carousel.name"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.all.grid.columns_desktop.label",
+      "info": "On mobile, reviews always show 1 per view in the slider."
+    },
+    {
+      "type": "select",
+      "id": "column_gap",
+      "options": [
+        { "value": "none", "label": "t:sections.all.grid.column_gap.options__none.label" },
+        { "value": "extra-small", "label": "t:sections.all.grid.column_gap.options__xs.label" },
+        { "value": "small", "label": "t:sections.all.grid.column_gap.options__sm.label" },
+        { "value": "medium", "label": "t:sections.all.grid.column_gap.options__md.label" },
+        { "value": "large", "label": "t:sections.all.grid.column_gap.options__lg.label" },
+        { "value": "extra-large", "label": "t:sections.all.grid.column_gap.options__xl.label" }
+      ],
+      "default": "medium",
+      "label": "t:sections.all.grid.column_gap.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "t:sections.all.carousel.autoplay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_delay",
+      "label": "t:sections.all.carousel.autoplay_delay",
+      "max": 10,
+      "min": 2,
+      "step": 1,
+      "unit": "s",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.divider.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_section_divider",
+      "default": false,
+      "label": "t:sections.all.divider.settings.show_divider.label"
+    },
+    {
+      "type": "select",
+      "id": "divider_width",
+      "options": [
+        { "value": "fixed", "label": "t:sections.all.container.options__fixed.label" },
+        { "value": "full", "label": "t:sections.all.container.options__full.label" }
+      ],
+      "default": "fixed",
+      "label": "t:sections.all.divider.settings.divider_width.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "select",
+          "id": "rating",
+          "label": "t:sections.testimonials.blocks.testimonial.settings.icon.label",
+          "options": [
+            { "value": "none", "label": "t:sections.testimonials.blocks.testimonial.settings.icon.options__1.label" },
+            { "value": "1-star", "label": "t:sections.testimonials.blocks.testimonial.settings.icon.options__2.label" },
+            { "value": "2-stars", "label": "t:sections.testimonials.blocks.testimonial.settings.icon.options__3.label" },
+            { "value": "3-stars", "label": "t:sections.testimonials.blocks.testimonial.settings.icon.options__4.label" },
+            { "value": "4-stars", "label": "t:sections.testimonials.blocks.testimonial.settings.icon.options__5.label" },
+            { "value": "5-stars", "label": "t:sections.testimonials.blocks.testimonial.settings.icon.options__6.label" }
+          ],
+          "default": "5-stars"
+        },
+        {
+          "type": "text",
+          "id": "product_name",
+          "label": "Product name",
+          "default": "Product name"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Review text",
+          "default": "Beautiful jewellery, exactly as shown in the photos."
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Customer name",
+          "default": "Customer name"
+        },
+        {
+          "type": "text",
+          "id": "location",
+          "label": "Customer location",
+          "default": "City"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_verified_badge",
+          "label": "Show verified purchase badge",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "review_time",
+          "label": "Review date text",
+          "default": "3 days ago"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Customer reviews",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "rating": "5-stars",
+            "product_name": "ZIRCON HEART NECKLACE",
+            "quote": "Wore this to my cousin's wedding and got so many compliments. Packaging was gorgeous too.",
+            "author": "Fatima A.",
+            "location": "Lahore",
+            "review_time": "3 days ago"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "rating": "5-stars",
+            "product_name": "PERSONALIZED BIRTHSTONE NECKLACE",
+            "quote": "Ordered with my sister's name. She cried. Worth every rupee.",
+            "author": "Mariam S.",
+            "location": "Karachi",
+            "review_time": "1 week ago"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "rating": "4-stars",
+            "product_name": "GOLD BEAR NECKLACE",
+            "quote": "Super cute, exactly as shown. Delivery was fast. Minus one star only because I wanted more colour options.",
+            "author": "Layla R.",
+            "location": "Islamabad",
+            "review_time": "2 weeks ago"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,235 @@
+{{ 'section-category-pills.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign motion_delay = 50
+%}
+
+{% render 'divider',
+  show_divider: section.settings.show_section_divider,
+  divider_width: section.settings.divider_width
+%}
+
+<div
+  class="section section--padding category-pills color-{{ section.settings.color_scheme }}"
+  style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="page-width">
+    <div class="category-pills__content{% if section.settings.swipe_on_mobile %} swipe-mobile{% endif %}">
+      <div class="category-pills__items inline-flex justify-{{ section.settings.item_alignment | replace: 'left', 'start' | replace: 'right', 'end' }}{% if section.settings.swipe_on_mobile %} flex-nowrap md:flex-wrap{% else %} flex-wrap{% endif %}">
+        {%- for block in section.blocks -%}
+          {%- assign motion_delay = motion_delay | plus: 50 -%}
+          {%- assign link = block.settings.link -%}
+          <motion-element
+            data-motion="fade-up"
+            data-motion-delay="{{ motion_delay }}"
+            class="category-pill-wrap"
+            {{ block.shopify_attributes }}
+          >
+            {%- if link != blank -%}
+              <a
+                href="{{ link }}"
+                class="category-pill flex items-center gap-x-2 rounded color-{{ block.settings.color_scheme }}"
+                aria-label="{{ block.settings.text | strip_html }}"
+              >
+            {%- else -%}
+              <span class="category-pill flex items-center gap-x-2 rounded color-{{ block.settings.color_scheme }}">
+            {%- endif -%}
+              {%- if block.settings.icon != blank -%}
+                <span class="category-pill__icon" aria-hidden="true">{{ block.settings.icon }}</span>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <span class="category-pill__text">{{ block.settings.text }}</span>
+              {%- endif -%}
+            {%- if link != blank -%}
+              </a>
+            {%- else -%}
+              </span>
+            {%- endif -%}
+          </motion-element>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Category pills",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.general.name"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "item_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.all.text_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.all.text_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.all.text_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.all.text_alignment.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.mobile.name"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": true,
+      "label": "t:sections.all.mobile.swipe_on_mobile.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.divider.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_section_divider",
+      "default": true,
+      "label": "t:sections.all.divider.settings.show_divider.label"
+    },
+    {
+      "type": "select",
+      "id": "divider_width",
+      "options": [
+        {
+          "value": "fixed",
+          "label": "t:sections.all.container.options__fixed.label"
+        },
+        {
+          "value": "full",
+          "label": "t:sections.all.container.options__full.label"
+        }
+      ],
+      "default": "full",
+      "label": "t:sections.all.divider.settings.divider_width.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_item",
+      "name": "Category pill",
+      "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label"
+        },
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "✨",
+          "info": "Paste an emoji, e.g. 🏅 💎 ✨ 🎁 🎀 ☀️"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Label",
+          "default": "Category"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.all.card_link.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category pills",
+      "blocks": [
+        {
+          "type": "category_item",
+          "settings": {
+            "icon": "🏅",
+            "text": "Best Sellers"
+          }
+        },
+        {
+          "type": "category_item",
+          "settings": {
+            "icon": "💎",
+            "text": "Under Rs. 1,000"
+          }
+        },
+        {
+          "type": "category_item",
+          "settings": {
+            "icon": "✨",
+            "text": "Under Rs. 1,500"
+          }
+        },
+        {
+          "type": "category_item",
+          "settings": {
+            "icon": "🎁",
+            "text": "Gifts Under Rs. 2,000"
+          }
+        },
+        {
+          "type": "category_item",
+          "settings": {
+            "icon": "🎀",
+            "text": "Personalised"
+          }
+        },
+        {
+          "type": "category_item",
+          "settings": {
+            "icon": "☀️",
+            "text": "New Arrivals"
+          }
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["footer", "header", "custom.overlay"]
+  }
+}
+{% endschema %}

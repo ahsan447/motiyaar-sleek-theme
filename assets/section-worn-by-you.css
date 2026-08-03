@@ -1,0 +1,60 @@
+.worn-by-you {
+  overflow: hidden;
+}
+
+.worn-by-you-card__image {
+  margin-bottom: 1.6rem;
+}
+
+.worn-by-you-card__caption {
+  padding-inline: 0.2rem;
+}
+
+.worn-by-you-card__quote {
+  margin: 0 0 0.8rem;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+.worn-by-you-card__quote:before {
+  content: '\201C';
+}
+
+.worn-by-you-card__quote:after {
+  content: '\201D';
+}
+
+.worn-by-you-card__meta {
+  row-gap: 0.4rem;
+  font-size: 1.3rem;
+}
+
+.worn-by-you-card__name {
+  font-weight: var(--font-body-weight-bold, 600);
+}
+
+.worn-by-you-card__dot {
+  opacity: 0.5;
+}
+
+.worn-by-you-card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  flex-shrink: 0;
+  border: 1px solid rgba(var(--color-foreground), 0.35);
+  color: rgb(var(--color-foreground));
+}
+
+.worn-by-you-card__badge .icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .worn-by-you-card__quote {
+    font-size: 1.6rem;
+  }
+}

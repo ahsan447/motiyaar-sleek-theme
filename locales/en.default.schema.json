@@ -1642,6 +1642,25 @@
     "collection-image-showcase": {
       "name": "Collection image showcase"
     },
+    "shop-by-category": {
+      "name": "Shop by category",
+      "settings": {
+        "collection": {
+          "info": "Used to auto-generate the link and piece count if no custom link/label is set"
+        },
+        "link_label": {
+          "info": "Leave blank to auto-generate from the collection's product count"
+        },
+        "main_image": {
+          "header": "Main image"
+        }
+      },
+      "blocks": {
+        "grid_image": {
+          "name": "Grid image"
+        }
+      }
+    },
     "product-tabs": {
       "name": "Product tabs",
       "settings": {
