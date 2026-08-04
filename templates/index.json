@@ -515,8 +515,8 @@
         "question_Fq03eF": {
           "type": "question",
           "settings": {
-            "question": "Is it safe for sensitive skin?",
-            "answer": "<p>Yes, our pieces are nickel-free and hypoallergenic, making them safe for everyday wear on sensitive skin.</p>",
+            "question": "How long will my order take to arrive?",
+            "answer": "<p>Orders are usually processed within <strong>1 working days</strong> and delivered within approximately <strong>[3–7] working days</strong>. Delivery times may be longer during sales, public holidays, severe weather or high-order periods.<br/><br/></p>",
             "open": false
           }
         },
