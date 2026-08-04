@@ -1,4 +1,5 @@
 {{ 'section-trust-hero.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'trust-hero.js' | asset_url }}" defer="defer"></script>
 
 {%- liquid
   assign loading = 'lazy'
@@ -161,20 +162,26 @@
           {%- assign quote_blocks = section.blocks | where: 'type', 'quote' -%}
           {% if quote_blocks.size > 0 %}
             <motion-element
-              class="trust-hero__quotes grid"
+              class="block"
               data-motion="fade-up"
               data-motion-delay="{{ motion_delay }}"
             >
-              {% for block in quote_blocks %}
-                <div class="trust-hero__quote" {{ block.shopify_attributes }}>
-                  {% if block.settings.quote != blank %}
-                    <p class="trust-hero__quote-text text-sm">&ldquo;{{ block.settings.quote }}&rdquo;</p>
-                  {% endif %}
-                  {% if block.settings.author != blank %}
-                    <p class="trust-hero__quote-author text-sm">&mdash; {{ block.settings.author }}</p>
-                  {% endif %}
+              <trust-hero-quotes-slider class="block" data-section-id="{{ section.id }}">
+                <div class="trust-hero__quotes swiper">
+                  <div class="swiper-wrapper">
+                    {% for block in quote_blocks %}
+                      <div class="trust-hero__quote swiper-slide" {{ block.shopify_attributes }}>
+                        {% if block.settings.quote != blank %}
+                          <p class="trust-hero__quote-text text-sm">&ldquo;{{ block.settings.quote }}&rdquo;</p>
+                        {% endif %}
+                        {% if block.settings.author != blank %}
+                          <p class="trust-hero__quote-author text-sm">&mdash; {{ block.settings.author }}</p>
+                        {% endif %}
+                      </div>
+                    {% endfor %}
+                  </div>
                 </div>
-              {% endfor %}
+              </trust-hero-quotes-slider>
             </motion-element>
             {%- assign motion_delay = motion_delay | plus: 50 -%}
           {% endif %}
