@@ -16,11 +16,16 @@
   height: 100%;
 }
 
+.collection-pills {
+  padding: 20px 10px;
+  background: #f3e9c8;
+}
+
 .collection-pill {
   height: 100%;
+  padding: 0.9rem 1.6rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 20px 10px;
-  background: #F3E9C8;
+  background: rgb(var(--color-background));
   color: rgb(var(--color-foreground));
   text-decoration: none;
   cursor: pointer;
