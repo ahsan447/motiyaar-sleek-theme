@@ -499,8 +499,8 @@
         "question_Fq01aB": {
           "type": "question",
           "settings": {
-            "question": "Is this real gold?",
-            "answer": "<p>Our jewellery is crafted with high-quality gold plating over premium base metals, giving you a real-gold look that lasts.</p>",
+            "question": "What should I do if my order arrives damaged or incorrect?",
+            "answer": "<p>Contact our customer support team within <strong>[24/48] hours</strong> of receiving the parcel. Share your order number along with clear photos or an unboxing video so the issue can be reviewed promptly.</p>",
             "open": false
           }
         },
@@ -539,8 +539,8 @@
         "question_Fq06kL": {
           "type": "question",
           "settings": {
-            "question": "What if the ring doesn't fit?",
-            "answer": "<p>No worries — we offer easy exchanges so you can get the perfect fit.</p>",
+            "question": "Can I return or exchange my order?",
+            "answer": "<p><br/>Eligible unused items may be exchanged within 7<strong>days</strong> of delivery, provided they are unworn, undamaged and returned with their original packaging. Earrings, customized pieces and sale items may be excluded for hygiene or policy reasons.<br/><br/></p>",
             "open": false
           }
         }
