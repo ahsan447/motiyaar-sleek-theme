@@ -15,6 +15,15 @@
   }
 }
 
+.footer-info__brand-logo-link {
+  display: inline-block;
+  margin: 0 0 1.2rem;
+}
+.footer-info__brand-logo {
+  display: block;
+  height: auto;
+}
+
 .footer-info__brand-name {
   margin: 0 0 1.2rem;
   font-family: var(--font-heading-family);

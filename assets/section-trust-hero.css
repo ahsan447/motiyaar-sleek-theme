@@ -60,7 +60,7 @@
 
 .trust-hero__rating {
   gap: 0.6rem 1.2rem;
-  margin-top: 0.4rem;
+  margin-top: 20px;
 }
 .trust-hero__stars {
   gap: 0.2rem;
@@ -77,11 +77,6 @@
   opacity: 0.7;
 }
 
-.trust-hero__quotes {
-  margin-top: 0.8rem;
-  padding-top: 1.6rem;
-  border-top: 0.1rem solid rgba(var(--color-foreground, 17, 17, 17), 0.1);
-}
 .trust-hero__quote-text {
   margin: 0 0 0.6rem;
   line-height: 1.5;

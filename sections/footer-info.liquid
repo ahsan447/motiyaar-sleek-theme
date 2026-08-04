@@ -25,7 +25,23 @@
               data-motion-delay="{{ motion_delay }}"
               {{ block.shopify_attributes }}
             >
-              {%- if block.settings.heading != blank -%}
+              {%- if block.settings.logo_image != blank -%}
+                {%- liquid
+                  assign logo_width = block.settings.logo_width
+                  assign logo_width_2x = logo_width | times: 2
+                -%}
+                <a href="{{ routes.root_url }}" class="footer-info__brand-logo-link">
+                  <img
+                    srcset="{{ block.settings.logo_image | image_url: width: logo_width }} 1x, {{ block.settings.logo_image | image_url: width: logo_width_2x }} 2x"
+                    src="{{ block.settings.logo_image | image_url: width: logo_width }}"
+                    loading="lazy"
+                    width="{{ logo_width }}"
+                    height="{{ logo_width | divided_by: block.settings.logo_image.aspect_ratio }}"
+                    alt="{{ block.settings.logo_image.alt | default: block.settings.heading }}"
+                    class="footer-info__brand-logo"
+                  >
+                </a>
+              {%- elsif block.settings.heading != blank -%}
                 <p class="footer-info__brand-name">{{ block.settings.heading }}</p>
               {%- endif -%}
               {%- if block.settings.text != blank -%}
@@ -198,6 +214,22 @@
       "name": "Brand",
       "limit": 1,
       "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Logo image",
+          "info": "Optional. Links to the homepage. Replaces the heading text below when set."
+        },
+        {
+          "type": "range",
+          "id": "logo_width",
+          "min": 60,
+          "max": 300,
+          "step": 10,
+          "unit": "px",
+          "label": "Logo width",
+          "default": 140
+        },
         {
           "type": "text",
           "id": "heading",

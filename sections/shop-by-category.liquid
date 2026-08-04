@@ -69,6 +69,9 @@
       {%- else -%}
         {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg sbc__main-media' }}
       {%- endif -%}
+      {%- if collection != blank -%}
+        <span class="sbc__label">{{ collection.title }}</span>
+      {%- endif -%}
     </a>
     <div class="sbc__side">
       {%- for i in (1..4) -%}
@@ -76,8 +79,17 @@
           assign block = section.blocks[forloop.index0]
           assign item_image = blank
           assign item_link = top_link
+          assign item_title = blank
           if block != blank
             assign item_image = block.settings.image
+            assign item_collection = block.settings.collection
+            assign item_title = block.settings.title
+            if item_title == blank and item_collection != blank
+              assign item_title = item_collection.title
+            endif
+            if item_collection != blank
+              assign item_link = item_collection.url
+            endif
             if block.settings.link != blank
               assign item_link = block.settings.link
             endif
@@ -112,6 +124,9 @@
               assign current = i | plus: 1
             -%}
             {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg sbc__side-media' }}
+          {%- endif -%}
+          {%- if item_title != blank -%}
+            <span class="sbc__label">{{ item_title }}</span>
           {%- endif -%}
         </a>
       {%- endfor -%}
@@ -265,6 +280,17 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.all.image.label"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.all.collection.label"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.all.collection.title.label",
+          "info": "t:sections.all.collection.title.info"
         },
         {
           "type": "url",
