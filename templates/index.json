@@ -345,7 +345,7 @@
         "grid_image_Qw1a2B": {
           "type": "grid_image",
           "settings": {
-            "image": "shopify://shop_images/WhatsAppImage2026-07-31at8.48.30PM.jpg",
+            "image": "shopify://shop_images/Rings.png",
             "collection": "rings",
             "title": "",
             "link": "shopify://collections/bundles"
@@ -354,7 +354,7 @@
         "grid_image_Rt3c4D": {
           "type": "grid_image",
           "settings": {
-            "image": "shopify://shop_images/WhatsApp_Image_2026-07-30_at_9.03.22_PM_1.jpg",
+            "image": "shopify://shop_images/Bracelets.png",
             "collection": "bracelets",
             "title": "",
             "link": "shopify://collections/bracelets"
@@ -392,7 +392,7 @@
         "collection": "neckalce",
         "link_label": "",
         "link": "",
-        "main_image": "shopify://shop_images/WhatsAppImage2026-07-30at4.27.48PM_1.jpg",
+        "main_image": "shopify://shop_images/Necklaces.png",
         "main_image_link": "shopify://collections/neckalce",
         "padding_top": 60,
         "padding_bottom": 60,
