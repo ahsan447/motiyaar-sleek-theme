@@ -1,0 +1,49 @@
+.collection-pills__items {
+  --column-gap: 0.8rem;
+  overflow: hidden;
+}
+.collection-pills__items .swiper-wrapper {
+  align-items: stretch;
+}
+.collection-pills__items .swiper-slide {
+  height: auto;
+  width: auto;
+}
+
+.collection-pill-wrap {
+  display: block;
+  height: 100%;
+}
+
+.collection-pill {
+  height: 100%;
+  padding: 0.9rem 1.6rem;
+  border: 1px solid rgb(var(--color-border));
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+.collection-pill__text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+.collection-pill:hover {
+  background: rgb(var(--color-button));
+  border-color: rgb(var(--color-button));
+}
+.collection-pill:hover .collection-pill__text {
+  color: rgb(var(--color-button-text));
+}
+
+@media (max-width: 767.98px) {
+  .collection-pill {
+    padding: 0.7rem 1.2rem;
+  }
+  .collection-pill__text {
+    font-size: 1.3rem;
+  }
+}

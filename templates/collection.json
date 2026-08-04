@@ -49,6 +49,53 @@
         "padding_bottom": 60
       }
     },
+    "collection_pills": {
+      "type": "collection-pills",
+      "blocks": {
+        "collection_item_1": {
+          "type": "collection_item",
+          "settings": {}
+        },
+        "collection_item_2": {
+          "type": "collection_item",
+          "settings": {}
+        },
+        "collection_item_3": {
+          "type": "collection_item",
+          "settings": {}
+        },
+        "collection_item_4": {
+          "type": "collection_item",
+          "settings": {}
+        },
+        "collection_item_5": {
+          "type": "collection_item",
+          "settings": {}
+        },
+        "collection_item_6": {
+          "type": "collection_item",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "collection_item_1",
+        "collection_item_2",
+        "collection_item_3",
+        "collection_item_4",
+        "collection_item_5",
+        "collection_item_6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "item_alignment": "center",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "show_section_divider": true,
+        "divider_width": "full"
+      }
+    },
     "custom_content_RecVe9": {
       "type": "custom-content",
       "blocks": {
@@ -234,6 +281,7 @@
   "order": [
     "breadcrumbs_Gxg9wp",
     "banner",
+    "collection_pills",
     "custom_content_RecVe9",
     "product-grid"
   ]
