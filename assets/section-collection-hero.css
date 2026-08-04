@@ -42,7 +42,7 @@
   padding: 0;
 }
 
-.collection-hero .collection-hero__inner {
+.collection-hero .collection-hero__inner .blocks-radius {
   border-radius: 0px;
 }
 
