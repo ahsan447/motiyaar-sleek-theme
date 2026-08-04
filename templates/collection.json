@@ -121,8 +121,6 @@
       "custom_css": [],
       "settings": {
         "color_scheme": "scheme-1",
-        "items_desktop": 12,
-        "items_mobile": 2.2,
         "padding_top": 24,
         "padding_bottom": 24,
         "show_section_divider": true,

@@ -12,8 +12,6 @@ if (!customElements.get('collection-pills-slider')) {
         };
 
         this.sliderWrapper = this.querySelector(this.selectors.sliderWrapper);
-        this.itemsDesktop = parseFloat(this.dataset.itemsDesktop) || 12;
-        this.itemsMobile = parseFloat(this.dataset.itemsMobile) || 2.2;
         this.sliderInstance = false;
 
         this.initSlider();
@@ -26,14 +24,8 @@ if (!customElements.get('collection-pills-slider')) {
         const spaceBetween = parseFloat(columnGap.replace('rem', '')) * 10 || 8;
 
         const sliderOptions = {
-          slidesPerView: this.itemsMobile,
+          slidesPerView: 'auto',
           spaceBetween: spaceBetween,
-          breakpoints: {
-            768: {
-              slidesPerView: this.itemsDesktop,
-              spaceBetween: spaceBetween,
-            },
-          },
           pagination: false,
           loop: false,
           threshold: 2,
