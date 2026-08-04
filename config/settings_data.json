@@ -41,7 +41,7 @@
     "page_width": 2000,
     "section_header_alignment": "center",
     "section_header_alignment_mobile": "inherit",
-    "buttons_corner_radius": "slightly",
+    "buttons_corner_radius": "soft-pill",
     "inputs_corner_radius": "slightly",
     "blocks_corner_radius": "slightly",
     "pcard_corner_radius": "slightly",
