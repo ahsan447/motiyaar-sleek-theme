@@ -346,7 +346,8 @@
           "type": "grid_image",
           "settings": {
             "image": "shopify://shop_images/WhatsAppImage2026-07-31at8.48.30PM.jpg",
-            "collection": "bundles",
+            "collection": "rings",
+            "title": "",
             "link": "shopify://collections/bundles"
           }
         },
@@ -355,6 +356,7 @@
           "settings": {
             "image": "shopify://shop_images/WhatsApp_Image_2026-07-30_at_9.03.22_PM_1.jpg",
             "collection": "bracelets",
+            "title": "",
             "link": "shopify://collections/bracelets"
           }
         },
@@ -363,6 +365,7 @@
           "settings": {
             "image": "shopify://shop_images/WhatsAppImage2026-07-30at9.03.18PM.jpg",
             "collection": "featured",
+            "title": "",
             "link": "shopify://collections/featured"
           }
         },
@@ -371,6 +374,7 @@
           "settings": {
             "image": "shopify://shop_images/WhatsAppImage2026-07-30at4.29.38PM_1.jpg",
             "collection": "charm-holders",
+            "title": "",
             "link": "shopify://collections/charm-holders"
           }
         }

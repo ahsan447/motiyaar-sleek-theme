@@ -88,8 +88,6 @@
       "custom_css": [],
       "settings": {
         "color_scheme": "scheme-1",
-        "item_alignment": "center",
-        "swipe_on_mobile": true,
         "padding_top": 24,
         "padding_bottom": 24,
         "show_section_divider": true,
