@@ -59,6 +59,13 @@
             "author": "Aisha"
           }
         },
+        "quote_inNHgG": {
+          "type": "quote",
+          "settings": {
+            "quote": "The necklace is exactly like the photos delicate, polished.",
+            "author": "Haram"
+          }
+        },
         "quote_7d4gPt": {
           "type": "quote",
           "settings": {
@@ -120,6 +127,7 @@
         "buttons_Tb1a04",
         "rating_Tb1a05",
         "quote_Tb1a06",
+        "quote_inNHgG",
         "quote_7d4gPt",
         "quote_Tb1a07",
         "quote_Tb1a08",
