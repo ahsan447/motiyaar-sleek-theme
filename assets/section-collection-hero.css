@@ -34,7 +34,18 @@
 }
 .collection-hero:not(.color-inherit) .collection-hero__text {
   padding-inline: var(--padding-x);
+  padding: 20px;
 }
+
+.collection-hero .page-width {
+  max-width: 100%;
+  padding: 0;
+}
+
+.collection-hero .collection-hero__inner {
+  border-radius: 0px;
+}
+
 @media (min-width: 768px) {
   .collection-hero--image-left .collection-hero__text {
     padding-inline-start: var(--padding-x);
