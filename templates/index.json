@@ -36,7 +36,7 @@
         "buttons_Tb1a04": {
           "type": "buttons",
           "settings": {
-            "button_1_label": "Shop best sellers",
+            "button_1_label": "Shop now",
             "button_1_link": "shopify://collections/best-sellers",
             "button_1_style": "btn--primary",
             "button_2_label": "Shop under Rs. 1,500",
