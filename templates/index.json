@@ -59,6 +59,13 @@
             "author": "Aisha"
           }
         },
+        "quote_7d4gPt": {
+          "type": "quote",
+          "settings": {
+            "quote": "The bracelet sits beautifully on the wrist and has a refined shine instead of looking overly bright or artificial",
+            "author": "Laiba"
+          }
+        },
         "quote_Tb1a07": {
           "type": "quote",
           "settings": {
@@ -113,6 +120,7 @@
         "buttons_Tb1a04",
         "rating_Tb1a05",
         "quote_Tb1a06",
+        "quote_7d4gPt",
         "quote_Tb1a07",
         "quote_Tb1a08",
         "trust_badge_Tb1a09",
