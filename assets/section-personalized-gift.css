@@ -110,7 +110,7 @@
   width: 100%;
 }
 
-@media (max-width: 479.98px) {
+@media (max-width: 749.98px) {
   .personalized-gift__card {
     flex-direction: column;
   }
@@ -118,5 +118,19 @@
     flex-basis: auto;
     max-width: 100%;
     align-self: auto;
+  }
+
+  .personalized-gift__feature {
+    padding: 1.6rem 1rem;
+  }
+
+  .personalized-gift__feature-value {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .personalized-gift__feature-label {
+    font-size: 11px;
+    margin: 0;
   }
 }
