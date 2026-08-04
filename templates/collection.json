@@ -1,7 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumbs_Gxg9wp": {
       "type": "breadcrumbs",
+      "disabled": true,
       "settings": {
         "text_alignment": "center"
       }
@@ -12,7 +22,7 @@
         "collection_info_zUNyKV": {
           "type": "collection_info",
           "settings": {
-            "heading_size": "hd2",
+            "heading_size": "h3",
             "heading_tag": "h1",
             "show_description": true,
             "padding_top": 0,
@@ -23,11 +33,10 @@
       "block_order": [
         "collection_info_zUNyKV"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "scheme-1",
+        "image": "{{ collection.image }}",
         "image_overlay_opacity": 0,
         "image_position": "top",
         "image_height": "extra-small",
@@ -50,6 +59,7 @@
             "image_overlay_opacity": 30,
             "heading": "Collection's name",
             "heading_size": "h4",
+            "heading_highlight_style": "none",
             "subheading": "",
             "description": "",
             "button_label": "",
@@ -57,6 +67,7 @@
             "content_position": "middle-center",
             "content_alignment": "center",
             "content_spacing": "small",
+            "card_link": "",
             "color_scheme_mobile": "",
             "show_text_below": true,
             "content_alignment_mobile": "left",
@@ -73,6 +84,7 @@
             "image_overlay_opacity": 30,
             "heading": "Collection's name",
             "heading_size": "h4",
+            "heading_highlight_style": "none",
             "subheading": "",
             "description": "",
             "button_label": "",
@@ -80,6 +92,7 @@
             "content_position": "middle-center",
             "content_alignment": "center",
             "content_spacing": "small",
+            "card_link": "",
             "color_scheme_mobile": "",
             "show_text_below": true,
             "content_alignment_mobile": "left",
@@ -96,6 +109,7 @@
             "image_overlay_opacity": 30,
             "heading": "Collection's name",
             "heading_size": "h4",
+            "heading_highlight_style": "none",
             "subheading": "",
             "description": "",
             "button_label": "",
@@ -103,6 +117,7 @@
             "content_position": "middle-center",
             "content_alignment": "center",
             "content_spacing": "small",
+            "card_link": "",
             "color_scheme_mobile": "",
             "show_text_below": true,
             "content_alignment_mobile": "left",
@@ -119,6 +134,7 @@
             "image_overlay_opacity": 30,
             "heading": "Collection's name",
             "heading_size": "h4",
+            "heading_highlight_style": "none",
             "subheading": "",
             "description": "",
             "button_label": "",
@@ -126,6 +142,7 @@
             "content_position": "middle-center",
             "content_alignment": "center",
             "content_spacing": "small",
+            "card_link": "",
             "color_scheme_mobile": "",
             "show_text_below": true,
             "content_alignment_mobile": "left",
@@ -142,6 +159,7 @@
             "image_overlay_opacity": 30,
             "heading": "Collection's name",
             "heading_size": "h4",
+            "heading_highlight_style": "none",
             "subheading": "",
             "description": "",
             "button_label": "",
@@ -149,6 +167,7 @@
             "content_position": "middle-center",
             "content_alignment": "center",
             "content_spacing": "small",
+            "card_link": "",
             "color_scheme_mobile": "",
             "show_text_below": true,
             "content_alignment_mobile": "left",
@@ -165,6 +184,7 @@
         "image_card_EA8TmL",
         "image_card_Cab8TR"
       ],
+      "disabled": true,
       "custom_css": [
         ".card-media {--padding-y-mobile: 1.2rem;}",
         "@media (max-width: 767px) {.card-media--mobile-content-below .bg-overlay {display: none !important; }}"
@@ -175,6 +195,7 @@
         "enable_sticky_column": false,
         "heading": "",
         "heading_size": "h1",
+        "heading_highlight_style": "none",
         "subheading": "",
         "description": "",
         "column_gap": "extra-small",
@@ -189,13 +210,14 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
+        "color_scheme": "",
         "products_per_page": 15,
         "columns_desktop": 3,
+        "grid_layout": "standard",
         "pagination": "number",
+        "enable_color_swatch": true,
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_sorting": true,
