@@ -346,6 +346,7 @@
           "type": "grid_image",
           "settings": {
             "image": "shopify://shop_images/WhatsAppImage2026-07-31at8.48.30PM.jpg",
+            "collection": "bundles",
             "link": "shopify://collections/bundles"
           }
         },
@@ -353,6 +354,7 @@
           "type": "grid_image",
           "settings": {
             "image": "shopify://shop_images/WhatsApp_Image_2026-07-30_at_9.03.22_PM_1.jpg",
+            "collection": "bracelets",
             "link": "shopify://collections/bracelets"
           }
         },
@@ -360,6 +362,7 @@
           "type": "grid_image",
           "settings": {
             "image": "shopify://shop_images/WhatsAppImage2026-07-30at9.03.18PM.jpg",
+            "collection": "featured",
             "link": "shopify://collections/featured"
           }
         },
@@ -367,6 +370,7 @@
           "type": "grid_image",
           "settings": {
             "image": "shopify://shop_images/WhatsAppImage2026-07-30at4.29.38PM_1.jpg",
+            "collection": "charm-holders",
             "link": "shopify://collections/charm-holders"
           }
         }
