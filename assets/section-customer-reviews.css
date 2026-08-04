@@ -12,6 +12,7 @@
 }
 .customer-reviews__items .swiper-slide {
   height: auto;
+  padding-bottom: 80px;
 }
 .review-card {
   display: flex;
@@ -24,6 +25,10 @@
 @media (max-width: 767.98px) {
   .review-card {
     padding: 2.4rem 2rem;
+  }
+
+  .customer-reviews__items .swiper-slide {
+    padding-bottom: 55px;
   }
 }
 .review-card__stars {
