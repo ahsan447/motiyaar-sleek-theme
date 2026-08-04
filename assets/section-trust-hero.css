@@ -124,4 +124,8 @@
   .index-template .tabs__nav-design-1 + .section__footer  {
     display: none;
   }
+
+  .trust-hero__heading {
+    font-size: 28px;
+  }
 }

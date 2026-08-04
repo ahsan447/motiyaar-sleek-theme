@@ -96,3 +96,13 @@
   opacity: 1;
   width: auto;
 }
+
+@media (max-width: 767.98px) {
+  .customer-reviews__slider {
+    margin-top: 0;
+  }
+
+  .customer-reviews .section__heading {
+    font-size: 28px;
+  }
+}
