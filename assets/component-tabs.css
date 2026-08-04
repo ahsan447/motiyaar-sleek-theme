@@ -137,4 +137,8 @@
     gap: 0 var(--tab-spacing-mobile);
     padding-inline: 1.5rem;
   }
+
+  .index-template .tabs__nav {
+    padding-bottom: 15px;
+  }
 }
