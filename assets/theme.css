@@ -1666,6 +1666,10 @@ body.header-pinned .sticky-element {
   top: calc(var(--sticky-offset, 2rem) + var(--header-height));
 }
 
+body.header-pinned  .collection .sticky-element {
+  top: 0;
+}
+
 /* Select element */
 .select-element {
   --icon-size: 0.7rem;
