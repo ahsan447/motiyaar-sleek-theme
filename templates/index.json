@@ -39,8 +39,8 @@
             "button_1_label": "Shop now",
             "button_1_link": "shopify://collections/best-sellers",
             "button_1_style": "btn--primary",
-            "button_2_label": "Shop under Rs. 1,500",
-            "button_2_link": "shopify://collections/under-rs-000",
+            "button_2_label": "Shop under Rs. 2,000",
+            "button_2_link": "shopify://collections/under-rs-2000",
             "button_2_style": "btn--secondary"
           }
         },
