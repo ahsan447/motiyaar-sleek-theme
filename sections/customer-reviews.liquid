@@ -78,7 +78,7 @@
                   <div class="review-card__meta flex items-center justify-between flex-wrap gap-x-2">
                     {%- if block.settings.show_verified_badge -%}
                       <span class="review-card__verified flex items-center gap-x-1">
-                        {%- render 'icon-check', size: 'small' -%}
+                        <svg class="icon icon-check icon--small" xmlns="http://www.w3.org/2000/svg" id="Layer_2" viewBox="0 0 223.82 163.12"><g id="Layer_1-2"><path d="M3.71,95.94c-6.21-6.23-3.8-15.82,1.21-20.83,5.8-5.8,15.33-6.88,21.48-.77l50.46,50.15L197.09,4.36c6.32-6.32,15.91-5.41,21.84.42,5.51,5.42,7.14,15.23.85,21.52L87.08,159.06c-5.2,5.21-14.9,5.51-20.09.31L3.71,95.94Z"/></g></svg>
                         <span>{{ 'sections.customer_reviews.verified_purchase' | t }}</span>
                       </span>
                     {%- else -%}

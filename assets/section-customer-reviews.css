@@ -71,7 +71,7 @@
   gap: 0.8rem 1.2rem;
 }
 .review-card__verified {
-  color: #1f7a3f;
+  color: #000;
 }
 .review-card__verified .icon {
   width: 1.4rem;
