@@ -574,6 +574,18 @@
     "customer_reviews_Rv3wKp": {
       "type": "customer-reviews",
       "blocks": {
+        "review_GXwCy7": {
+          "type": "review",
+          "settings": {
+            "rating": "5-stars",
+            "product_name": "Jhumka Earrings",
+            "quote": "Statement earrings usually become uncomfortable for me after a few hours, but these were surprisingly easy to wear. They looked noticeable without feeling too heavy, and I kept them on throughout the event.",
+            "author": "Alina K.",
+            "location": "Islamabad",
+            "show_verified_badge": true,
+            "review_time": "3 days ago"
+          }
+        },
         "review_Nh82Ta": {
           "type": "review",
           "settings": {
@@ -612,6 +624,7 @@
         }
       },
       "block_order": [
+        "review_GXwCy7",
         "review_Nh82Ta",
         "review_Bq91Ux",
         "review_Cf47Lm"
