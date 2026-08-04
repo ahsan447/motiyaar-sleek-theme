@@ -364,7 +364,7 @@
           "type": "grid_image",
           "settings": {
             "image": "shopify://shop_images/WhatsAppImage2026-07-30at9.03.18PM.jpg",
-            "collection": "featured",
+            "collection": "earnings",
             "title": "",
             "link": "shopify://collections/featured"
           }
@@ -373,7 +373,7 @@
           "type": "grid_image",
           "settings": {
             "image": "shopify://shop_images/WhatsAppImage2026-07-30at4.29.38PM_1.jpg",
-            "collection": "charm-holders",
+            "collection": "keychains",
             "title": "",
             "link": "shopify://collections/charm-holders"
           }
@@ -389,11 +389,11 @@
         "color_scheme": "scheme-1",
         "heading": "Shop by category",
         "heading_size": "hd2",
-        "collection": "best-sellers",
+        "collection": "neckalce",
         "link_label": "",
         "link": "",
         "main_image": "shopify://shop_images/WhatsAppImage2026-07-30at4.27.48PM_1.jpg",
-        "main_image_link": "shopify://collections/best-sellers",
+        "main_image_link": "shopify://collections/neckalce",
         "padding_top": 60,
         "padding_bottom": 60,
         "show_section_divider": false,
