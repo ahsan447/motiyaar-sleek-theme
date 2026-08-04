@@ -269,7 +269,7 @@
         "column_gap": "small",
         "row_gap": "inherit",
         "grid_layout": "standard",
-        "pcard_image_ratio": "3/4",
+        "pcard_image_ratio": "1/1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "show_all_button_on_top": true,
