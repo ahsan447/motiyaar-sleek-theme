@@ -110,6 +110,10 @@
   width: 100%;
 }
 
+.personalized-gift__card-content .personalized-gift__card-button {
+  border-radius: 999px;
+}
+
 @media (max-width: 749.98px) {
   .personalized-gift__card {
     flex-direction: column;
