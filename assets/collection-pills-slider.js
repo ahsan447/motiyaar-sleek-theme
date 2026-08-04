@@ -12,6 +12,7 @@ if (!customElements.get('collection-pills-slider')) {
         };
 
         this.sliderWrapper = this.querySelector(this.selectors.sliderWrapper);
+        this.itemsDesktop = parseFloat(this.dataset.itemsDesktop) || 4.2;
         this.sliderInstance = false;
 
         this.initSlider();
@@ -26,6 +27,11 @@ if (!customElements.get('collection-pills-slider')) {
         const sliderOptions = {
           slidesPerView: 'auto',
           spaceBetween: spaceBetween,
+          breakpoints: {
+            768: {
+              slidesPerView: this.itemsDesktop,
+            },
+          },
           pagination: false,
           loop: false,
           threshold: 2,

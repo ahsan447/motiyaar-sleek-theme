@@ -15,7 +15,10 @@
   style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
 >
   <div class="page-width">
-    <collection-pills-slider class="collection-pills__content block">
+    <collection-pills-slider
+      class="collection-pills__content block"
+      data-items-desktop="{{ section.settings.items_desktop }}"
+    >
       <div class="collection-pills__items swiper">
         <div class="swiper-wrapper">
           {%- for block in section.blocks -%}
@@ -69,6 +72,19 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.carousel.name"
+    },
+    {
+      "type": "range",
+      "id": "items_desktop",
+      "min": 2,
+      "max": 8,
+      "step": 0.1,
+      "default": 4.2,
+      "label": "Items per view (desktop)"
     },
     {
       "type": "header",
