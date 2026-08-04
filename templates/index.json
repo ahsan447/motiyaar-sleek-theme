@@ -523,8 +523,8 @@
         "question_Fq04gH": {
           "type": "question",
           "settings": {
-            "question": "Will it look like the photos?",
-            "answer": "<p>Absolutely. All our product photos are true to life, so what you see is exactly what you get.</p>",
+            "question": "Is Cash on Delivery available?",
+            "answer": "<p>Cash on Delivery is available for eligible orders and delivery locations across Pakistan. Certain high-value, customised or promotional orders may require advance payment.</p>",
             "open": false
           }
         },
