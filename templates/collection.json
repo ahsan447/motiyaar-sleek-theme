@@ -37,7 +37,7 @@
       "settings": {
         "color_scheme": "scheme-inverse",
         "image": "{{ collection.image }}",
-        "image_overlay_opacity": 38,
+        "image_overlay_opacity": 50,
         "image_position": "as-bg",
         "image_height": "extra-small",
         "text_alignment": "center",
