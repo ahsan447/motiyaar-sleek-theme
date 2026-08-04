@@ -54,27 +54,59 @@
       "blocks": {
         "collection_item_1": {
           "type": "collection_item",
-          "settings": {}
+          "settings": {
+            "collection": "neckalce",
+            "text": "Necklace",
+            "color_scheme": ""
+          }
         },
         "collection_item_2": {
           "type": "collection_item",
-          "settings": {}
+          "settings": {
+            "collection": "rings",
+            "text": "Rings",
+            "color_scheme": ""
+          }
         },
         "collection_item_3": {
           "type": "collection_item",
-          "settings": {}
+          "settings": {
+            "collection": "earnings",
+            "text": "Earrings",
+            "color_scheme": ""
+          }
         },
         "collection_item_4": {
           "type": "collection_item",
-          "settings": {}
+          "settings": {
+            "collection": "bracelets",
+            "text": "Bracelet",
+            "color_scheme": ""
+          }
         },
         "collection_item_5": {
           "type": "collection_item",
-          "settings": {}
+          "settings": {
+            "collection": "anklets",
+            "text": "Anklets",
+            "color_scheme": ""
+          }
         },
         "collection_item_6": {
           "type": "collection_item",
-          "settings": {}
+          "settings": {
+            "collection": "under-rs-000",
+            "text": "Under Rs. 1,000",
+            "color_scheme": ""
+          }
+        },
+        "collection_item_KcKGyN": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "under-rs-2000",
+            "text": "Under Rs. 2,000",
+            "color_scheme": ""
+          }
         }
       },
       "block_order": [
@@ -83,11 +115,14 @@
         "collection_item_3",
         "collection_item_4",
         "collection_item_5",
-        "collection_item_6"
+        "collection_item_6",
+        "collection_item_KcKGyN"
       ],
       "custom_css": [],
       "settings": {
         "color_scheme": "scheme-1",
+        "items_desktop": 12,
+        "items_mobile": 2.2,
         "padding_top": 24,
         "padding_bottom": 24,
         "show_section_divider": true,
