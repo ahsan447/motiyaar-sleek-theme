@@ -35,7 +35,7 @@
       ],
       "custom_css": [],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-inverse",
         "image": "{{ collection.image }}",
         "image_overlay_opacity": 50,
         "image_position": "as-bg",
