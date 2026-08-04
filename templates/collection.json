@@ -45,7 +45,7 @@
         "parallax_direction": "vertical",
         "image_mobile": "{{ collection.metafields.custom.collection_mobile_image.value }}",
         "image_height_mobile": "auto",
-        "padding_top": 48,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
