@@ -1,6 +1,7 @@
 .cart table thead tr th {
   padding-block: 1rem;
   padding-inline-end: 1rem;
+  text-align: left;
 }
 .cart table thead tr th:not(:first-child) {
   width: 20%;
