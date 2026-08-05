@@ -70,13 +70,16 @@
 .review-card__meta {
   gap: 0.8rem 1.2rem;
 }
-.review-card__verified {
-  color: #44ae55;
-}
 
 .review-card__verified svg path {
   fill: #44ae55;
 }
+
+.review-card__verified {
+  color: #44ae55;
+}
+
+
 
 .review-card__verified .icon {
   width: 1.4rem;
