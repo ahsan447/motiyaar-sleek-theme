@@ -9,6 +9,7 @@
     assign requires_variant_selection = true
   endif
   assign product_form_id = 'cart-drawer-upsell-' | append: section.id | append: product.id
+  assign quick_view_modal_id = 'QuickView-cart-upsell-' | append: product.id | append: '-' | append: section.id
 -%}
 <div class="product-card product-card--list blocks-radius background-2 cart-drawer-upsell-card">
   <div class="product-card__wrapper">
@@ -42,15 +43,18 @@
       </h3>
       {% render 'price', product: product %}
       {%- if requires_variant_selection -%}
-        <a
-          href="{{ product.url }}"
+        <button
+          type="button"
+          aria-controls="{{ quick_view_modal_id }}"
+          aria-haspopup="dialog"
           class="product-card__action-button product-card__atc btn btn--secondary"
           aria-label="{{ 'products.product.choose_options' | t }}"
         >
           <span class="product-card__atc-icon inline-flex">
             {% render 'icon-cart', name: settings.cart_icon, size: 'medium' %}
           </span>
-        </a>
+        </button>
+        {%- render 'quick-view-modal', modal_id: quick_view_modal_id, product: product -%}
       {%- else -%}
         {%- form 'product',
           product,
