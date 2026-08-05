@@ -70,7 +70,12 @@
         {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg sbc__main-media' }}
       {%- endif -%}
       {%- if collection != blank -%}
-        <span class="sbc__label">{{ collection.title }}</span>
+        <span class="sbc__label">
+          {%- if collection.all_products_count > 0 -%}
+            <span class="sbc__count">{{ collection.all_products_count }} Products</span>
+          {%- endif -%}
+          <span class="sbc__title">{{ collection.title }}</span>
+        </span>
       {%- endif -%}
     </a>
     <div class="sbc__side">
@@ -80,6 +85,7 @@
           assign item_image = blank
           assign item_link = top_link
           assign item_title = blank
+          assign item_count = blank
           if block != blank
             assign item_image = block.settings.image
             assign item_collection = block.settings.collection
@@ -89,6 +95,7 @@
             endif
             if item_collection != blank
               assign item_link = item_collection.url
+              assign item_count = item_collection.all_products_count
             endif
             if block.settings.link != blank
               assign item_link = block.settings.link
@@ -126,7 +133,12 @@
             {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg sbc__side-media' }}
           {%- endif -%}
           {%- if item_title != blank -%}
-            <span class="sbc__label">{{ item_title }}</span>
+            <span class="sbc__label">
+              {%- if item_count != blank and item_count > 0 -%}
+                <span class="sbc__count">{{ item_count }} Products</span>
+              {%- endif -%}
+              <span class="sbc__title">{{ item_title }}</span>
+            </span>
           {%- endif -%}
         </a>
       {%- endfor -%}
