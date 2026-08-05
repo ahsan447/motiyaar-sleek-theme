@@ -167,6 +167,57 @@
         "padding_bottom": 100
       }
     },
+    "trust_badges_Ab12Cd": {
+      "type": "trust-badges",
+      "blocks": {
+        "badge_Ab12Ce": {
+          "type": "badge",
+          "settings": {
+            "custom_image": "shopify://shop_images/Quality_Check.svg",
+            "heading": "Quality Checked",
+            "text": "Every piece is inspected before dispatch."
+          }
+        },
+        "badge_Ab12Cf": {
+          "type": "badge",
+          "settings": {
+            "custom_image": "shopify://shop_images/Gift_Ready_Packaging.svg",
+            "heading": "Gift-Ready Packaging",
+            "text": "Ready to make their moment feel special."
+          }
+        },
+        "badge_Ab12Cg": {
+          "type": "badge",
+          "settings": {
+            "custom_image": "shopify://shop_images/Secure_Checkout.svg",
+            "heading": "Secure Checkout",
+            "text": "Your payment details stay protected."
+          }
+        },
+        "badge_Ab12Ch": {
+          "type": "badge",
+          "settings": {
+            "custom_image": "shopify://shop_images/Nationwide_Delivery.svg",
+            "heading": "Nationwide Delivery",
+            "text": "Carefully delivered across Pakistan."
+          }
+        }
+      },
+      "block_order": [
+        "badge_Ab12Ce",
+        "badge_Ab12Cf",
+        "badge_Ab12Cg",
+        "badge_Ab12Ch"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "columns_desktop": "4",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
     "testimonials_8JHr3L": {
       "type": "testimonials",
       "blocks": {
@@ -732,6 +783,7 @@
   "order": [
     "breadcrumbs",
     "main",
+    "trust_badges_Ab12Cd",
     "testimonials_8JHr3L",
     "feature_list_cW3d9c",
     "rich_text_7rBwdd",
