@@ -40,6 +40,13 @@
           "type": "price",
           "settings": {}
         },
+        "text_WAhCAa": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -149,6 +156,7 @@
         "judge_me_reviews_preview_badge_Fi8pfK",
         "title",
         "price",
+        "text_WAhCAa",
         "description",
         "inventory",
         "variant_picker",
