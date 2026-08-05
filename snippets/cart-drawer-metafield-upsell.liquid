@@ -39,9 +39,9 @@
     </div>
   {%- endfor -%}
 {%- endcapture -%}
-{%- if request.design_mode -%}
+{%- if true -%}
   <div style="padding:10px;margin-bottom:10px;border:1px dashed #999;font-size:12px;font-family:monospace;background:#fafafa;color:#333;">
-    <strong>Upsell debug (only visible to you in the editor):</strong><br>
+    <strong>Upsell debug (TEMPORARY - visible to everyone right now):</strong><br>
     Cart items: {{ cart.item_count }}<br>
     {%- for cart_item in cart.items -%}
       &bull; {{ cart_item.product.title }} (id {{ cart_item.product_id }}) &rarr;
