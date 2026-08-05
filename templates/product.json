@@ -274,65 +274,20 @@
       "blocks": {
         "question_Fq01aB": {
           "type": "question",
+          "repeater": "{{ product.metafields.custom.faq.value }}",
           "settings": {
-            "question": "What should I do if my order arrives damaged or incorrect?",
-            "answer": "<p>Contact our customer support team within <strong>[24/48] hours</strong> of receiving the parcel. Share your order number along with clear photos or an unboxing video so the issue can be reviewed promptly.</p>",
-            "open": false
-          }
-        },
-        "question_Fq02cD": {
-          "type": "question",
-          "settings": {
-            "question": "Will the colour fade?",
-            "answer": "<p>With proper care — avoiding water, perfume and harsh chemicals — the colour is designed to stay vibrant for a long time.</p>",
-            "open": false
-          }
-        },
-        "question_Fq03eF": {
-          "type": "question",
-          "settings": {
-            "question": "How long will my order take to arrive?",
-            "answer": "<p>Orders are usually processed within <strong>1 working days</strong> and delivered within approximately <strong>[3–7] working days</strong>. Delivery times may be longer during sales, public holidays, severe weather or high-order periods.<br/><br/></p>",
-            "open": false
-          }
-        },
-        "question_Fq04gH": {
-          "type": "question",
-          "settings": {
-            "question": "Is Cash on Delivery available?",
-            "answer": "<p>Cash on Delivery is available for eligible orders and delivery locations across Pakistan. Certain high-value, customised or promotional orders may require advance payment.</p>",
-            "open": false
-          }
-        },
-        "question_Fq05iJ": {
-          "type": "question",
-          "settings": {
-            "question": "Do you offer cash on delivery?",
-            "answer": "<p>Yes, cash on delivery is available nationwide alongside secure online payment options.</p>",
-            "open": false
-          }
-        },
-        "question_Fq06kL": {
-          "type": "question",
-          "settings": {
-            "question": "Can I return or exchange my order?",
-            "answer": "<p><br/>Eligible unused items may be exchanged within 7<strong>days</strong> of delivery, provided they are unworn, undamaged and returned with their original packaging. Earrings, customized pieces and sale items may be excluded for hygiene or policy reasons.<br/><br/></p>",
-            "open": false
+            "question": "{{ block.repeater.question.value }}",
+            "answer": "{{ block.repeater.answer | metafield_tag }}"
           }
         }
       },
       "block_order": [
-        "question_Fq01aB",
-        "question_Fq02cD",
-        "question_Fq03eF",
-        "question_Fq04gH",
-        "question_Fq05iJ",
-        "question_Fq06kL"
+        "question_Fq01aB"
       ],
       "settings": {
         "container": "fixed",
         "color_scheme": "scheme-8",
-        "subheading": "Before you order",
+        "subheading": "",
         "heading": "Questions we get every day",
         "heading_size": "h2",
         "link_label": "Ask us on WhatsApp",
