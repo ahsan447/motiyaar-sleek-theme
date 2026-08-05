@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-cart": {
@@ -5,28 +14,23 @@
       "blocks": {
         "free_shipping_goal_W8bXKE": {
           "type": "free_shipping_goal",
-          "settings": {
-          }
+          "settings": {}
         },
         "cart_note_qpALBg": {
           "type": "cart_note",
-          "settings": {
-          }
+          "settings": {}
         },
         "cart_shipping_rate_bnhQBk": {
           "type": "cart_shipping_rate",
-          "settings": {
-          }
+          "settings": {}
         },
         "subtotal_LeUiVY": {
           "type": "subtotal",
-          "settings": {
-          }
+          "settings": {}
         },
         "buttons_drwbch": {
           "type": "buttons",
-          "settings": {
-          }
+          "settings": {}
         },
         "trust_badge_secure": {
           "type": "trust_badge",
@@ -75,20 +79,25 @@
     },
     "featured_collection_Y4GDWA": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "header_layout": "vertical",
         "heading": "You may also like",
         "heading_size": "h1",
+        "heading_highlight_style": "none",
         "subheading": "",
         "description": "",
         "text_size": "text-base",
         "show_collection_description": false,
+        "collection": "",
         "limit": 4,
         "columns": 4,
         "column_gap": "extra-small",
         "row_gap": "inherit",
+        "grid_layout": "standard",
         "enable_slider": true,
+        "controls_position": "inside",
         "pcard_image_ratio": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
