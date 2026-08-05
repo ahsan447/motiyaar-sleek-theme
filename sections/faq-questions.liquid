@@ -4,29 +4,29 @@
   assign question_blocks = section.blocks | where: 'type', 'question'
 -%}
 
-{% render 'divider',
-  show_divider: section.settings.show_section_divider,
-  divider_width: section.settings.divider_width
-%}
-
-<div
-  class="section section--padding faq-questions page-width page-width--{{ section.settings.container }} color-{{ section.settings.color_scheme }}"
-  style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
-  data-id="{{ section.id }}"
->
-  {% render 'section-heading',
-    section_settings: section.settings,
-    header_layout: 'horizontal',
-    header_alignment: 'left',
-    header_alignment_mobile: 'left',
-    button_visible: true,
-    button_label: section.settings.link_label,
-    button_link: section.settings.link_url,
-    button_style: 'btn--underline',
-    custom_css_class: ' faq-questions__header'
+{%- if question_blocks.size > 0 -%}
+  {% render 'divider',
+    show_divider: section.settings.show_section_divider,
+    divider_width: section.settings.divider_width
   %}
 
-  {%- if question_blocks.size > 0 -%}
+  <div
+    class="section section--padding faq-questions page-width page-width--{{ section.settings.container }} color-{{ section.settings.color_scheme }}"
+    style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+    data-id="{{ section.id }}"
+  >
+    {% render 'section-heading',
+      section_settings: section.settings,
+      header_layout: 'horizontal',
+      header_alignment: 'left',
+      header_alignment_mobile: 'left',
+      button_visible: true,
+      button_label: section.settings.link_label,
+      button_link: section.settings.link_url,
+      button_style: 'btn--underline',
+      custom_css_class: ' faq-questions__header'
+    %}
+
     <motion-element class="section__content block" data-motion="fade-up">
       <div
         class="faq-questions__grid f-grid f-grid-1-cols md:f-grid-{{ section.settings.columns_desktop }}-cols f-grid--gap-{{ section.settings.column_gap }} f-grid--row-gap-{{ section.settings.row_gap }}"
@@ -57,8 +57,8 @@
         {%- endfor -%}
       </div>
     </motion-element>
-  {%- endif -%}
-</div>
+  </div>
+{%- endif -%}
 
 {% schema %}
 {
