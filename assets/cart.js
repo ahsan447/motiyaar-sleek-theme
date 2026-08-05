@@ -506,44 +506,6 @@ class CartDrawerProductsRecommendation extends HTMLElement {
 
 customElements.define('cart-drawer-products-recommendation', CartDrawerProductsRecommendation);
 
-class CartDrawerMetafieldUpsell extends HTMLElement {
-  get slideContainer() {
-    return this.querySelector('.swiper');
-  }
-
-  get sliderPagination() {
-    return this.querySelector('.swiper-pagination');
-  }
-
-  get sliderNext() {
-    return this.querySelector('.swiper-button-next');
-  }
-
-  get sliderPrev() {
-    return this.querySelector('.swiper-button-prev');
-  }
-
-  connectedCallback() {
-    this.carousel = new FoxTheme.Carousel(this.slideContainer, {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: false,
-      pagination: {
-        el: this.sliderPagination,
-        type: 'fraction',
-      },
-      navigation: {
-        nextEl: this.sliderNext,
-        prevEl: this.sliderPrev,
-      },
-    });
-
-    this.carousel && this.carousel.init();
-  }
-}
-
-customElements.define('cart-drawer-metafield-upsell', CartDrawerMetafieldUpsell);
-
 class MainCart extends HTMLElement {
   constructor() {
     super();

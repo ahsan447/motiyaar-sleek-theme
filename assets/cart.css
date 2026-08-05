@@ -262,3 +262,20 @@
   background-color: rgba(var(--color-primary), 0.16);
   color: rgb(var(--color-primary));
 }
+
+.cart-drawer-metafield-upsell__scroll {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.cart-drawer-metafield-upsell__scroll::-webkit-scrollbar {
+  display: none;
+}
+.cart-drawer-metafield-upsell__item {
+  flex: 0 0 90%;
+  max-width: 32rem;
+  scroll-snap-align: start;
+}
