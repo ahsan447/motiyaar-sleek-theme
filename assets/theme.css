@@ -2109,7 +2109,7 @@ button,
   background: none;
   color: rgb(var(--color-foreground));
   border: var(--buttons-border-width) solid rgb(var(--color-border));
-  border-radius: var(--buttons-radius, 0);
+  border-radius: 999px;
   padding: 0 var(--buttons-padding);
   height: var(--buttons-height);
   line-height: 30px;
