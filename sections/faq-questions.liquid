@@ -2,9 +2,15 @@
 
 {%- liquid
   assign question_blocks = section.blocks | where: 'type', 'question'
+  assign visible_count = 0
+  for block in question_blocks
+    if block.settings.question != blank
+      assign visible_count = visible_count | plus: 1
+    endif
+  endfor
 -%}
 
-{%- if question_blocks.size > 0 -%}
+{%- if visible_count > 0 -%}
   {% render 'divider',
     show_divider: section.settings.show_section_divider,
     divider_width: section.settings.divider_width
@@ -32,28 +38,30 @@
         class="faq-questions__grid f-grid f-grid-1-cols md:f-grid-{{ section.settings.columns_desktop }}-cols f-grid--gap-{{ section.settings.column_gap }} f-grid--row-gap-{{ section.settings.row_gap }}"
       >
         {%- for block in question_blocks -%}
-          <div class="faq-questions__item color-{{ section.settings.item_color_scheme }}" {{ block.shopify_attributes }}>
-            <details
-              class="faq-questions__details accordion-details"
-              is="accordion-group"
-              {% if block.settings.open %}
-                open
-                aria-expanded="true"
-              {% else %}
-                aria-expanded="false"
-              {% endif %}
-            >
-              <summary class="faq-questions__summary accordion-details__summary flex items-center justify-between gap-2 focus-inset">
-                <span class="faq-questions__question font-heading">{{ block.settings.question }}</span>
-                {% render 'icon-plus-toggle', size: 'small' %}
-              </summary>
-              {%- if block.settings.answer != blank -%}
-                <div class="faq-questions__answer accordion-details__content rte">
-                  {{ block.settings.answer }}
-                </div>
-              {%- endif -%}
-            </details>
-          </div>
+          {%- if block.settings.question != blank -%}
+            <div class="faq-questions__item color-{{ section.settings.item_color_scheme }}" {{ block.shopify_attributes }}>
+              <details
+                class="faq-questions__details accordion-details"
+                is="accordion-group"
+                {% if block.settings.open %}
+                  open
+                  aria-expanded="true"
+                {% else %}
+                  aria-expanded="false"
+                {% endif %}
+              >
+                <summary class="faq-questions__summary accordion-details__summary flex items-center justify-between gap-2 focus-inset">
+                  <span class="faq-questions__question font-heading">{{ block.settings.question }}</span>
+                  {% render 'icon-plus-toggle', size: 'small' %}
+                </summary>
+                {%- if block.settings.answer != blank -%}
+                  <div class="faq-questions__answer accordion-details__content rte">
+                    {{ block.settings.answer }}
+                  </div>
+                {%- endif -%}
+              </details>
+            </div>
+          {%- endif -%}
         {%- endfor -%}
       </div>
     </motion-element>
