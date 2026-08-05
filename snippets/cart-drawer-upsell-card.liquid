@@ -1,0 +1,90 @@
+{%- liquid
+  assign variant = product.selected_or_first_available_variant
+  assign qty_rules = false
+  if variant.quantity_rule.min > 1 or variant.quantity_rule.max != null or variant.quantity_rule.increment > 1
+    assign qty_rules = true
+  endif
+  assign requires_variant_selection = false
+  if product.has_only_default_variant == false or qty_rules
+    assign requires_variant_selection = true
+  endif
+  assign product_form_id = 'cart-drawer-upsell-' | append: section.id | append: product.id
+-%}
+<div class="product-card product-card--list blocks-radius background-2 cart-drawer-upsell-card">
+  <div class="product-card__wrapper">
+    <div class="product-card__image-wrapper product-card__image-wrapper--main-only">
+      <a href="{{ product.url }}" aria-label="{{ product.title | escape }}" tabindex="-1">
+        {%- if product.featured_media -%}
+          <div
+            class="media-wrapper product-card__image product-card__image--main"
+            style="--aspect-ratio: {{ product.featured_media.aspect_ratio | default: 1 }}"
+          >
+            {{
+              product.featured_media
+              | image_url: width: 1000
+              | image_tag:
+                loading: 'lazy',
+                widths: '66, 100, 132, 200',
+                sizes: '(max-width: 767px) 66px, 100px',
+                is: 'image-lazy'
+            }}
+          </div>
+        {%- else -%}
+          <div class="product-card__image product-card__image--main" style="--aspect-ratio: 1;">
+            {{- 'product-1' | placeholder_svg_tag: 'placeholder-svg' -}}
+          </div>
+        {%- endif -%}
+      </a>
+    </div>
+    <div class="product-card__info text-left">
+      <h3 class="product-card__title text-pcard-title">
+        <a class="reversed-link" href="{{ product.url }}">{{- product.title -}}</a>
+      </h3>
+      {% render 'price', product: product %}
+      {%- if requires_variant_selection -%}
+        <a
+          href="{{ product.url }}"
+          class="product-card__action-button product-card__atc btn btn--secondary"
+          aria-label="{{ 'products.product.choose_options' | t }}"
+        >
+          <span class="product-card__atc-icon inline-flex">
+            {% render 'icon-cart', name: settings.cart_icon, size: 'medium' %}
+          </span>
+        </a>
+      {%- else -%}
+        {%- form 'product',
+          product,
+          id: product_form_id,
+          novalidate: 'novalidate',
+          data-type: 'add-to-cart-form',
+          is: 'product-form'
+        -%}
+          <input
+            type="hidden"
+            name="id"
+            value="{{- variant.id -}}"
+            class="product-variant-id"
+            {% if variant.available == false %}
+              disabled
+            {% endif %}
+          >
+          <button
+            id="{{ product_form_id }}-submit"
+            type="submit"
+            name="add"
+            {% if variant.available == false %}
+              disabled
+            {% endif %}
+            aria-label="{% if variant.available %}{{ 'products.product.add_to_cart' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}"
+            class="product-card__action-button product-card__atc btn btn--secondary"
+          >
+            <span class="product-card__atc-icon inline-flex">
+              {% render 'icon-cart', name: settings.cart_icon, size: 'medium' %}
+            </span>
+            {% render 'loading-spinner' %}
+          </button>
+        {%- endform -%}
+      {%- endif -%}
+    </div>
+  </div>
+</div>

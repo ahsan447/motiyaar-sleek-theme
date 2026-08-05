@@ -66,8 +66,8 @@
         "button": "Apply"
       },
       "free_shipping": {
-        "remaining_html": "Spend {{ remaining_amount }} more to reach free shipping!",
-        "congratulations_html": "You are eligible for free shipping."
+        "remaining_html": "You are {{ remaining_amount }} away from free delivery.",
+        "congratulations_html": "You have qualified for free delivery."
       },
       "shipping_calculator": {
         "title": "Estimate Shipping",

@@ -43,6 +43,9 @@
   margin-block-start: 2.4rem;
   margin-block-end: 6rem;
 }
+.cart .free-shipping-goal__row {
+  justify-content: center;
+}
 .cart .free-shipping-goal + .cart__form {
   margin-block-start: 0;
 }
@@ -111,10 +114,24 @@
 }
 .cart-drawer__header {
   padding: 2rem;
+  border-bottom: 0.1rem solid rgb(var(--color-border));
 }
 .cart-drawer__footer {
   border-top: 0.1rem solid rgb(var(--color-border));
   padding-block-start: 1.6rem;
+}
+.cart-drawer__footer .totals__subtotal-value {
+  color: rgb(var(--color-primary));
+}
+.cart-drawer .cart-item + .cart-item {
+  border-top: 0.1rem solid rgb(var(--color-border));
+  padding-block-start: 1.6rem;
+}
+.cart-drawer .cart-item__title {
+  transition: opacity var(--duration-default, 200ms) ease;
+}
+.cart-drawer .cart-item__title:hover {
+  opacity: 0.7;
 }
 .cart-drawer__empty {
   padding-block-start: 3rem;
@@ -189,4 +206,59 @@
 }
 .free-shipping-goal--done .free-shipping-goal__label--default {
   display: none;
+}
+
+/* Free delivery goal card (cart drawer) */
+.cart-drawer .free-shipping-goal {
+  background-color: rgba(var(--color-primary), 0.06);
+  border: 0.1rem solid rgba(var(--color-primary), 0.16);
+  border-radius: var(--medium-blocks-radius, 0.8rem);
+  padding: 1.4rem 1.6rem;
+  text-align: start;
+  transition: background-color var(--duration-default, 200ms) ease, border-color var(--duration-default, 200ms) ease;
+}
+.cart-drawer .free-shipping-goal--done {
+  background-color: rgba(var(--color-primary), 0.1);
+  border-color: rgba(var(--color-primary), 0.28);
+}
+.free-shipping-goal__row {
+  min-height: 3.4rem;
+}
+.free-shipping-goal__icon {
+  position: relative;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  background-color: rgba(var(--color-primary), 0.12);
+  color: rgb(var(--color-primary));
+}
+.free-shipping-goal__icon .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity var(--duration-default, 200ms) ease, transform var(--duration-default, 200ms) ease;
+}
+.free-shipping-goal__icon .icon-check {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.4);
+}
+.free-shipping-goal--done .free-shipping-goal__icon .icon-truck {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.4);
+}
+.free-shipping-goal--done .free-shipping-goal__icon .icon-check {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.free-shipping-goal__label--default strong {
+  color: rgb(var(--color-primary));
+}
+.free-shipping-goal--done .free-shipping-goal__label--success {
+  color: rgb(var(--color-primary));
+}
+.free-shipping-goal .progress-bar {
+  height: 0.6rem;
+  background-color: rgba(var(--color-primary), 0.16);
+  color: rgb(var(--color-primary));
 }

@@ -16,7 +16,7 @@
       "settings": {
         "show_cart_note": false,
         "show_shipping_rates_calculator": false,
-        "show_free_shipping_goal": false,
+        "show_free_shipping_goal": true,
         "enable_cart_recommendations": true,
         "cart_recommendations_heading": "You may also like",
         "cart_recommendations_limit": 3

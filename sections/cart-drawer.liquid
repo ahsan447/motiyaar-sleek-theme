@@ -370,6 +370,12 @@
                 -%}
               </ul>
             </cart-items>
+            {%- if section.settings.enable_metafield_upsell -%}
+              {%- render 'cart-drawer-metafield-upsell',
+                heading: section.settings.metafield_upsell_heading,
+                limit: section.settings.metafield_upsell_limit
+              -%}
+            {%- endif -%}
           </div>
         </div>
         <div
@@ -647,6 +653,32 @@
       "max": 10,
       "step": 1,
       "default": 3
+    },
+    {
+      "type": "header",
+      "content": "Related product upsells"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_metafield_upsell",
+      "label": "Enable related product upsells",
+      "default": true,
+      "info": "Shows products picked in the \"Related upsell products\" metafield of the products already in the cart."
+    },
+    {
+      "type": "text",
+      "id": "metafield_upsell_heading",
+      "label": "Heading",
+      "default": "Complete the look"
+    },
+    {
+      "type": "range",
+      "id": "metafield_upsell_limit",
+      "label": "Maximum products to show",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 4
     }
   ]
 }

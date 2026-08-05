@@ -62,6 +62,7 @@
     "collection_card_show_product_count": false,
     "color_swatch_trigger": "Color",
     "cart_type": "drawer",
+    "free_shipping_minimum_amount": "100",
     "cart_icon": "shopping-bag",
     "social_facebook_link": "#",
     "social_instagram_link": "#",
