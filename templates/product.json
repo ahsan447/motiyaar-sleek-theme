@@ -42,6 +42,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "inventory": {
@@ -67,8 +68,8 @@
           "type": "buy_buttons",
           "settings": {
             "show_quantity_selector": true,
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
           }
         },
         "icon_with_text": {
@@ -115,11 +116,10 @@
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
-            "heading": "Collapsible tab heading",
+            "heading": "Exchange Policy",
             "icon": "none",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "content": "<p>We have a 14-day return policy, which means you have 14 days after receiving your item to request a return. <br/><br/>To be eligible for a return, your item must be in the same condition that you received it, unworn or unused, with tags, and in its original packaging. You’ll also need the receipt or proof of purchase.<br/><br/>To start a return, you can contact us at<a href=\"mailto:motiyaarpk@gmail.com\">motiyaarpk@gmail.com</a>. Please note that returns will need to be sent to the following address: [house no 516, street 25, Bahria Town phase 3, Rawalpindi] <br/><br/>If your return is accepted, we’ll send you a return shipping label, as well as instructions on how and where to send your package. Items sent back to us without first requesting a return will not be accepted.<br/><br/>You can always contact us for any return questions at<a href=\"mailto:motiyaarpk@gmail.com\">motiyaarpk@gmail.com</a>.<br/><br/></p>",
             "page": "",
             "default_open": false
           }
@@ -254,7 +254,7 @@
         "judge_me_reviews_review_widget_pJAcBG": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "review_data": "sample_data",
+            "review_data": "real_data",
             "max_width": 1200,
             "show_shop_reviews": true,
             "empty_state": "empty_widget"
