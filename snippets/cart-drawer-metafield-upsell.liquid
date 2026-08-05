@@ -5,7 +5,8 @@
   scrollable strip. Line items without the metafield are simply
   skipped; line items with it all contribute. Products already in the
   cart, sold-out products, and duplicates across line items are
-  excluded. Pure CSS scroll-snap, no JS/Swiper dependency.
+  excluded. CSS scroll-snap strip (touch/trackpad scroll works even
+  without JS); cart-drawer-upsell-scroll only adds mouse click-drag.
 {%- endcomment -%}
 {%- liquid
   assign limit = limit | default: 4
@@ -38,8 +39,8 @@
 {%- if upsell_count > 0 -%}
   <div class="cart-drawer-metafield-upsell flex flex-col gap-3">
     <p class="h5">{{ heading | escape }}</p>
-    <div class="cart-drawer-metafield-upsell__scroll">
+    <cart-drawer-upsell-scroll class="cart-drawer-metafield-upsell__scroll">
       {{- upsell_cards -}}
-    </div>
+    </cart-drawer-upsell-scroll>
   </div>
 {%- endif -%}

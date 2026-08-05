@@ -270,12 +270,23 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  cursor: grab;
+  touch-action: pan-y;
 }
 .cart-drawer-metafield-upsell__scroll::-webkit-scrollbar {
   display: none;
+}
+.cart-drawer-metafield-upsell__scroll.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
 }
 .cart-drawer-metafield-upsell__item {
   flex: 0 0 90%;
   max-width: 32rem;
   scroll-snap-align: start;
+  pointer-events: auto;
+}
+.cart-drawer-metafield-upsell__scroll.is-dragging .cart-drawer-metafield-upsell__item {
+  pointer-events: none;
 }

@@ -506,6 +506,63 @@ class CartDrawerProductsRecommendation extends HTMLElement {
 
 customElements.define('cart-drawer-products-recommendation', CartDrawerProductsRecommendation);
 
+class CartDrawerUpsellScroll extends HTMLElement {
+  constructor() {
+    super();
+    this.isDown = false;
+    this.hasDragged = false;
+
+    this.onPointerDown = this.onPointerDown.bind(this);
+    this.onPointerMove = this.onPointerMove.bind(this);
+    this.onPointerUp = this.onPointerUp.bind(this);
+  }
+
+  connectedCallback() {
+    this.addEventListener('pointerdown', this.onPointerDown);
+    this.addEventListener('pointermove', this.onPointerMove);
+    this.addEventListener('pointerup', this.onPointerUp);
+    this.addEventListener('pointercancel', this.onPointerUp);
+  }
+
+  onPointerDown(event) {
+    if (event.pointerType === 'touch') return;
+
+    this.isDown = true;
+    this.hasDragged = false;
+    this.startX = event.clientX;
+    this.scrollLeftStart = this.scrollLeft;
+    this.setPointerCapture(event.pointerId);
+  }
+
+  onPointerMove(event) {
+    if (!this.isDown) return;
+
+    const walk = event.clientX - this.startX;
+    if (Math.abs(walk) > 5 && !this.hasDragged) {
+      this.hasDragged = true;
+      this.classList.add('is-dragging');
+    }
+    if (this.hasDragged) {
+      event.preventDefault();
+      this.scrollLeft = this.scrollLeftStart - walk;
+    }
+  }
+
+  onPointerUp(event) {
+    if (!this.isDown) return;
+
+    this.isDown = false;
+    if (this.hasPointerCapture(event.pointerId)) {
+      this.releasePointerCapture(event.pointerId);
+    }
+
+    if (this.hasDragged) {
+      setTimeout(() => this.classList.remove('is-dragging'), 0);
+    }
+  }
+}
+customElements.define('cart-drawer-upsell-scroll', CartDrawerUpsellScroll);
+
 class MainCart extends HTMLElement {
   constructor() {
     super();
