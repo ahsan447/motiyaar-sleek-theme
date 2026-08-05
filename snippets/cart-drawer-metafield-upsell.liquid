@@ -1,10 +1,10 @@
 {%- comment -%}
-  Aggregates products from each cart line item's product metafield
-  custom.line_item_recommendation_products (list.product_reference).
-  Every line item that has products set in that metafield contributes
-  them; line items without it are simply skipped. Products already in
-  the cart, sold-out products, and duplicates across line items are
-  excluded.
+  Walks every cart line item's product metafield
+  custom.line_item_recommendation_products (list.product_reference) and
+  renders the referenced products in one combined slider. Line items
+  without the metafield are simply skipped; line items with it all
+  contribute. Products already in the cart, sold-out products, and
+  duplicates across line items are excluded.
 {%- endcomment -%}
 {%- liquid
   assign limit = limit | default: 4
@@ -13,30 +13,27 @@
   for cart_item in cart.items
     assign cart_product_ids = cart_product_ids | append: cart_item.product_id | append: '-'
   endfor
-
-  assign candidate_products = '' | split: ','
-  for cart_item in cart.items
-    assign line_item_recs = cart_item.product.metafields.custom.line_item_recommendation_products.value
-    if line_item_recs != blank
-      assign candidate_products = candidate_products | concat: line_item_recs
-    endif
-  endfor
 -%}
 {%- capture upsell_cards -%}
   {%- liquid
     assign seen_ids = ''
     assign upsell_count = 0
+    assign total_candidates = 0
   -%}
-  {%- for candidate in candidate_products -%}
-    {%- assign id_token = candidate.id | append: '-' -%}
-    {%- if candidate == blank or candidate.available == false or cart_product_ids contains id_token or seen_ids contains id_token or upsell_count >= limit -%}
-      {%- continue -%}
-    {%- endif -%}
-    {%- assign seen_ids = seen_ids | append: id_token -%}
-    {%- assign upsell_count = upsell_count | plus: 1 -%}
-    <div class="swiper-slide">
-      {%- render 'cart-drawer-upsell-card', product: candidate -%}
-    </div>
+  {%- for cart_item in cart.items -%}
+    {%- assign line_item_recs = cart_item.product.metafields.custom.line_item_recommendation_products.value -%}
+    {%- assign total_candidates = total_candidates | plus: line_item_recs.size -%}
+    {%- for candidate in line_item_recs -%}
+      {%- assign id_token = candidate.id | append: '-' -%}
+      {%- if candidate == blank or candidate.available == false or cart_product_ids contains id_token or seen_ids contains id_token or upsell_count >= limit -%}
+        {%- continue -%}
+      {%- endif -%}
+      {%- assign seen_ids = seen_ids | append: id_token -%}
+      {%- assign upsell_count = upsell_count | plus: 1 -%}
+      <div class="swiper-slide">
+        {%- render 'cart-drawer-upsell-card', product: candidate -%}
+      </div>
+    {%- endfor -%}
   {%- endfor -%}
 {%- endcapture -%}
 {%- if true -%}
@@ -53,7 +50,7 @@
       {%- endif -%}
       <br>
     {%- endfor -%}
-    Candidates collected: {{ candidate_products.size }}<br>
+    Total candidates seen: {{ total_candidates }}<br>
     Shown after filtering: {{ upsell_count }}
   </div>
 {%- endif -%}
