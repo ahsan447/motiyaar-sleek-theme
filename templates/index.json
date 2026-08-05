@@ -12,6 +12,18 @@
     "trust_hero_Rn5aWx": {
       "type": "trust-hero",
       "blocks": {
+        "image_tbzPpV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Firefly_Gemini_Flash_Create_an_ultra-photorealistic_luxury_jewelry_campaign_inspired_by_the_attached_refer_889280.png"
+          }
+        },
+        "image_neaCEc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Firefly_Gemini_Flash_Create_an_ultra-photorealistic_luxury_jewelry_beauty_campaign_inspired_by_the_attache_889280.png"
+          }
+        },
         "subheading_Tb1a01": {
           "type": "subheading",
           "settings": {
@@ -121,6 +133,8 @@
         }
       },
       "block_order": [
+        "image_tbzPpV",
+        "image_neaCEc",
         "subheading_Tb1a01",
         "heading_Tb1a02",
         "text_Tb1a03",
