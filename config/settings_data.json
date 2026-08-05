@@ -62,8 +62,8 @@
     "collection_card_show_product_count": false,
     "color_swatch_trigger": "Color",
     "cart_type": "drawer",
-    "free_shipping_minimum_amount": "100",
     "cart_icon": "shopping-bag",
+    "free_shipping_minimum_amount": "2500",
     "social_facebook_link": "#",
     "social_instagram_link": "#",
     "social_youtube_link": "#",
@@ -99,6 +99,16 @@
         "type": "main-password-footer",
         "settings": {
           "color_scheme": "scheme-1"
+        }
+      },
+      "sticky-atc-bar": {
+        "type": "sticky-atc-bar",
+        "settings": {
+          "container": "full",
+          "visibility": "all",
+          "show_atc_button": true,
+          "show_dynamic_checkout_buttons": false,
+          "show_quantity": true
         }
       }
     },
