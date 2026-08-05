@@ -39,6 +39,24 @@
     </div>
   {%- endfor -%}
 {%- endcapture -%}
+{%- if request.design_mode -%}
+  <div style="padding:10px;margin-bottom:10px;border:1px dashed #999;font-size:12px;font-family:monospace;background:#fafafa;color:#333;">
+    <strong>Upsell debug (only visible to you in the editor):</strong><br>
+    Cart items: {{ cart.item_count }}<br>
+    {%- for cart_item in cart.items -%}
+      &bull; {{ cart_item.product.title }} (id {{ cart_item.product_id }}) &rarr;
+      {%- assign debug_recs = cart_item.product.metafields.custom.line_item_recommendation_products -%}
+      {%- if debug_recs == blank -%}
+        metafield empty/not set
+      {%- else -%}
+        metafield type: {{ debug_recs.type }}, value: {{ debug_recs.value.size }} product(s)
+      {%- endif -%}
+      <br>
+    {%- endfor -%}
+    Candidates collected: {{ candidate_products.size }}<br>
+    Shown after filtering: {{ upsell_count }}
+  </div>
+{%- endif -%}
 {%- if upsell_count > 0 -%}
   <cart-drawer-metafield-upsell class="cart-drawer-products-recommendation cart-drawer-metafield-upsell flex flex-col gap-3">
     <div class="cart-drawer-products-recommendation__header flex items-center justify-between">
