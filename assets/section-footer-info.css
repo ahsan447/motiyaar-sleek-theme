@@ -116,10 +116,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 2.8rem;
+  height: 4.8rem;
+  width: 7rem;
   padding: 0.4rem 0.8rem;
   border-radius: 0.6rem;
   background-color: #fff;
+}
+
+.jdgm-widget:not(.jdgm-review-widget--small,.jdgm-review-widget--medium) .jdgm-write-rev-link, .jdgm-widget:not(.jdgm-review-widget--small,.jdgm-review-widget--medium) .jdgm-ask-question-btn {
+  border-radius: 999px;
 }
 
 .footer-info__payment-icon {

@@ -42,6 +42,7 @@
   background-color: #ffffff;
   color: #000000;
   border-color: transparent;
+  border-radius: 99px;
 }
 
 .email-capture__input::placeholder {
