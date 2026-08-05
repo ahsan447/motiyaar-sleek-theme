@@ -73,6 +73,7 @@
         },
         "icon_with_text": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
             "layout": "horizontal",
             "title_font": "body",
