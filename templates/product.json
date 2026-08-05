@@ -43,7 +43,7 @@
         "text_WAhCAa": {
           "type": "text",
           "settings": {
-            "text": "",
+            "text": "{{ product.metafields.custom.short_description | metafield_tag }}",
             "text_style": "body"
           }
         },
