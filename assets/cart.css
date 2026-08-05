@@ -84,6 +84,38 @@
 .cart__footer {
   margin-block-start: 4rem;
 }
+.cart__trust-badges {
+  gap: 1.2rem 2rem;
+  justify-content: center;
+  padding-block-end: 0.4rem;
+}
+.cart__trust-badge {
+  gap: 0.6rem;
+}
+.cart__trust-badge .icon,
+.cart__trust-badge .icon-lock {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+}
+.cart__trust-badge-icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+.cart__trust-badge-label {
+  white-space: nowrap;
+  opacity: 0.85;
+}
+@media (max-width: 767.98px) {
+  .cart__trust-badges {
+    justify-content: flex-start;
+  }
+  .cart__trust-badge-label {
+    white-space: normal;
+  }
+}
 .cart__footer-wrapper {
   width: 100%;
 }

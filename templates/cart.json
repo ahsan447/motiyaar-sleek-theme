@@ -27,6 +27,34 @@
           "type": "buttons",
           "settings": {
           }
+        },
+        "trust_badge_secure": {
+          "type": "trust_badge",
+          "settings": {
+            "icon": "lock",
+            "label": "Secure Checkout"
+          }
+        },
+        "trust_badge_payment": {
+          "type": "trust_badge",
+          "settings": {
+            "icon": "tag",
+            "label": "Multiple Payment Options"
+          }
+        },
+        "trust_badge_returns": {
+          "type": "trust_badge",
+          "settings": {
+            "icon": "check-circle",
+            "label": "Easy Returns"
+          }
+        },
+        "trust_badge_delivery": {
+          "type": "trust_badge",
+          "settings": {
+            "icon": "truck",
+            "label": "Nationwide Delivery"
+          }
         }
       },
       "block_order": [
@@ -34,7 +62,11 @@
         "cart_note_qpALBg",
         "cart_shipping_rate_bnhQBk",
         "subtotal_LeUiVY",
-        "buttons_drwbch"
+        "buttons_drwbch",
+        "trust_badge_secure",
+        "trust_badge_payment",
+        "trust_badge_returns",
+        "trust_badge_delivery"
       ],
       "settings": {
         "padding_top": 100,

@@ -112,6 +112,7 @@
           assign items_in_cart = cart.item_count | minus: gift_wraps_in_cart
         endif
       -%}
+      {%- assign trust_badge_blocks = section.blocks | where: 'type', 'trust_badge' -%}
       <main-cart id="MainCart-{{ section.id }}" class="block">
         <form class="cart__form" action="{{ routes.cart_url }}" method="POST" id="cart">
           <cart-items>
@@ -483,6 +484,34 @@
               gift_wraps_in_cart: gift_wraps_in_cart,
               items_in_cart: items_in_cart
             -%}
+            {%- if trust_badge_blocks.size > 0 -%}
+              <div class="cart__trust-badges flex flex-wrap items-center">
+                {%- for block in trust_badge_blocks -%}
+                  <div class="cart__trust-badge flex items-center" {{ block.shopify_attributes }}>
+                    {%- if block.settings.custom_icon != blank -%}
+                      {{
+                        block.settings.custom_icon
+                        | image_url: width: 64
+                        | image_tag:
+                          loading: 'lazy',
+                          width: 32,
+                          height: 32,
+                          widths: '32,48,64',
+                          class: 'cart__trust-badge-icon',
+                          alt: block.settings.label | default: shop.name
+                      }}
+                    {%- elsif block.settings.icon == 'lock' -%}
+                      {% render 'icon-padlock', size: 'small' %}
+                    {%- elsif block.settings.icon != 'none' -%}
+                      {% render 'icons', icon: block.settings.icon, size: 'small' %}
+                    {%- endif -%}
+                    {%- if block.settings.label != blank -%}
+                      <span class="cart__trust-badge-label text-sm">{{ block.settings.label }}</span>
+                    {%- endif -%}
+                  </div>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
             {%- for block in section.blocks -%}
               {%- case block.type -%}
                 {%- when '@app' -%}
@@ -734,6 +763,71 @@
       "type": "cart_shipping_rate",
       "name": "t:sections.main-cart.blocks.cart_shipping_rate.name",
       "limit": 1
+    },
+    {
+      "type": "trust_badge",
+      "name": "Trust badge",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "t:sections.all.icon.label",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.all.icon.options__1.label"
+            },
+            {
+              "value": "lock",
+              "label": "Lock"
+            },
+            {
+              "value": "seal-check",
+              "label": "t:sections.all.icon.options__22.label"
+            },
+            {
+              "value": "check-circle",
+              "label": "t:sections.all.icon.options__15.label"
+            },
+            {
+              "value": "truck",
+              "label": "t:sections.all.icon.options__13.label"
+            },
+            {
+              "value": "package",
+              "label": "t:sections.all.icon.options__11.label"
+            },
+            {
+              "value": "tag",
+              "label": "t:sections.all.icon.options__17.label"
+            },
+            {
+              "value": "gift",
+              "label": "t:sections.all.icon.options__8.label"
+            },
+            {
+              "value": "heart",
+              "label": "t:sections.all.icon.options__10.label"
+            }
+          ],
+          "default": "seal-check"
+        },
+        {
+          "type": "paragraph",
+          "content": "Upload a custom icon image to override the icon above."
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom icon image"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "t:sections.all.description.label",
+          "default": "Quality Checked"
+        }
+      ]
     }
   ]
 }

@@ -142,4 +142,8 @@
   .footer-info__payment {
     justify-content: center;
   }
+
+  .product--medium {
+    gap: 0 !important;
+  }
 }
