@@ -1,6 +1,9 @@
 .trust-hero__media {
   min-height: 100%;
 }
+.trust-hero__media-slider {
+  overflow: hidden;
+}
 .trust-hero__inner {
   --padding-x: 2rem;
   --padding-y: 4rem;

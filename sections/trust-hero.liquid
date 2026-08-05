@@ -11,6 +11,7 @@
 
   assign image = section.settings.image
   assign alt_image = image.alt | default: shop.name | escape
+  assign image_blocks = section.blocks | where: 'type', 'image'
 
   assign color_inherit = false
   if section.settings.color_scheme == section.settings.section_color_scheme
@@ -39,28 +40,73 @@
         {% endif %}
       >
         <motion-element data-motion="zoom-out" class="block w-full h-full">
-          <div
-            class="trust-hero__media hero__media media-wrapper hover-wrapper"
-            style="{% if section.settings.image_height == 'adapt' %}--aspect-ratio: {{ section.settings.image.aspect_ratio | default: '4/5' }};{% endif %}"
-          >
-            {% if section.settings.image != blank %}
-              {{-
-                image
-                | image_url: width: image.width
-                | image_tag:
-                  loading: loading,
-                  fetchpriority: fetchpriority,
-                  sizes: sizes,
-                  width: image.width,
-                  height: image.height,
-                  widths: '300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200',
-                  alt: alt_image,
-                  class: 'hover-scale-up'
-              -}}
-            {% else %}
-              {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg w-full h-full hover-scale-up' }}
-            {% endif %}
-          </div>
+          {% if image_blocks.size > 0 %}
+            <div
+              class="trust-hero__media hero__media media-wrapper hover-wrapper"
+              style="{% if section.settings.image_height == 'adapt' %}--aspect-ratio: {{ image_blocks.first.settings.image.aspect_ratio | default: '4/5' }};{% endif %}"
+            >
+              <trust-hero-media-slider class="block w-full h-full" data-section-id="{{ section.id }}">
+                <div class="trust-hero__media-slider swiper w-full h-full">
+                  <div class="swiper-wrapper">
+                    {% for block in image_blocks %}
+                      {%- liquid
+                        assign block_image = block.settings.image
+                        assign block_alt = block_image.alt | default: shop.name | escape
+                        assign block_loading = 'lazy'
+                        assign block_fetchpriority = 'low'
+                        if forloop.index == 1 and section.index < 3
+                          assign block_loading = 'eager'
+                          assign block_fetchpriority = 'high'
+                        endif
+                      -%}
+                      <div class="swiper-slide" {{ block.shopify_attributes }}>
+                        {% if block_image != blank %}
+                          {{-
+                            block_image
+                            | image_url: width: block_image.width
+                            | image_tag:
+                              loading: block_loading,
+                              fetchpriority: block_fetchpriority,
+                              sizes: sizes,
+                              width: block_image.width,
+                              height: block_image.height,
+                              widths: '300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200',
+                              alt: block_alt,
+                              class: 'hover-scale-up'
+                          -}}
+                        {% else %}
+                          {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg w-full h-full hover-scale-up' }}
+                        {% endif %}
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </trust-hero-media-slider>
+            </div>
+          {% else %}
+            <div
+              class="trust-hero__media hero__media media-wrapper hover-wrapper"
+              style="{% if section.settings.image_height == 'adapt' %}--aspect-ratio: {{ section.settings.image.aspect_ratio | default: '4/5' }};{% endif %}"
+            >
+              {% if section.settings.image != blank %}
+                {{-
+                  image
+                  | image_url: width: image.width
+                  | image_tag:
+                    loading: loading,
+                    fetchpriority: fetchpriority,
+                    sizes: sizes,
+                    width: image.width,
+                    height: image.height,
+                    widths: '300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200',
+                    alt: alt_image,
+                    class: 'hover-scale-up'
+                -}}
+              {% else %}
+                {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg w-full h-full hover-scale-up' }}
+              {% endif %}
+            </div>
+          {% endif %}
         </motion-element>
       </parallax-element>
 
@@ -629,6 +675,21 @@
           "id": "review_text",
           "label": "Review summary text",
           "default": "Loved by 10,000+ customers"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Add one or more Image blocks to turn the side image into an auto-playing slider (one image shown at a time)."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.all.image.label"
         }
       ]
     },
