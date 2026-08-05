@@ -228,7 +228,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "heading": "You may also like",
-        "heading_size": "h2",
+        "heading_size": "h3",
         "heading_highlight_style": "none",
         "subheading": "",
         "description": "",
@@ -277,7 +277,8 @@
           "repeater": "{{ product.metafields.custom.faq.value }}",
           "settings": {
             "question": "{{ block.repeater.question.value }}",
-            "answer": "{{ block.repeater.answer | metafield_tag }}"
+            "answer": "<p>{{ block.repeater.answer | metafield_tag }}</p>",
+            "open": false
           }
         }
       },
