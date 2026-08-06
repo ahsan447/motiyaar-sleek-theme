@@ -242,17 +242,23 @@
 }
 
 /* Free delivery goal card (cart drawer) */
+.free-shipping-goal {
+  --color-fsg-accent: var(--color-primary);
+}
+.free-shipping-goal--done {
+  --color-fsg-accent: 61, 122, 82;
+}
 .cart-drawer .free-shipping-goal {
-  background-color: rgba(var(--color-primary), 0.06);
-  border: 0.1rem solid rgba(var(--color-primary), 0.16);
+  background-color: rgba(var(--color-fsg-accent), 0.06);
+  border: 0.1rem solid rgba(var(--color-fsg-accent), 0.16);
   border-radius: var(--medium-blocks-radius, 0.8rem);
   padding: 1.4rem 1.6rem;
   text-align: start;
   transition: background-color var(--duration-default, 200ms) ease, border-color var(--duration-default, 200ms) ease;
 }
 .cart-drawer .free-shipping-goal--done {
-  background-color: rgba(var(--color-primary), 0.1);
-  border-color: rgba(var(--color-primary), 0.28);
+  background-color: rgba(var(--color-fsg-accent), 0.1);
+  border-color: rgba(var(--color-fsg-accent), 0.28);
 }
 .free-shipping-goal__row {
   min-height: 3.4rem;
@@ -262,8 +268,9 @@
   width: 3.4rem;
   height: 3.4rem;
   border-radius: 50%;
-  background-color: rgba(var(--color-primary), 0.12);
-  color: rgb(var(--color-primary));
+  background-color: rgba(var(--color-fsg-accent), 0.12);
+  color: rgb(var(--color-fsg-accent));
+  transition: background-color var(--duration-default, 200ms) ease, color var(--duration-default, 200ms) ease;
 }
 .free-shipping-goal__icon .icon {
   position: absolute;
@@ -285,15 +292,16 @@
   transform: translate(-50%, -50%) scale(1);
 }
 .free-shipping-goal__label--default strong {
-  color: rgb(var(--color-primary));
+  color: rgb(var(--color-fsg-accent));
 }
 .free-shipping-goal--done .free-shipping-goal__label--success {
-  color: rgb(var(--color-primary));
+  color: rgb(var(--color-fsg-accent));
 }
 .free-shipping-goal .progress-bar {
   height: 0.6rem;
-  background-color: rgba(var(--color-primary), 0.16);
-  color: rgb(var(--color-primary));
+  background-color: rgba(var(--color-fsg-accent), 0.16);
+  color: rgb(var(--color-fsg-accent));
+  transition: background-color var(--duration-default, 200ms) ease, color var(--duration-default, 200ms) ease;
 }
 
 .cart-drawer-metafield-upsell__scroll {
