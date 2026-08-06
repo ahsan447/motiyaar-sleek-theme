@@ -166,6 +166,7 @@
                                 <a
                                   href="{{ link.url }}"
                                   class="reversed-link"
+                                  {% render 'external-link-attrs', url: link.url %}
                                 >
                                   {{ link.title }}
                                 </a>
@@ -324,7 +325,11 @@
               <ul class="linklist linklist--horizontal list-unstyled">
                 {% for link in linklists[section.settings.footer_bottom_menu].links %}
                   <li>
-                    <a href="{{ link.url }}" class="reversed-link">{{ link.title | escape }}</a>
+                    <a
+                      href="{{ link.url }}"
+                      class="reversed-link"
+                      {% render 'external-link-attrs', url: link.url %}
+                    >{{ link.title | escape }}</a>
                   </li>
                 {% endfor %}
               </ul>

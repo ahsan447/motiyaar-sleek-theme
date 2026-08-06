@@ -65,6 +65,7 @@
                       <a
                         href="{{ grandchildlink.url }}"
                         class="menu-drawer__item-link flex items-center justify-between"
+                        {% render 'external-link-attrs', url: grandchildlink.url %}
                       >
                         {{- grandchildlink.title | escape -}}
                       </a>
@@ -77,6 +78,7 @@
             <a
               href="{{ childlink.url }}"
               class="menu-drawer__item-link flex items-center justify-between"
+              {% render 'external-link-attrs', url: childlink.url %}
             >
               {{- childlink.title -}}
             </a>

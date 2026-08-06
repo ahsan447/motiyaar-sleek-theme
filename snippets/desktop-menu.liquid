@@ -51,7 +51,12 @@
                         <li class="relative">
                           <details level="child" trigger="hover" is="details-dropdown">
                             <summary data-link="{{ childlink.url }}" class="flex items-center justify-between gap-x-1">
-                              <a href="{{ childlink.url }}" class="reversed-link" tabindex="-1">
+                              <a
+                                href="{{ childlink.url }}"
+                                class="reversed-link"
+                                tabindex="-1"
+                                {% render 'external-link-attrs', url: childlink.url %}
+                              >
                                 {{- childlink.title | escape -}}
                               </a>
                               <svg
@@ -71,7 +76,11 @@
                                   {%- for grandchildlink in childlink.links -%}
                                     <li>
                                       <p>
-                                        <a class="reversed-link" href="{{ grandchildlink.url }}">
+                                        <a
+                                          class="reversed-link"
+                                          href="{{ grandchildlink.url }}"
+                                          {% render 'external-link-attrs', url: grandchildlink.url %}
+                                        >
                                           {{- grandchildlink.title | escape -}}
                                         </a>
                                       </p>
@@ -85,7 +94,11 @@
                       {%- else -%}
                         <li>
                           <p>
-                            <a href="{{ childlink.url }}" class="reversed-link">{{ childlink.title | escape }}</a>
+                            <a
+                              href="{{ childlink.url }}"
+                              class="reversed-link"
+                              {% render 'external-link-attrs', url: childlink.url %}
+                            >{{ childlink.title | escape }}</a>
                           </p>
                         </li>
                       {%- endif -%}
@@ -99,7 +112,11 @@
           {%- if enable_mega_menu -%}
             {% render 'mega-menu', link: link, block: mega_menu_block %}
           {%- else -%}
-            <a href="{{ link.url }}" class="menu__item flex relative z-2 font-navigation">
+            <a
+              href="{{ link.url }}"
+              class="menu__item flex relative z-2 font-navigation"
+              {% render 'external-link-attrs', url: link.url %}
+            >
               <span class="reversed-link">{{ link.title | escape }}</span>
             </a>
           {%- endif -%}

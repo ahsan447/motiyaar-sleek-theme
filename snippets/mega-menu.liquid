@@ -72,14 +72,22 @@
                 {%- if show_menu_column_divider -%}
                   <div class="mega-menu__item-wrapper">
                 {%- endif -%}
-                <a href="{{ childlink.url }}" class="h4 mega-menu__link mega-menu__link--top font-heading">
+                <a
+                  href="{{ childlink.url }}"
+                  class="h4 mega-menu__link mega-menu__link--top font-heading"
+                  {% render 'external-link-attrs', url: childlink.url %}
+                >
                   {{- childlink.title | escape -}}
                 </a>
                 {%- if childlink.links != blank -%}
                   <ul class="mega-menu__item-child">
                     {%- for grandchildlink in childlink.links -%}
                       <li>
-                        <a href="{{ grandchildlink.url }}" class="reversed-link mega-menu__link">
+                        <a
+                          href="{{ grandchildlink.url }}"
+                          class="reversed-link mega-menu__link"
+                          {% render 'external-link-attrs', url: grandchildlink.url %}
+                        >
                           {{- grandchildlink.title | escape -}}
                         </a>
                       </li>

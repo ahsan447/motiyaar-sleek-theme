@@ -70,7 +70,11 @@
                   block: mega_menu_block
                 -%}
               {%- else -%}
-                <a href="{{ link.url }}" class="menu-drawer__item-link flex items-center justify-between">
+                <a
+                  href="{{ link.url }}"
+                  class="menu-drawer__item-link flex items-center justify-between"
+                  {% render 'external-link-attrs', url: link.url %}
+                >
                   {{- link.title | escape -}}
                 </a>
               {%- endif -%}

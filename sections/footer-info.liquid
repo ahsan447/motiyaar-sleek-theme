@@ -78,20 +78,11 @@
                 {%- endif -%}
                 <ul class="footer-info__links list-unstyled">
                   {%- for link in block.settings.menu.links -%}
-                    {%- liquid
-                      assign is_external_link = false
-                      if link.url contains '://' and link.url contains request.host == false
-                        assign is_external_link = true
-                      endif
-                    -%}
                     <li>
                       <a
                         class="footer-info__link"
                         href="{{ link.url }}"
-                        {% if is_external_link %}
-                          target="_blank"
-                          rel="noopener"
-                        {% endif %}
+                        {% render 'external-link-attrs', url: link.url %}
                       >{{ link.title }}</a>
                     </li>
                   {%- endfor -%}
