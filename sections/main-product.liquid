@@ -26,7 +26,7 @@
   data-update-url="true"
   data-url="{{ product.url }}"
   class="section block section-{{ section.id }} section--padding page-width color-{{ section.settings.color_scheme }}"
-  style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+  style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;--section-padding-top-mobile: {{ section.settings.padding_top_mobile }}px;--section-padding-bottom-mobile: {{ section.settings.padding_bottom_mobile }}px;"
 >
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
@@ -1554,6 +1554,10 @@
       "content": "t:sections.all.padding.section_padding_heading"
     },
     {
+      "type": "header",
+      "content": "Desktop"
+    },
+    {
       "type": "range",
       "id": "padding_top",
       "min": 0,
@@ -1572,6 +1576,30 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 30
     }
   ]
 }
