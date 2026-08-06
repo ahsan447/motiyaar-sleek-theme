@@ -194,7 +194,7 @@
         "enable_image_zoom": false,
         "enable_video_looping": false,
         "padding_top": 0,
-        "padding_bottom": 46
+        "padding_bottom": 68
       }
     },
     "trust_badges_Ab12Cd": {
@@ -239,6 +239,7 @@
         "badge_Ab12Cg",
         "badge_Ab12Ch"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "columns_desktop": "4",
