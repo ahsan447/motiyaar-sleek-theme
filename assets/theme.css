@@ -3780,6 +3780,10 @@ input:is([type=radio])::after {
   text-overflow: ellipsis;
 }
 
+.jdgm-write-rev-link.jdgm-write-rev-link {
+  border-radius: 99px !important;
+}
+
 @media (max-width: 767.98px) {
   .product-card__title.text-upper {
     font-size: calc(var(--font-body-size) * 1px);
