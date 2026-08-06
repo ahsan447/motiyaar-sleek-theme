@@ -51,14 +51,14 @@
   display: flex;
   align-items: stretch;
   width: 100%;
-  max-width: 46rem;
+  max-width: 59rem;
   border: 0.1rem solid rgba(var(--color-foreground), 0.08);
   box-shadow: 0 1.6rem 3.2rem rgba(var(--color-foreground), 0.08);
 }
 
 .personalized-gift__card-media {
-  flex: 0 0 38%;
-  max-width: 38%;
+  flex: 0 0 45%;
+  max-width: 45%;
   align-self: stretch;
 }
 .personalized-gift__card-media .media-wrapper {
