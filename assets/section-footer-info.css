@@ -63,6 +63,11 @@
   white-space: nowrap;
 }
 
+.footer-info__social {
+  margin-top: 2rem;
+  color: rgb(var(--color-foreground));
+}
+
 .footer-info__col-heading {
   margin: 0 0 1.6rem;
   color: var(--footer-info-accent, #d8a35c);
