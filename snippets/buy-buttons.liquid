@@ -83,6 +83,9 @@
       -%}
 
 <div class="product-form__buttons">
+  {%- if block.settings.show_quantity_selector -%}
+    {%- render 'quantity-input', section_id: section_id, min: 1, input_label: product.title -%}
+  {%- endif -%}
   <button
     id="ProductSubmitButton-{{ section_id }}"
     type="submit"
