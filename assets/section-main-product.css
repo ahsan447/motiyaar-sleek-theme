@@ -605,8 +605,6 @@
 .product__trust-badges {
   --icon-size: 1.8rem;
   gap: 1rem 2rem;
-  padding: 1.6rem 0;
-  border-top: 0.1rem solid rgb(var(--color-border));
 }
 .product__trust-badges .icon-with-text__item {
   gap: 0.8rem;
