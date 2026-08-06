@@ -26,6 +26,7 @@
   if settings.currency_code_enabled
     assign money_price = price | money_with_currency
   endif
+  assign money_price = money_price | replace: '.00', ''
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
@@ -62,9 +63,9 @@
       <span class="f-price-item f-price-item--regular">
         <s>
           {% if settings.currency_code_enabled %}
-            {{ compare_at_price | money_with_currency }}
+            {{ compare_at_price | money_with_currency | replace: '.00', '' }}
           {% else %}
-            {{ compare_at_price | money }}
+            {{ compare_at_price | money | replace: '.00', '' }}
           {% endif %}
         </s>
       </span>
@@ -86,7 +87,7 @@
             {%- endif -%}
           </span>
       {%- endcapture -%}
-      <span data-unit-price>{{ selected_variant.unit_price | money }}</span>
+      <span data-unit-price>{{ selected_variant.unit_price | money | replace: '.00', '' }}</span>
       {{- unit_price_separator -}}
       {{- unit_price_base_unit -}}
     </div>
@@ -106,7 +107,7 @@
               assign sale_badge = 'products.product.price.save_price_html' | t: amount: amount
             when 'fixed_amount'
               if compare_at_price > price
-                assign amount = compare_at_price | minus: price | money
+                assign amount = compare_at_price | minus: price | money | replace: '.00', ''
               endif
               assign sale_badge = 'products.product.price.save_price_html' | t: amount: amount
             else

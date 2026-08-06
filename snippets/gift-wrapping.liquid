@@ -23,7 +23,7 @@
       </div>
       <label for="GiftWrap-{{ section.id }}" class="text-sm cursor-pointer">
         {%- liquid
-          assign gift_price = gift_wrapping.object.price | money
+          assign gift_price = gift_wrapping.object.price | money | replace: '.00', ''
           echo 'general.cart.gift_wrapping.message_html' | t: price: gift_price
         -%}
       </label>

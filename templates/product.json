@@ -79,6 +79,21 @@
             "show_gift_card_recipient": false
           }
         },
+        "trust_badges_Pd9wLk": {
+          "type": "trust_badges",
+          "settings": {
+            "badge_1_icon": "seal-check",
+            "badge_1_text": "Secure Checkout",
+            "badge_2_icon": "currency-circle-dollar",
+            "badge_2_text": "All Payment Methods Accepted",
+            "badge_3_icon": "truck",
+            "badge_3_text": "Fast Delivery",
+            "badge_4_icon": "arrow-up-left",
+            "badge_4_text": "Easy Returns",
+            "badge_5_icon": "certificate",
+            "badge_5_text": "Customer Satisfaction Guaranteed"
+          }
+        },
         "icon_with_text": {
           "type": "icon-with-text",
           "disabled": true,
@@ -161,6 +176,7 @@
         "inventory",
         "variant_picker",
         "buy_buttons",
+        "trust_badges_Pd9wLk",
         "icon_with_text",
         "pickup_availability",
         "complementary",

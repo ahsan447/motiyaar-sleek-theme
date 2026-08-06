@@ -3,7 +3,7 @@
   assign total_price = cart.total_price | plus: 0
 -%}
 {%- capture left_to_spend -%}
-    <strong data-left-to-spend>{{ limit_currency | minus: cart.total_price | money }}</strong>
+    <strong data-left-to-spend>{{ limit_currency | minus: cart.total_price | money | replace: '.00', '' }}</strong>
 {%- endcapture -%}
 <free-shipping-goal
   data-cart-total="{{ total_price }}"

@@ -123,7 +123,7 @@
                               {% render 'icon-discount' %}
                               <span>
                                 {{- discount_allocation.discount_application.title }} (-
-                                {{- discount_allocation.amount | money -}}
+                                {{- discount_allocation.amount | money | replace: '.00', '' -}}
                                 )</span
                               >
                             </li>
@@ -172,20 +172,20 @@
                             <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                           </dt>
                           <dd class="regular-price m-0">
-                            <s>{{ line_item.original_price | money }}</s>
+                            <s>{{ line_item.original_price | money | replace: '.00', '' }}</s>
                           </dd>
                           <dt>
                             <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
                           </dt>
                           <dd class="m-0">
-                            <span>{{ line_item.final_price | money }}</span>
+                            <span>{{ line_item.final_price | money | replace: '.00', '' }}</span>
                           </dd>
                         {%- else -%}
                           <dt>
                             <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                           </dt>
                           <dd class="m-0">
-                            {{ line_item.original_price | money }}
+                            {{ line_item.original_price | money | replace: '.00', '' }}
                           </dd>
                         {%- endif -%}
                         {%- if line_item.unit_price_measurement -%}
@@ -204,7 +204,7 @@
                               {%- endif -%}
                               {{ line_item.unit_price_measurement.reference_unit }}
                             {%- endcapture -%}
-                              <span data-unit-price>{{ line_item.unit_price | money }}</span>
+                              <span data-unit-price>{{ line_item.unit_price | money | replace: '.00', '' }}</span>
                               {{- unit_price_separator -}}
                               {{- unit_price_base_unit -}}
                             </span>
@@ -212,7 +212,7 @@
                         {%- endif -%}
                       </dl>
                     {%- else -%}
-                      <span>{{ line_item.final_price | money }}</span>
+                      <span>{{ line_item.final_price | money | replace: '.00', '' }}</span>
                     {%- endif -%}
                   </td>
                   <td
@@ -235,17 +235,17 @@
                           <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                         </dt>
                         <dd class="regular-price m-0">
-                          <s>{{ line_item.original_line_price | money }}</s>
+                          <s>{{ line_item.original_line_price | money | replace: '.00', '' }}</s>
                         </dd>
                         <dt>
                           <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
                         </dt>
                         <dd class="m-0">
-                          <span>{{ line_item.final_line_price | money }}</span>
+                          <span>{{ line_item.final_line_price | money | replace: '.00', '' }}</span>
                         </dd>
                       </dl>
                     {%- else -%}
-                      {{ line_item.original_line_price | money }}
+                      {{ line_item.original_line_price | money | replace: '.00', '' }}
                     {%- endif -%}
                   </td>
                 </tr>
@@ -255,7 +255,7 @@
         </div>
         <ul class="order-total-amount md:text-right">
           <li>
-            <span>{{ 'customer.order.subtotal' | t }}:</span> {{ order.line_items_subtotal_price | money }}
+            <span>{{ 'customer.order.subtotal' | t }}:</span> {{ order.line_items_subtotal_price | money | replace: '.00', '' }}
           </li>
 
           {%- if order.cart_level_discount_applications != blank -%}
@@ -269,7 +269,7 @@
                   >:
                 </span>
                 <div>
-                  <span>-{{ discount_application.total_allocated_amount | money }}</span>
+                  <span>-{{ discount_application.total_allocated_amount | money | replace: '.00', '' }}</span>
                   <span class="cart-discount">
                     {% render 'icon-discount' %}
                     {{- discount_application.title -}}
@@ -282,7 +282,7 @@
           {%- for shipping_method in order.shipping_methods -%}
             <li>
               <span>{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }}):</span>
-              {{ shipping_method.price | money }}
+              {{ shipping_method.price | money | replace: '.00', '' }}
             </li>
           {%- endfor -%}
 
@@ -292,24 +292,24 @@
                 {{ 'customer.order.tax' | t }} ({{ tax_line.title }}
                 {{ tax_line.rate | times: 100 }}%):
               </span>
-              {{ tax_line.price | money }}
+              {{ tax_line.price | money | replace: '.00', '' }}
             </li>
           {%- endfor -%}
           {%- if order.total_duties -%}
             <li>
               <span>{{ 'customer.order.total_duties' | t }}:</span>
-              {{ order.total_duties | money }}
+              {{ order.total_duties | money | replace: '.00', '' }}
             </li>
           {%- endif -%}
           {%- if order.total_refunded_amount > 0 -%}
             <li>
               <span>{{ 'customer.order.total_refunded' | t }}:</span>
-              -{{ order.total_refunded_amount | money_with_currency }}
+              -{{ order.total_refunded_amount | money_with_currency | replace: '.00', '' }}
             </li>
           {%- endif -%}
           <li class="h3">
             <span>{{ 'customer.order.total' | t }}:</span>
-            {{ order.total_net_amount | money_with_currency }}
+            {{ order.total_net_amount | money_with_currency | replace: '.00', '' }}
           </li>
         </ul>
       </div>

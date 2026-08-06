@@ -33,12 +33,12 @@
       incoming: {{ variant.incoming | json }},
       next_incoming_date: {{ variant.next_incoming_date | json }},
       store_availabilities: {{ variant.store_availabilities | json }},
-      price: {{ variant.price | money_with_currency | json }},
+      price: {{ variant.price | money_with_currency | replace: '.00', '' | json }},
       {% if variant.compare_at_price > variant.price %}
-      compare_price: {{ variant.compare_at_price | money_with_currency | json }},
+      compare_price: {{ variant.compare_at_price | money_with_currency | replace: '.00', '' | json }},
       {% endif %}
-      grab_price: {{ variant.price | divided_by: 4 | money_with_currency | json  }},
-      atom_price: {{ variant.price | divided_by: 3 | money_with_currency | json  }},
+      grab_price: {{ variant.price | divided_by: 4 | money_with_currency | replace: '.00', '' | json  }},
+      atom_price: {{ variant.price | divided_by: 3 | money_with_currency | replace: '.00', '' | json  }},
       notice: {% if variant.metafields.custom.pre_order_notice %}'{{variant.metafields.custom.pre_order_notice|html}}'{% else %}null{% endif %}
     }{% unless forloop.last %}, {% endunless %}
     {% endfor %}

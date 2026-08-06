@@ -48,9 +48,9 @@
       <div class="gift-card__price">
         <h1 class="h2">
           {% if settings.currency_code_enabled %}
-            {{ gift_card.balance | money_with_currency }}
+            {{ gift_card.balance | money_with_currency | replace: '.00', '' }}
           {% else %}
-            {{ gift_card.balance | money }}
+            {{ gift_card.balance | money | replace: '.00', '' }}
           {% endif %}
         </h1>
         {%- if gift_card.enabled == false or gift_card.expired -%}

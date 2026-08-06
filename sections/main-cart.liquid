@@ -168,24 +168,25 @@
                                       if settings.currency_code_enabled
                                         assign money_price = item.original_price | money_with_currency
                                       endif
+                                      assign money_price = money_price | replace: '.00', ''
                                     -%}
                                     {%- if item.original_price != item.final_price -%}
                                       <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                                       <s class="price__sale font-body text-sm text-subtext">{{ money_price }}</s>
                                       <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
                                       <span class="price__regular">
-                                        {%- liquid 
+                                        {%- liquid
                                           if settings.currency_code_enabled
-                                            echo item.final_price | money_with_currency
+                                            echo item.final_price | money_with_currency | replace: '.00', ''
                                           else
-                                            echo item.final_price | money
-                                          endif  
+                                            echo item.final_price | money | replace: '.00', ''
+                                          endif
                                         -%}
                                       </span>
                                     {%- else -%}
                                       {{- money_price -}}
                                     {%- endif -%}
-          
+
                                     {%- if item.variant.available and item.unit_price_measurement -%}
                                       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
                                       <span class="unit-price flex items-center font-body text-sm text-subtext">
@@ -199,7 +200,7 @@
                                             endif
                                           endcapture
                                         -%}
-                                        ({{ item.variant.unit_price | money }}
+                                        ({{ item.variant.unit_price | money | replace: '.00', '' }}
                                         <span aria-hidden="true">/</span>
                                         <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
                                         {{ unit_price_base_unit }})
@@ -336,24 +337,25 @@
                               if settings.currency_code_enabled
                                 assign money_price = item.original_price | money_with_currency
                               endif
+                              assign money_price = money_price | replace: '.00', ''
                             -%}
                             {%- if item.original_price != item.final_price -%}
                               <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                               <s class="price__sale font-body text-sm text-subtext">{{ money_price }}</s>
                               <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
                               <span class="price__regular">
-                                {%- liquid 
+                                {%- liquid
                                   if settings.currency_code_enabled
-                                    echo item.final_price | money_with_currency
+                                    echo item.final_price | money_with_currency | replace: '.00', ''
                                   else
-                                    echo item.final_price | money
-                                  endif  
+                                    echo item.final_price | money | replace: '.00', ''
+                                  endif
                                 -%}
                               </span>
                             {%- else -%}
                               {{- money_price -}}
                             {%- endif -%}
-  
+
                             {%- if item.variant.available and item.unit_price_measurement -%}
                               <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
                               <span class="unit-price flex items-center text-sm font-body text-subtext">
@@ -367,7 +369,7 @@
                                     endif
                                   endcapture
                                 -%}
-                                ({{ item.variant.unit_price | money }}
+                                ({{ item.variant.unit_price | money | replace: '.00', '' }}
                                 <span aria-hidden="true">/</span>
                                 <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
                                 {{ unit_price_base_unit }})
@@ -447,9 +449,9 @@
                         <span class="font-body-bolder">
                           {%- liquid
                             if settings.currency_code_enabled
-                              echo item.final_line_price | money_with_currency
+                              echo item.final_line_price | money_with_currency | replace: '.00', ''
                             else
-                              echo item.final_line_price | money
+                              echo item.final_line_price | money | replace: '.00', ''
                             endif
                           -%}
                         </span>
@@ -529,7 +531,7 @@
                             <li class="discount text-sm flex items-center">
                               {% render 'icon-discount' %}
                               <span>{{- discount.title -}}</span>
-                              <span class="font-body-bold">(-{{ discount.total_allocated_amount | money }})</span>
+                              <span class="font-body-bold">(-{{ discount.total_allocated_amount | money | replace: '.00', '' }})</span>
                             </li>
                           {%- endfor -%}
                         </ul>
@@ -539,7 +541,7 @@
                           {{- 'sections.cart.estimated_total' | t -}}
                         </span>
                         <span class="totals__subtotal-value h4 font-body-bolder">
-                          {{- cart.total_price | money_with_currency -}}
+                          {{- cart.total_price | money_with_currency | replace: '.00', '' -}}
                         </span>
                       </div>
                       <div class="tax-note">
