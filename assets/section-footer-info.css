@@ -64,8 +64,30 @@
 }
 
 .footer-info__social {
-  margin-top: 2rem;
+  margin-top: 2.4rem;
+  gap: 1.2rem;
+}
+.footer-info__social .social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.3);
+  border-radius: 50%;
   color: rgb(var(--color-foreground));
+  transition: background-color var(--duration-default, 200ms) ease,
+    border-color var(--duration-default, 200ms) ease,
+    color var(--duration-default, 200ms) ease;
+}
+.footer-info__social .social__link svg {
+  width: 2rem;
+  height: 2rem;
+}
+.footer-info__social .social__link:hover {
+  background-color: var(--footer-info-accent, #d8a35c);
+  border-color: var(--footer-info-accent, #d8a35c);
+  color: rgb(var(--color-background));
 }
 
 .footer-info__col-heading {
