@@ -295,6 +295,10 @@
     --product-blocks-gap: 2rem;
     --product-blocks-gap-large: 2.4rem;
   }
+
+  .product__block--title .product__title {
+    font-size: 24px;
+  }
 }
 .product__inventory {
   --status-color: #10a443;
