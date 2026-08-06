@@ -1,7 +1,9 @@
 {%- liquid
   assign is_external_link = false
-  if url contains '://' and url contains request.host == false
-    assign is_external_link = true
+  if url contains '://'
+    unless url contains request.host
+      assign is_external_link = true
+    endunless
   endif
 -%}
 {%- if is_external_link -%}target="_blank" rel="noopener"{%- endif -%}

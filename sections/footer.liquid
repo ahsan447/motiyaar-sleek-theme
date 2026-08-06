@@ -227,6 +227,7 @@
                               <a
                                 {% if block.settings.button_link != blank %}
                                   href="{{ block.settings.button_link }}"
+                                  {% render 'external-link-attrs', url: block.settings.button_link %}
                                 {% else %}
                                   role="link" aria-disabled="true"
                                 {% endif %}
