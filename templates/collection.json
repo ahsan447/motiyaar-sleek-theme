@@ -37,9 +37,9 @@
       "settings": {
         "color_scheme": "scheme-inverse",
         "image": "{{ collection.image }}",
-        "image_overlay_opacity": 50,
+        "image_overlay_opacity": 0,
         "image_position": "as-bg",
-        "image_height": "extra-small",
+        "image_height": "adapt",
         "text_alignment": "center",
         "enable_parallax": false,
         "parallax_direction": "vertical",
