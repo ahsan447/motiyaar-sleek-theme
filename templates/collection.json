@@ -21,6 +21,7 @@
       "blocks": {
         "collection_info_zUNyKV": {
           "type": "collection_info",
+          "disabled": true,
           "settings": {
             "heading_size": "h3",
             "heading_tag": "h1",
