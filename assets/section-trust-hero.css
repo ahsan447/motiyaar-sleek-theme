@@ -132,27 +132,42 @@
     font-size: 28px;
   }
 }
-/* Trust Hero - keep both CTA buttons in one row on mobile */
+/* Trust Hero CTA buttons */
 @media screen and (max-width: 749px) {
   .trust-hero__buttons {
-    display: flex;
-    flex-wrap: nowrap !important;
+    display: grid !important;
+    grid-template-columns: 35% 1fr;
+    gap: 0.6rem;
     width: 100%;
-    gap: 0.8rem;
   }
 
-  .trust-hero__buttons > * {
-    flex: 1 1 0;
-    min-width: 0;
-  }
-
-  .trust-hero__buttons .button,
-  .trust-hero__buttons > a {
-    width: 100%;
+  .trust-hero__buttons .btn {
+    width: 100% !important;
     min-width: 0 !important;
+    margin: 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     white-space: nowrap;
     text-align: center;
+
     padding-left: 0.8rem;
     padding-right: 0.8rem;
+  }
+}
+
+/* Galaxy Fold / very narrow mobile */
+@media screen and (max-width: 374px) {
+  .trust-hero__buttons {
+    grid-template-columns: 34% 1fr;
+    gap: 0.5rem;
+  }
+
+  .trust-hero__buttons .btn {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 1.1rem;
   }
 }
