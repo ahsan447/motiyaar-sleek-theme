@@ -6328,5 +6328,5 @@ body:not(.header-pinned) .header-scrolled .header {
   }
 }
 .jdgm-widget-actions-wrapper .jdgm-write-rev-link {
-  border-radius: 20px !important;
+  border-radius: 999px !important;
 }
