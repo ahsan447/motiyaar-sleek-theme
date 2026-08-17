@@ -105,7 +105,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "padding_top": 40,
-        "padding_bottom": 0,
+        "padding_bottom": 60,
         "custom_liquid": "<div class=\"page-width text-center charm-bar-heading\">\n  <div class=\"section__header--text\">\n    <h2 class=\"section__heading h1\">The Charm Bar</h2>\n    <div class=\"section__description rte text-base\">Start with a base, then add what matters. Each charm is a personal touch designed to reflect your story, your style, and a little shine.</div>\n  </div>\n</div>\n<style>\n@media screen and (max-width: 600px) {\n  .charm-bar-heading .section__heading.h1 {\n    font-size: 22px;\n  }\n  .charm-bar-heading .section__description {\n    font-size: 12px;\n  }\n}\n</style>"
       }
     },
@@ -214,6 +214,7 @@
     },
     "featured_collection_6CkKHy": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "color_scheme": "scheme-1",
