@@ -201,7 +201,6 @@
       },
       "block_order": ["slide_ee6DPU"],
       "settings": {
-<<<<<<< HEAD
         "container": "full",
         "layout": "standard",
         "slide_height": "large",
@@ -211,20 +210,6 @@
         "controls_position": "bottom",
         "show_text_below": false,
         "text_alignment_mobile": "center"
-=======
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-1",
-        "image": "shopify://shop_images/Earring_2.webp",
-        "image_height": "adapt",
-        "layout": "image_first",
-        "desktop_content_position": "center",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "show_section_divider": false,
-        "divider_width": "fixed"
->>>>>>> 3f0390e8bb1dcd4ff14e688902a77f72f536cb77
       }
     },
     "featured_collection_6CkKHy": {
