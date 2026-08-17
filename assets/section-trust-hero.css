@@ -132,3 +132,27 @@
     font-size: 28px;
   }
 }
+/* Trust Hero - keep both CTA buttons in one row on mobile */
+@media screen and (max-width: 749px) {
+  .trust-hero__buttons {
+    display: flex;
+    flex-wrap: nowrap !important;
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .trust-hero__buttons > * {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .trust-hero__buttons .button,
+  .trust-hero__buttons > a {
+    width: 100%;
+    min-width: 0 !important;
+    white-space: nowrap;
+    text-align: center;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
