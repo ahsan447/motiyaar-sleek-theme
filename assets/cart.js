@@ -457,32 +457,38 @@ class CartDrawerProductsRecommendation extends HTMLElement {
     return this.querySelector('.swiper-button-prev');
   }
 
+  get wrapper() {
+    return this.querySelector('.swiper-wrapper');
+  }
+
+  shuffle(items) {
+    const shuffled = items.slice();
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
   init() {
-    fetch(this.dataset.url)
-      .then((response) => response.text())
-      .then((responseText) => {
-        const sectionInnerHTML = new DOMParser()
-          .parseFromString(responseText, 'text/html')
-          .querySelector('.shopify-section');
+    const wrapper = this.wrapper;
+    const slides = wrapper ? Array.from(wrapper.children) : [];
 
-        if (sectionInnerHTML === null) return;
+    if (!slides.length) {
+      this.classList.add('hidden');
+      this.dispatchEvent(new CustomEvent('is-empty'));
+      return;
+    }
 
-        const recommendations = sectionInnerHTML.querySelector('cart-drawer-products-recommendation');
-        if (recommendations && recommendations.innerHTML.trim().length) {
-          const productCount = recommendations.querySelectorAll('.product-card');
-          this.innerHTML = recommendations.innerHTML;
-          this.initCarousel();
-          if (productCount.length > 0) this.classList.remove('hidden');
-          this.dispatchEvent(new CustomEvent('recommendations:loaded'));
-        } else {
-          this.closest('.shopify-section').remove();
-          this.classList.add('hidden');
-          this.dispatchEvent(new CustomEvent('is-empty'));
-        }
-      })
-      .catch((e) => {
-        console.error(e);
-      });
+    const limit = parseInt(this.dataset.limit, 10) || slides.length;
+    const shuffled = this.shuffle(slides);
+
+    shuffled.forEach((slide) => wrapper.appendChild(slide));
+    shuffled.slice(limit).forEach((slide) => slide.remove());
+
+    this.classList.remove('hidden');
+    this.initCarousel();
+    this.dispatchEvent(new CustomEvent('recommendations:loaded'));
   }
 
   initCarousel() {
