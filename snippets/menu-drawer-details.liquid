@@ -44,7 +44,10 @@
         </div>
       {%- endif -%}
       {%- for childlink in link.links -%}
-        <li class="menu-drawer__item" level="child">
+        <li
+          class="menu-drawer__item{% if childlink.links != blank %} menu-drawer__item--group{% endif %}"
+          level="child"
+        >
           {%- if childlink.links != blank -%}
             <div class="menu-drawer__item-group">
               {%- if childlink.url != blank -%}
