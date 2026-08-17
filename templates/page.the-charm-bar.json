@@ -23,7 +23,7 @@
         "slide_ALw3nJ": {
           "type": "slide",
           "settings": {
-            "color_scheme": "scheme-1",
+            "color_scheme": "scheme-10",
             "background": "shopify://shop_images/Earring_2.webp",
             "background_mobile": "shopify://shop_images/1_d313f088-8fda-458b-816e-49cfd4eda665.png",
             "image_overlay_opacity": 0,
@@ -42,7 +42,7 @@
         "slide_mjCc3w": {
           "type": "slide",
           "settings": {
-            "color_scheme": "scheme-1",
+            "color_scheme": "scheme-10",
             "background": "shopify://shop_images/Necklace_2.png",
             "background_mobile": "shopify://shop_images/Necklace_2.png",
             "image_overlay_opacity": 0,
@@ -61,7 +61,7 @@
         "slide_ramUYg": {
           "type": "slide",
           "settings": {
-            "color_scheme": "scheme-1",
+            "color_scheme": "scheme-10",
             "background": "shopify://shop_images/Necklace_3.png",
             "background_mobile": "shopify://shop_images/Necklace_3.png",
             "image_overlay_opacity": 0,
@@ -103,7 +103,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-10",
         "padding_top": 40,
         "padding_bottom": 60,
         "custom_liquid": "<div class=\"page-width text-center charm-bar-heading\">\n  <div class=\"section__header--text\">\n    <h2 class=\"section__heading h1\">The Charm Bar</h2>\n    <div class=\"section__description rte text-base\">Start with a base, then add what matters. Each charm is a personal touch designed to reflect your story, your style, and a little shine.</div>\n  </div>\n</div>\n<style>\n@media screen and (max-width: 600px) {\n  .charm-bar-heading .section__heading.h1 {\n    font-size: 22px;\n  }\n  .charm-bar-heading .section__description {\n    font-size: 12px;\n  }\n}\n</style>"
@@ -114,7 +114,7 @@
       "custom_css": [],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-10",
         "header_layout": "vertical",
         "heading": "Step 1: Begin With A Base",
         "heading_size": "h2",
@@ -147,7 +147,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-10",
         "header_layout": "vertical",
         "heading": "Step 2: Add A Charm",
         "heading_size": "h2",
@@ -182,7 +182,7 @@
         "slide_ee6DPU": {
           "type": "slide",
           "settings": {
-            "color_scheme": "scheme-1",
+            "color_scheme": "scheme-10",
             "background": "shopify://shop_images/Earring_2.webp",
             "background_mobile": "shopify://shop_images/Earring_2.webp",
             "image_overlay_opacity": 0,
@@ -217,7 +217,7 @@
       "disabled": true,
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-10",
         "header_layout": "vertical",
         "heading": "Step 3: Make It Personal",
         "heading_size": "h2",
@@ -250,7 +250,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-10",
         "header_layout": "vertical",
         "heading": "Keep Exploring",
         "heading_size": "h2",
@@ -284,7 +284,7 @@
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<section class=\"collection-menu-slider\">\n  <div class=\"page-full-width slider-wrapper\">\n\n    <!-- LEFT ARROW -->\n    <button class=\"slider-arrow prev\" aria-label=\"Previous\" style=\"opacity: 0; pointer-events: none;\">\n      ❮\n    </button>\n\n    <div class=\"menu-slider\" id=\"collectionMenuSlider\">\n      \n        \n          \n          <div class=\"menu-slide\">\n            <a href=\"/collections/neckalce\" class=\"menu-card\">\n              Necklace\n            </a>\n          </div>\n        \n      \n        \n          \n          <div class=\"menu-slide\">\n            <a href=\"/collections/earnings\" class=\"menu-card\">\n              Earrings\n            </a>\n          </div>\n        \n      \n        \n          \n          <div class=\"menu-slide\">\n            <a href=\"/collections/rings\" class=\"menu-card\">\n              RINGS\n            </a>\n          </div>\n        \n      \n        \n          \n          <div class=\"menu-slide\">\n            <a href=\"/collections/bracelets\" class=\"menu-card\">\n              Bracelets\n            </a>\n          </div>\n        \n      \n        \n        \n      \n    </div>\n\n    <!-- RIGHT ARROW -->\n    <button class=\"slider-arrow next\" aria-label=\"Next\" style=\"opacity: 0; pointer-events: none;\">\n      ❯\n    </button>\n\n  </div>\n</section>\n<style>\n.menu-slider {\n    display: flex;\n    gap: 15px;\n\n    margin: 0 auto;\n}\n.menu-slide {\n width: 100%;\n}\n.menu-card {\n    display: block;\n     width: 100%;\n    text-align: center;\n    border-radius: 40px;\n    overflow: hidden;\n    background: #f7f7f7;\n    padding: 10px;\n    text-transform: uppercase;\n    text-decoration: none;\n}\n@media (max-width: 600px) {\n  .menu-slider {\n    display: flex;\n    gap: 15px;\nflex-direction: column;\n    margin: 0 auto;\n}\n.menu-card {\n width: 100%;}\n}\n</style>",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-10",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -332,7 +332,7 @@
         "badge_4xFtEi"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-10",
         "columns_desktop": "4",
         "padding_top": 44,
         "padding_bottom": 44,
@@ -343,7 +343,7 @@
     "newsletter_U4PQ6F": {
       "type": "newsletter",
       "settings": {
-        "color_scheme": "scheme-inverse",
+        "color_scheme": "scheme-10",
         "layout": "vertical",
         "heading": "Keep Up With The Most Recent Styles",
         "heading_size": "h3",
