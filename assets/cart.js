@@ -492,19 +492,27 @@ class CartDrawerProductsRecommendation extends HTMLElement {
   }
 
   initCarousel() {
-    this.carousel = new FoxTheme.Carousel(this.slideContainer, {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: false,
-      pagination: {
-        el: this.sliderPagination,
-        type: 'fraction',
+    this.carousel = new FoxTheme.Carousel(
+      this.slideContainer,
+      {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: this.sliderPagination,
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: this.sliderNext,
+          prevEl: this.sliderPrev,
+        },
       },
-      navigation: {
-        nextEl: this.sliderNext,
-        prevEl: this.sliderPrev,
-      },
-    });
+      [FoxTheme.Swiper.Autoplay]
+    );
 
     this.carousel && this.carousel.init();
   }
