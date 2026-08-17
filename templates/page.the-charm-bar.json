@@ -11,13 +11,443 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "page_full_width": false,
+        "page_full_width_spacing": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "slideshow_kAV36i": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_ALw3nJ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Earring_2.webp",
+            "mobile_image": "shopify://shop_images/1_d313f088-8fda-458b-816e-49cfd4eda665.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "text": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_mjCc3w": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Necklace_2.png",
+            "mobile_image": "shopify://shop_images/Necklace_2.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "text": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_ramUYg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Necklace_3.png",
+            "mobile_image": "shopify://shop_images/Necklace_3.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "text": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_ALw3nJ",
+        "slide_mjCc3w",
+        "slide_ramUYg"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 576px) {.slide-banner {height: auto !important; }}"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "page_full_width": true,
+        "page_full_width_spacing": false,
+        "slider_image_height": 800,
+        "slider_image_height_laptop": 700,
+        "slider_image_height_tab": 500,
+        "slider_image_height_mobile": 400,
+        "swiper_pagination": false,
+        "swiper_navigation": false,
+        "auto_play": 3,
+        "slider_effect": "fade",
+        "show_text_below": false,
+        "slider_overlay": false,
+        "overlay_opacity": 0.5,
+        "overlay_color": "",
+        "overlay_screen_width": "576",
+        "custom_class_name": ""
+      }
+    },
+    "custom_liquid_4AnwCk": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "page_full_width": true,
+        "page_full_width_spacing": false,
+        "title": "The Charm Bar",
+        "heading_size": "h1",
+        "sub_heading": "",
+        "description": "Start with a base, then add what matters.Each charm is a personal touch designed to reflect your story, your style, and a little shine.",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "column_alignment": "center",
+        "custom_liquid": "<style>\na.button.button--secondary {\n  display: block;\n  text-decoration: underline;\n}\na.button.button--secondary:hover {\n    background: transparent;\n    color: #000;\n}\n.mobile-hide {\n        display: block !important;\n    }\n\n@media screen and (max-width: 600px) {\nh2.title.h1 {\n    font-size: 22px;\n}\np.description {\n    font-size: 12px;\n}\nh2.title.h2 {\n    font-size: 22px;\n}\n.image-with-text__media {\n    min-height: auto !important;\n}\n    .aboutus .image-with-text__media-item.grid__item {\n        height: auto !important;\n    }\n}\n</style>",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_LftrVk": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "header_layout": "vertical",
+        "heading": "Step 1: Begin With A Base",
+        "heading_size": "h2",
+        "heading_highlight_style": "none",
+        "subheading": "",
+        "description": "",
+        "text_size": "text-base",
+        "show_collection_description": false,
+        "collection": "charm-holders",
+        "limit": 12,
+        "columns": 4,
+        "column_gap": "small",
+        "row_gap": "inherit",
+        "grid_layout": "standard",
+        "enable_slider": true,
+        "controls_position": "inside",
+        "pcard_image_ratio": "3/4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_all_button_on_top": true,
+        "button_label": "Shop All Charm Holders",
+        "button_style": "btn--underline",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "featured_collection_wcTJqz": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "header_layout": "vertical",
+        "heading": "Step 2: Add A Charm",
+        "heading_size": "h2",
+        "heading_highlight_style": "none",
+        "subheading": "",
+        "description": "",
+        "text_size": "text-base",
+        "show_collection_description": false,
+        "collection": "charms",
+        "limit": 12,
+        "columns": 4,
+        "column_gap": "small",
+        "row_gap": "inherit",
+        "grid_layout": "standard",
+        "enable_slider": true,
+        "controls_position": "inside",
+        "pcard_image_ratio": "3/4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_all_button_on_top": true,
+        "button_label": "Shop All Charm",
+        "button_style": "btn--underline",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_ee6DPU": {
+      "type": "image-with-text",
+      "settings": {
+        "page_full_width": true,
+        "page_full_width_spacing": false,
+        "image": "shopify://shop_images/Earring_2.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "overlap",
+        "color_scheme": "scheme-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class_name": "aboutus"
+      }
+    },
+    "featured_collection_6CkKHy": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "header_layout": "vertical",
+        "heading": "Step 3: Make It Personal",
+        "heading_size": "h2",
+        "heading_highlight_style": "none",
+        "subheading": "",
+        "description": "",
+        "text_size": "text-base",
+        "show_collection_description": false,
+        "collection": "earnings",
+        "limit": 12,
+        "columns": 4,
+        "column_gap": "small",
+        "row_gap": "inherit",
+        "grid_layout": "standard",
+        "enable_slider": true,
+        "controls_position": "inside",
+        "pcard_image_ratio": "3/4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_all_button_on_top": true,
+        "button_label": "Shop All Personalized Charms",
+        "button_style": "btn--underline",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "featured_collection_GHHidn": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "header_layout": "vertical",
+        "heading": "Keep Exploring",
+        "heading_size": "h2",
+        "heading_highlight_style": "none",
+        "subheading": "",
+        "description": "",
+        "text_size": "text-base",
+        "show_collection_description": false,
+        "collection": "featured",
+        "limit": 12,
+        "columns": 4,
+        "column_gap": "small",
+        "row_gap": "inherit",
+        "grid_layout": "standard",
+        "enable_slider": false,
+        "controls_position": "inside",
+        "pcard_image_ratio": "3/4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_all_button_on_top": true,
+        "button_label": "Shop All Charm Enhancers",
+        "button_style": "btn--underline",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "custom_liquid_KgTH6A": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "page_full_width": true,
+        "page_full_width_spacing": true,
+        "title": "",
+        "heading_size": "h1",
+        "sub_heading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "column_alignment": "center",
+        "custom_liquid": "<section class=\"collection-menu-slider\">\n  <div class=\"page-full-width slider-wrapper\">\n\n    <!-- LEFT ARROW -->\n    <button class=\"slider-arrow prev\" aria-label=\"Previous\" style=\"opacity: 0; pointer-events: none;\">\n      ❮\n    </button>\n\n    <div class=\"menu-slider\" id=\"collectionMenuSlider\">\n      \n        \n          \n          <div class=\"menu-slide\">\n            <a href=\"/collections/neckalce\" class=\"menu-card\">\n              Necklace\n            </a>\n          </div>\n        \n      \n        \n          \n          <div class=\"menu-slide\">\n            <a href=\"/collections/earnings\" class=\"menu-card\">\n              Earrings\n            </a>\n          </div>\n        \n      \n        \n          \n          <div class=\"menu-slide\">\n            <a href=\"/collections/rings\" class=\"menu-card\">\n              RINGS\n            </a>\n          </div>\n        \n      \n        \n          \n          <div class=\"menu-slide\">\n            <a href=\"/collections/bracelets\" class=\"menu-card\">\n              Bracelets\n            </a>\n          </div>\n        \n      \n        \n        \n      \n    </div>\n\n    <!-- RIGHT ARROW -->\n    <button class=\"slider-arrow next\" aria-label=\"Next\" style=\"opacity: 0; pointer-events: none;\">\n      ❯\n    </button>\n\n  </div>\n</section>\n<style>\n.menu-slider {\n    display: flex;\n    gap: 15px;\n\n    margin: 0 auto;\n}\n.menu-slide {\n width: 100%;\n}\n.menu-card {\n    display: block;\n     width: 100%;\n    text-align: center;\n    border-radius: 40px;\n    overflow: hidden;\n    background: #f7f7f7;\n    padding: 10px;\n    text-transform: uppercase;\n    text-decoration: none;\n}\n@media (max-width: 600px) {\n  .menu-slider {\n    display: flex;\n    gap: 15px;\nflex-direction: column;\n    margin: 0 auto;\n}\n.menu-card {\n width: 100%;}\n}\n</style>",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "support_block_83RyQf": {
+      "type": "support-block",
+      "blocks": {
+        "column_rc7HX7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/distribution.png",
+            "icon_class": "",
+            "svg_icons": "",
+            "title": "WORLDWIDE SHIPPING",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "block_color_scheme": "background-1"
+          }
+        },
+        "column_XTAxNx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/imgi_38_default.png",
+            "icon_class": "",
+            "svg_icons": "",
+            "title": "FREE 60-DAY RETURNS",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "block_color_scheme": "background-1"
+          }
+        },
+        "column_CR3BfB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/imgi_39_default.png",
+            "icon_class": "",
+            "svg_icons": "",
+            "title": "24 MONTH WARRANTY",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "block_color_scheme": "background-1"
+          }
+        },
+        "column_4xFtEi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/imgi_40_default.png",
+            "icon_class": "",
+            "svg_icons": "",
+            "title": "100% SECRUE CHECKOUT",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "block_color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "column_rc7HX7",
+        "column_XTAxNx",
+        "column_CR3BfB",
+        "column_4xFtEi"
+      ],
+      "settings": {
+        "page_full_width": true,
+        "page_full_width_spacing": true,
+        "title": "",
+        "heading_size": "h1",
+        "sub_heading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "column_alignment": "center",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-2",
+        "block_styles": "grid__items",
+        "block_column_alignment": "center",
+        "icon_outer_size": "35",
+        "icon_size": "",
+        "image_radius": "",
+        "vertical_position": "veritcal_center",
+        "padding_top": 44,
+        "padding_bottom": 44,
+        "swiper_enable": false,
+        "desktop_column": 5,
+        "laptop_column": 3,
+        "tablet_column": 2,
+        "mobile_column": 1,
+        "swiper_pagination": false,
+        "swiper_navigation": false,
+        "auto_play": 0,
+        "swipe_on_mobile": false,
+        "arrow_on_mobile": false,
+        "columns_mobile": "1",
+        "custom_class_name": ""
+      }
+    },
+    "newsletter_U4PQ6F": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_JG9RgA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Keep Up With The Most Recent Styles",
+            "heading_size": "h3"
+          }
+        },
+        "paragraph_KBQjWz": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Subscribe for insights into our new designs and limited creations</p>",
+            "text_style": "body"
+          }
+        },
+        "email_form_w97DGr": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_JG9RgA",
+        "paragraph_KBQjWz",
+        "email_form_w97DGr"
+      ],
+      "settings": {
+        "page_full_width": true,
+        "page_full_width_spacing": false,
+        "color_scheme": "scheme-inverse",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "custom_class_name": ""
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "slideshow_kAV36i",
+    "custom_liquid_4AnwCk",
+    "featured_collection_LftrVk",
+    "featured_collection_wcTJqz",
+    "image_with_text_ee6DPU",
+    "featured_collection_6CkKHy",
+    "featured_collection_GHHidn",
+    "custom_liquid_KgTH6A",
+    "support_block_83RyQf",
+    "newsletter_U4PQ6F"
   ]
 }
