@@ -46,34 +46,34 @@
       {%- for childlink in link.links -%}
         <li class="menu-drawer__item" level="child">
           {%- if childlink.links != blank -%}
-            <details is="menu-drawer-details">
-              <summary class="menu-drawer__item-link flex items-center justify-between">
-                <span>{{ childlink.title | escape }}</span>
-                {%- render 'icon-caret', size: 'medium' -%}
-              </summary>
-              <div class="menu-drawer__submenu absolute z-1 flex flex-col w-full h-full" data-parent>
-                <button
-                  type="button"
-                  class="menu-drawer__item-back-link font-navigation flex items-center gap-2 w-full"
+            <div class="menu-drawer__item-group">
+              {%- if childlink.url != blank -%}
+                <a
+                  href="{{ childlink.url }}"
+                  class="menu-drawer__item-link menu-drawer__item-link--static flex items-center justify-between"
+                  {% render 'external-link-attrs', url: childlink.url %}
                 >
-                  {%- render 'icon-caret', size: 'small' -%}
-                  {{ childlink.title | escape }}
-                </button>
-                <ul class="v-scrollable h-full w-full ss">
-                  {%- for grandchildlink in childlink.links -%}
-                    <li class="menu-drawer__item">
-                      <a
-                        href="{{ grandchildlink.url }}"
-                        class="menu-drawer__item-link flex items-center justify-between"
-                        {% render 'external-link-attrs', url: grandchildlink.url %}
-                      >
-                        {{- grandchildlink.title | escape -}}
-                      </a>
-                    </li>
-                  {%- endfor -%}
-                </ul>
-              </div>
-            </details>
+                  <span>{{ childlink.title | escape }}</span>
+                </a>
+              {%- else -%}
+                <p class="menu-drawer__item-link menu-drawer__item-link--static">
+                  <span>{{ childlink.title | escape }}</span>
+                </p>
+              {%- endif -%}
+              <ul class="menu-drawer__submenu-inline" role="list">
+                {%- for grandchildlink in childlink.links -%}
+                  <li class="menu-drawer__item menu-drawer__item--grandchild">
+                    <a
+                      href="{{ grandchildlink.url }}"
+                      class="menu-drawer__item-link flex items-center justify-between"
+                      {% render 'external-link-attrs', url: grandchildlink.url %}
+                    >
+                      {{- grandchildlink.title | escape -}}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
           {%- else -%}
             <a
               href="{{ childlink.url }}"
