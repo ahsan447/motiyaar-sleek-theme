@@ -6333,3 +6333,15 @@ body:not(.header-pinned) .header-scrolled .header {
 .jdgm-write-review-modal .jdgm-write-review-modal__nav-btn {
   border-radius: 999px !important;
 }
+/*drawer fontsize*/
+@media screen and (max-width: 749px) {
+  .menu-drawer__item-link {
+    font-size: 18px !important;
+  }
+}
+/*card hiding Drawer*/
+@media screen and (max-width: 749px) {
+  .menu-drawer .product-card {
+    display: none !important;
+  }
+}
