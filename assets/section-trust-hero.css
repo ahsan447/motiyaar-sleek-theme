@@ -132,27 +132,41 @@
     font-size: 28px;
   }
 }
-/* Trust Hero - keep both CTA buttons in one row on mobile */
+/* Trust Hero buttons - mobile */
 @media screen and (max-width: 749px) {
   .trust-hero__buttons {
     display: flex;
     flex-wrap: nowrap !important;
+    align-items: center;
     width: 100%;
-    gap: 0.8rem;
+    gap: 0.6rem;
   }
 
-  .trust-hero__buttons > * {
-    flex: 1 1 0;
-    min-width: 0;
-  }
-
-  .trust-hero__buttons .button,
-  .trust-hero__buttons > a {
-    width: 100%;
+  .trust-hero__buttons .btn {
+    width: auto !important;
     min-width: 0 !important;
+    flex: 0 1 auto;
     white-space: nowrap;
-    text-align: center;
+
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  /* Let second button use remaining space */
+  .trust-hero__buttons .btn--secondary {
+    flex: 1 1 auto;
+  }
+}
+
+/* Very small mobile screens - Galaxy Fold etc. */
+@media screen and (max-width: 374px) {
+  .trust-hero__buttons {
+    gap: 0.4rem;
+  }
+
+  .trust-hero__buttons .btn {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
+    font-size: 1.1rem;
   }
 }
