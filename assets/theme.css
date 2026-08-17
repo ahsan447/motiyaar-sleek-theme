@@ -4443,7 +4443,7 @@ input:is([type=radio])::after {
 }
 .icon--large {
   width: 2.4rem;
-  height: 2.4rem;
+  height: 2.8rem;
 }
 .icon--extra-large {
   width: 3.2rem;
