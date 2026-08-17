@@ -6333,3 +6333,8 @@ body:not(.header-pinned) .header-scrolled .header {
 .jdgm-write-review-modal .jdgm-write-review-modal__nav-btn {
   border-radius: 999px !important;
 }
+@media screen and (max-width: 749px) {
+  .menu-drawer__item-link {
+    font-size: 16px !important;
+  }
+}
