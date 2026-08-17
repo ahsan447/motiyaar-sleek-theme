@@ -6335,6 +6335,6 @@ body:not(.header-pinned) .header-scrolled .header {
 }
 @media screen and (max-width: 749px) {
   .menu-drawer__item-link {
-    font-size: 16px !important;
+    font-size: 18px !important;
   }
 }
