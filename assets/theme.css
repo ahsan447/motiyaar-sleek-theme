@@ -6105,20 +6105,22 @@ body:not(.header-pinned) .header-scrolled .header {
   flex-direction: column;
 }
 .menu-drawer__item-link--static {
-  color: rgba(var(--color-foreground), 0.55);
+  color: rgb(var(--color-foreground));
   font-family: var(--font-body-family);
   font-size: 1.2rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
   padding-block-end: 0.4rem;
+}
+.menu-drawer__item-link--static::first-letter {
+  text-transform: uppercase;
 }
 .menu-drawer__submenu-inline {
   display: flex;
   flex-direction: column;
 }
 .menu-drawer__submenu-inline .menu-drawer__item--grandchild {
-  padding-inline-start: 1.6rem;
   padding-block: 0.55rem;
 }
 .menu-drawer__submenu-inline .menu-drawer__item--grandchild:first-child {
