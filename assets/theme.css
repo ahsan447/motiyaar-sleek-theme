@@ -6327,3 +6327,6 @@ body:not(.header-pinned) .header-scrolled .header {
     order: 2;
   }
 }
+.jdgm-widget-actions-wrapper .jdgm-write-rev-link {
+  border-radius: 20px !important;
+}
