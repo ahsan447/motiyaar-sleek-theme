@@ -6108,11 +6108,15 @@ body:not(.header-pinned) .header-scrolled .header {
   color: rgb(var(--color-foreground));
   font-family: var(--font-body-family);
   font-size: 1.2rem;
-  font-weight: 600;
   text-transform: capitalize;
   letter-spacing: 0.02em;
   padding-block-end: 0.4rem;
 }
+
+.menu-drawer__item-link.menu-drawer__item-link--static {
+  font-size: 20px !important;
+}
+
 .menu-drawer__submenu-inline {
   display: flex;
   flex-direction: column;
