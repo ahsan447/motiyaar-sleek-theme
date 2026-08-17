@@ -336,8 +336,7 @@
                     </div>
                     {%- if section.settings.enable_cart_recommendations -%}
                       {%- render 'cart-drawer-products-recommendation',
-                        section_id: section.id
-                        product_id: item.product_id,
+                        product: item.product,
                         heading: section.settings.cart_recommendations_heading,
                         limit: section.settings.cart_recommendations_limit
                       -%}
