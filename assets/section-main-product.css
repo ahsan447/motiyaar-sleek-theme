@@ -628,6 +628,10 @@ product-info.section--padding {
   color: rgb(var(--color-foreground));
 }
 
+.product__trust-badges .text-sm {
+  text-transform: capitalize;
+}
+
 @media (max-width: 749px) {
   .product__trust-badges .icon-with-text__item:nth-child(2),
   .product__trust-badges .icon-with-text__item:nth-child(4) {
