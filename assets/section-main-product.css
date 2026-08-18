@@ -643,4 +643,7 @@ product-info.section--padding {
     font-size: 12px;
     line-height: 2.2rem;
   }
+  .product__trust-badges .icon-with-text__item {
+    gap: 4px;
+  }
 }
