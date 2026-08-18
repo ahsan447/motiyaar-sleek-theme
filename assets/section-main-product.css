@@ -634,7 +634,7 @@ product-info.section--padding {
 
 @media (max-width: 749px) {
   .product__trust-badges .icon-with-text__item:nth-child(2),
-  .product__trust-badges .icon-with-text__item:nth-child(4) {
+  .product__trust-badges .icon-with-text__item:nth-child(5) {
     display: none;
   }
 
