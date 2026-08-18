@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumbs_xYaBHj": {
@@ -39,8 +48,8 @@
             "heading": "Your location",
             "heading_size": "h1",
             "subheading": "",
-            "description": "<p>+333 (0)123 4567<\/p><p>Mon-Sat: 10am-8pm<\/p>",
-            "button_label": "Button label",
+            "description": "<p>+333 (0)123 4567</p><p>Mon-Sat: 10am-8pm</p>",
+            "button_label": "",
             "button_style": "btn--primary",
             "content_position": "bottom-left",
             "content_alignment": "left",
@@ -65,6 +74,7 @@
         "color_scheme": "scheme-f135f57d-69f6-4c1d-bd3a-40361420ed42",
         "heading": "Get in Touch",
         "heading_size": "hd2",
+        "heading_highlight_style": "none",
         "padding_top": 0,
         "padding_bottom": 100,
         "show_section_divider": false,
