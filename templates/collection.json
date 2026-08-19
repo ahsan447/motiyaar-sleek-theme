@@ -309,6 +309,27 @@
         "show_section_divider": false,
         "divider_width": "fixed"
       }
+    },
+    "email_capture_itHAYp": {
+      "type": "email-capture",
+      "settings": {
+        "color_scheme": "scheme-inverse",
+        "box_width": 780,
+        "subheading": "",
+        "heading": "Get First Access, Not More Spam",
+        "heading_size": "h1",
+        "heading_highlight_style": "none",
+        "description": "<p>New drops, limited pieces and private offers — sent occasionally.</p>",
+        "text_size": "text-base",
+        "placeholder": "Enter your email address",
+        "button_label": "Unlock First Access",
+        "button_style": "btn--white",
+        "terms_text": "<p>No spam. Unsubscribe any time.</p>",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
     }
   },
   "order": [
@@ -316,6 +337,7 @@
     "banner",
     "collection_pills",
     "custom_content_RecVe9",
-    "product-grid"
+    "product-grid",
+    "email_capture_itHAYp"
   ]
 }
