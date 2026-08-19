@@ -18,6 +18,10 @@
     display: grid;
     grid-template-columns: 480px 1fr;
   }
+
+  .trust-hero__heading.hd3 {
+    font-size: 30px;
+  }
 }
 @media (min-width: 1024px) {
   .trust-hero__inner {
