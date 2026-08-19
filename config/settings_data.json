@@ -157,7 +157,7 @@
           "secondary_button": "#ffffff",
           "secondary_button_border": "#e6e6e6",
           "secondary_button_label": "#000000",
-          "button_hover": "#9F1D35",
+          "button_hover": "#000000",
           "button_label_hover": "#ffffff",
           "form_field": "#ffffff",
           "form_field_label": "#000000",
