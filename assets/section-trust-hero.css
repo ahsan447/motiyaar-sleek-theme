@@ -22,6 +22,15 @@
   .trust-hero__heading.hd3 {
     font-size: 30px;
   }
+
+  .trust-hero__wrapper .btn {
+    padding: 0 15px;
+  }
+
+  .trust-hero__text,
+  .trust-hero__text * {
+    font-size: 16px;
+  }
 }
 @media (min-width: 1024px) {
   .trust-hero__inner {
