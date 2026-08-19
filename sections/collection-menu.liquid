@@ -1,0 +1,156 @@
+{{ 'section-collection-menu.css' | asset_url | stylesheet_tag }}
+
+{% render 'divider',
+  show_divider: section.settings.show_section_divider,
+  divider_width: section.settings.divider_width
+%}
+
+<div
+  class="section section--padding collection-menu color-{{ section.settings.color_scheme }}"
+  style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="page-width">
+    <div class="collection-menu__items">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign link = block.settings.link | default: block.settings.collection.url
+        -%}
+        <div class="collection-menu__item" {{ block.shopify_attributes }}>
+          {%- if link != blank -%}
+            <a href="{{ link }}" class="collection-menu__card">{{ block.settings.text }}</a>
+          {%- else -%}
+            <span class="collection-menu__card" role="link" aria-disabled="true">{{ block.settings.text }}</span>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection menu",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.general.name"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.divider.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_section_divider",
+      "default": false,
+      "label": "t:sections.all.divider.settings.show_divider.label"
+    },
+    {
+      "type": "select",
+      "id": "divider_width",
+      "options": [
+        {
+          "value": "fixed",
+          "label": "t:sections.all.container.options__fixed.label"
+        },
+        {
+          "value": "full",
+          "label": "t:sections.all.container.options__full.label"
+        }
+      ],
+      "default": "fixed",
+      "label": "t:sections.all.divider.settings.divider_width.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu_item",
+      "name": "Menu item",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.all.collection.label"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Label",
+          "default": "Collection"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.all.link.label",
+          "info": "Overrides the collection link above"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection menu",
+      "blocks": [
+        {
+          "type": "menu_item",
+          "settings": {
+            "text": "Necklace"
+          }
+        },
+        {
+          "type": "menu_item",
+          "settings": {
+            "text": "Earrings"
+          }
+        },
+        {
+          "type": "menu_item",
+          "settings": {
+            "text": "Rings"
+          }
+        },
+        {
+          "type": "menu_item",
+          "settings": {
+            "text": "Bracelets"
+          }
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["footer", "header", "custom.overlay"]
+  }
+}
+{% endschema %}

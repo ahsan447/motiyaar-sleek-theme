@@ -279,11 +279,45 @@
         "divider_width": "fixed"
       }
     },
-    "custom_liquid_KgTH6A": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "collection_menu_KgTH6A": {
+      "type": "collection-menu",
+      "name": "Collection menu",
+      "blocks": {
+        "menu_item_1": {
+          "type": "menu_item",
+          "settings": {
+            "collection": "",
+            "text": "Necklace",
+            "link": "/collections/neckalce"
+          }
+        },
+        "menu_item_2": {
+          "type": "menu_item",
+          "settings": {
+            "collection": "",
+            "text": "Earrings",
+            "link": "/collections/earnings"
+          }
+        },
+        "menu_item_3": {
+          "type": "menu_item",
+          "settings": {
+            "collection": "",
+            "text": "Rings",
+            "link": "/collections/rings"
+          }
+        },
+        "menu_item_4": {
+          "type": "menu_item",
+          "settings": {
+            "collection": "",
+            "text": "Bracelets",
+            "link": "/collections/bracelets"
+          }
+        }
+      },
+      "block_order": ["menu_item_1", "menu_item_2", "menu_item_3", "menu_item_4"],
       "settings": {
-        "custom_liquid": "<section class=\"collection-menu-slider\">\n  <div class=\"page-full-width slider-wrapper\">\n\n    <!-- LEFT ARROW -->\n    <button class=\"slider-arrow prev\" aria-label=\"Previous\" style=\"opacity: 0; pointer-events: none;\">\n      ❮\n    </button>\n\n    <div class=\"menu-slider\" id=\"collectionMenuSlider\">\n      \n        \n          \n          <div class=\"menu-slide\">\n            <a href=\"/collections/neckalce\" class=\"menu-card\">\n              Necklace\n            </a>\n          </div>\n        \n      \n        \n          \n          <div class=\"menu-slide\">\n            <a href=\"/collections/earnings\" class=\"menu-card\">\n              Earrings\n            </a>\n          </div>\n        \n      \n        \n          \n          <div class=\"menu-slide\">\n            <a href=\"/collections/rings\" class=\"menu-card\">\n              RINGS\n            </a>\n          </div>\n        \n      \n        \n          \n          <div class=\"menu-slide\">\n            <a href=\"/collections/bracelets\" class=\"menu-card\">\n              Bracelets\n            </a>\n          </div>\n        \n      \n        \n        \n      \n    </div>\n\n    <!-- RIGHT ARROW -->\n    <button class=\"slider-arrow next\" aria-label=\"Next\" style=\"opacity: 0; pointer-events: none;\">\n      ❯\n    </button>\n\n  </div>\n</section>\n<style>\n.menu-slider {\n    display: flex;\n    gap: 15px;\n\n    margin: 0 auto;\n}\n.menu-slide {\n width: 100%;\n}\n.menu-card {\n    display: block;\n     width: 100%;\n    text-align: center;\n    border-radius: 40px;\n    overflow: hidden;\n    background: #f7f7f7;\n    padding: 10px;\n    text-transform: uppercase;\n    text-decoration: none;\n}\n@media (max-width: 600px) {\n  .menu-slider {\n    display: flex;\n    gap: 15px;\nflex-direction: column;\n    margin: 0 auto;\n}\n.menu-card {\n width: 100%;}\n}\n</style>",
         "color_scheme": "scheme-10",
         "padding_top": 40,
         "padding_bottom": 52
@@ -371,7 +405,7 @@
     "image_with_text_ee6DPU",
     "featured_collection_6CkKHy",
     "featured_collection_GHHidn",
-    "custom_liquid_KgTH6A",
+    "collection_menu_KgTH6A",
     "trust_badges_Ab12Cd",
     "email_capture_pR8tWq"
   ]

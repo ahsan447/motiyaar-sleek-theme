@@ -1,0 +1,27 @@
+.collection-menu__items {
+  display: flex;
+  gap: 15px;
+}
+
+.collection-menu__item {
+  width: 100%;
+}
+
+.collection-menu__card {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 40px;
+  overflow: hidden;
+  background: #f7f7f7;
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+}
+
+@media (max-width: 600px) {
+  .collection-menu__items {
+    flex-direction: column;
+  }
+}
