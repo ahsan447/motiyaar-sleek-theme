@@ -396,7 +396,7 @@
             "image": "shopify://shop_images/Earrings.png",
             "collection": "earnings",
             "title": "",
-            "link": "shopify://collections/featured"
+            "link": "shopify://collections/earnings"
           }
         },
         "grid_image_Tu7g8H": {
@@ -405,7 +405,7 @@
             "image": "shopify://shop_images/Anklets.png",
             "collection": "anklets",
             "title": "",
-            "link": "shopify://collections/charm-holders"
+            "link": "shopify://collections/anklets"
           }
         }
       },
