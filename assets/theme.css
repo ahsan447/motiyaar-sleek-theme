@@ -2203,9 +2203,9 @@ button .button-icon,
   color: rgb(var(--color-link-hover));
 }
 .btn--white {
-  background-color: #fff;
-  border-color: #fff;
-  color: var(--color-button-white, #000);
+  background-color: #9F1D35;
+  border-color: #9F1D35;
+  color: var(--color-button-white, #fff);
   border: 0;
 }
 .btn--underline, .btn--link {
