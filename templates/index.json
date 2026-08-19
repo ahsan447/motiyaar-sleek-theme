@@ -159,7 +159,7 @@
         "desktop_content_position": "center",
         "enable_parallax": false,
         "parallax_direction": "vertical",
-        "padding_top": 60,
+        "padding_top": 20,
         "padding_bottom": 60,
         "show_section_divider": false,
         "divider_width": "fixed"
