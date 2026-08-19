@@ -408,6 +408,27 @@
         "show_section_divider": false,
         "divider_width": "fixed"
       }
+    },
+    "email_capture_9biLFA": {
+      "type": "email-capture",
+      "settings": {
+        "color_scheme": "scheme-inverse",
+        "box_width": 780,
+        "subheading": "",
+        "heading": "Get First Access, Not More Spam",
+        "heading_size": "h1",
+        "heading_highlight_style": "none",
+        "description": "<p>New drops, limited pieces and private offers — sent occasionally.</p>",
+        "text_size": "text-base",
+        "placeholder": "Enter your email address",
+        "button_label": "Unlock First Access",
+        "button_style": "btn--white",
+        "terms_text": "<p>No spam. Unsubscribe any time.</p>",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
     }
   },
   "order": [
@@ -417,6 +438,7 @@
     "related-products",
     "178594060449a64379",
     "customer_reviews_cHjFGE",
-    "faq_questions_Fq3mZx"
+    "faq_questions_Fq3mZx",
+    "email_capture_9biLFA"
   ]
 }
