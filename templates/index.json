@@ -40,6 +40,7 @@
         },
         "text_Tb1a03": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Gift-ready jewellery for everyday wear and special moments.</p>",
             "text_size": "text-lg"
@@ -58,6 +59,7 @@
         },
         "rating_Tb1a05": {
           "type": "rating",
+          "disabled": true,
           "settings": {
             "stars": "5-stars",
             "rating_text": "4.9/5 stars",
@@ -66,6 +68,7 @@
         },
         "quote_Tb1a06": {
           "type": "quote",
+          "disabled": true,
           "settings": {
             "quote": "Beautiful jewellery for everyday wear and special moments.",
             "author": "Aisha"
@@ -73,6 +76,7 @@
         },
         "quote_inNHgG": {
           "type": "quote",
+          "disabled": true,
           "settings": {
             "quote": "The necklace is exactly like the photos delicate, polished.",
             "author": "Haram"
@@ -80,6 +84,7 @@
         },
         "quote_7d4gPt": {
           "type": "quote",
+          "disabled": true,
           "settings": {
             "quote": "The bracelet sits beautifully on the wrist and has a refined shine",
             "author": "Laiba"
@@ -87,6 +92,7 @@
         },
         "quote_Tb1a07": {
           "type": "quote",
+          "disabled": true,
           "settings": {
             "quote": "Fast shipping and stunning, gift-ready packaging.",
             "author": "Bilal"
@@ -94,6 +100,7 @@
         },
         "quote_Tb1a08": {
           "type": "quote",
+          "disabled": true,
           "settings": {
             "quote": "Exactly the quality I expected — highly recommend!",
             "author": "Mariam"
