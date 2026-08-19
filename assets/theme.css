@@ -3873,9 +3873,9 @@ input:is([type=radio])::after {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background: #000;
+  background: #9F1D35;
   color: #fff;
-  border: 1px solid #000;
+  border: 1px solid #9F1D35;
   border-radius: 999px;
 }
 

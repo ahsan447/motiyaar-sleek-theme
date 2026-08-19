@@ -85,7 +85,8 @@
 .index-template .tabs__nav-design-1 .tabs__tab[aria-selected="true"] span,
 .index-template .tabs__nav-design-1 .tabs__tab:hover,
 .index-template .tabs__nav-design-1 .tabs__tab:hover span {
-  background: rgb(0,0,0) !important;
+  background: #9F1D35 !important;
+  border-color: #9F1D35 !important;
   color: rgb(255,255,255) !important;
 }
 
