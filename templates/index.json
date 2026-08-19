@@ -154,7 +154,7 @@
         "section_color_scheme": "scheme-2",
         "color_scheme": "scheme-2",
         "image": "shopify://shop_images/Firefly_gpt-image_Create_an_ultra-photorealistic_luxury_jewelry_beauty_campaign_inspired_by_the_attache_889280_1.png",
-        "image_height": "medium",
+        "image_height": "adapt",
         "layout": "text_first",
         "desktop_content_position": "center",
         "enable_parallax": false,
