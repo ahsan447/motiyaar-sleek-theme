@@ -44,8 +44,10 @@
 
     assign mobile_hide_quick_add = settings.pcard_mobile_hide_quick_add
 
+    assign redirect_to_pdp = settings.pcard_atc_redirect_to_pdp
+
     assign atc_button_tag = 'a'
-    unless settings.pcard_choose_options_actions == 'product_page'
+    unless settings.pcard_choose_options_actions == 'product_page' or redirect_to_pdp
       assign atc_button_tag = 'button'
     endunless
 
@@ -147,7 +149,7 @@
           -%}
           {%- if product.variants.size > 1 or qty_rules -%}
             <{{ atc_button_tag }}
-              {% if settings.pcard_choose_options_actions == 'product_page' %}
+              {% if settings.pcard_choose_options_actions == 'product_page' or redirect_to_pdp %}
                 href="{{- product_url -}}"
               {% else %}
                 aria-controls="{{ quick_view_modal_id }}"
@@ -158,6 +160,14 @@
             >
               {% render 'icon-cart', name: settings.cart_icon, size: 'medium' %}
             </{{ atc_button_tag }}>
+          {%- elsif redirect_to_pdp -%}
+            <a
+              href="{{ product_url }}"
+              class="pcard__actions hidden md:inline-flex shrink-0 pcard__atc btn btn--icon-circle btn--secondary"
+              aria-label="{% if variant.available %}{{ 'products.product.add_to_cart' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}"
+            >
+              {% render 'icon-cart', name: settings.cart_icon, size: 'medium' %}
+            </a>
           {%- else -%}
             {%- liquid
               if variant.available

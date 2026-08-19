@@ -366,6 +366,10 @@
             "label": "Go to product page"
           }
         },
+        "atc_redirect_to_pdp": {
+          "label": "Go to product page on Add to cart click",
+          "info": "When enabled, clicking the Add to cart button on product cards takes shoppers to the product page instead of adding to cart or opening the quick add popup."
+        },
         "mobile_layout": {
           "content": "Mobile layout"
         },

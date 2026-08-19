@@ -1084,10 +1084,17 @@
         "type": "header",
         "content": "t:settings_schema.product_cards.settings.header__quick_add.content"
       },
-      { 
+      {
         "type": "checkbox",
         "id": "pcard_show_cart_button",
         "label": "t:settings_schema.product_cards.settings.action_show_add_to_cart.label",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "pcard_atc_redirect_to_pdp",
+        "label": "t:settings_schema.product_cards.settings.atc_redirect_to_pdp.label",
+        "info": "t:settings_schema.product_cards.settings.atc_redirect_to_pdp.info",
         "default": true
       },
       {

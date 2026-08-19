@@ -66,8 +66,10 @@
 
   assign custom_tags = product.tags | where: 'tag__'
 
+  assign redirect_to_pdp = settings.pcard_atc_redirect_to_pdp
+
   assign atc_button_tag = 'a'
-  unless settings.pcard_choose_options_actions == 'product_page'
+  unless settings.pcard_choose_options_actions == 'product_page' or redirect_to_pdp
     assign atc_button_tag = 'button'
   endunless
 
@@ -336,7 +338,7 @@
         {%- if product.variants.size > 1 or qty_rules -%}
           <div class="product-card__actions product-card__main-actions">
             <{{ atc_button_tag }}
-              {% if settings.pcard_choose_options_actions == 'product_page' %}
+              {% if settings.pcard_choose_options_actions == 'product_page' or redirect_to_pdp %}
                 href="{{- product_url -}}"
               {% else %}
                 aria-controls="{{ quick_view_modal_id }}"
@@ -351,6 +353,25 @@
                 {{- 'products.product.choose_options' | t -}}
               </span>
             </{{ atc_button_tag }}>
+          </div>
+        {%- elsif redirect_to_pdp -%}
+          <div class="product-card__actions product-card__main-actions">
+            <a
+              href="{{ product_url }}"
+              aria-label="{% if variant.available %}{{ 'products.product.add_to_cart' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}"
+              class="product-card__atc product-card__action-button btn {{ settings.pcard_button_style }}"
+            >
+              <span class="product-card__atc-icon product-card__action-icon inline-flex md:hidden">
+                {%- render 'icon-cart', name: settings.cart_icon -%}
+              </span>
+              <span class="product-card__atc-text product-card__action-text">
+                {%- if variant.available -%}
+                  {{- 'products.product.add_to_cart' | t -}}
+                {%- else -%}
+                  {{- 'products.product.sold_out' | t -}}
+                {%- endif -%}
+              </span>
+            </a>
           </div>
         {%- else -%}
           {%- form 'product',
