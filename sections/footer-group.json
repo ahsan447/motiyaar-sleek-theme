@@ -102,7 +102,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-0ae2adca-0469-4df1-81ce-5d2fc5a8ab3a",
-        "accent_color": "#ffffff",
+        "accent_color": "#000000",
         "copyright_text": "Motiyaar All Rights Reserved",
         "show_payment_badges": true,
         "padding_top": 60,
