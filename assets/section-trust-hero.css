@@ -31,6 +31,10 @@
   .trust-hero__text * {
     font-size: 16px;
   }
+
+  .trust-hero__wrapper .trust-hero__eyebrow {
+    font-size: 14px;
+  }
 }
 @media (min-width: 1024px) {
   .trust-hero__inner {
