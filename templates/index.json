@@ -378,7 +378,7 @@
             "image": "shopify://shop_images/Rings.png",
             "collection": "rings",
             "title": "",
-            "link": "shopify://collections/bundles"
+            "link": "shopify://collections/rings"
           }
         },
         "grid_image_Rt3c4D": {
@@ -681,7 +681,7 @@
     "email_capture_pR8tWq": {
       "type": "email-capture",
       "settings": {
-        "color_scheme": "scheme-inverse",
+        "color_scheme": "scheme-578f75db-c702-4c9a-8942-944b4f626aea",
         "box_width": 780,
         "subheading": "",
         "heading": "Get First Access, Not More Spam",
