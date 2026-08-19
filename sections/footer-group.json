@@ -17,7 +17,7 @@
         "brand_1": {
           "type": "brand",
           "settings": {
-            "logo_image": "shopify://shop_images/Motiyaar_Logo_white.png",
+            "logo_image": "shopify://shop_images/Motiyaar_Logo.png",
             "logo_width": 140,
             "heading": "MOTIYAAR",
             "text": "<p>Everyday gold-plated jewellery made in Lahore. Designed to be worn, not saved for weddings.</p>",
@@ -101,7 +101,7 @@
         "payment_visa"
       ],
       "settings": {
-        "color_scheme": "scheme-inverse",
+        "color_scheme": "scheme-0ae2adca-0469-4df1-81ce-5d2fc5a8ab3a",
         "accent_color": "#ffffff",
         "copyright_text": "Motiyaar All Rights Reserved",
         "show_payment_badges": true,
