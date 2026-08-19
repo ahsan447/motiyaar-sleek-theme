@@ -16,7 +16,7 @@
 
   .trust-hero__wrapper {
     display: grid;
-    grid-template-columns: 450px 1fr;
+    grid-template-columns: 480px 1fr;
   }
 }
 @media (min-width: 1024px) {
