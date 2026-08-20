@@ -12,6 +12,7 @@
 
 .faq-questions__grid {
   margin-top: 3.2rem;
+  align-items: start;
 }
 
 .faq-questions__item {
