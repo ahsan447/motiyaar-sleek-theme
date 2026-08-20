@@ -3480,6 +3480,17 @@ input:is([type=radio])::after {
 .drawer--bottom[active] > .drawer__inner {
   --translate-y: 0;
 }
+.drawer--header .drawer__inner {
+  --translate-x: 0;
+  --translate-y: -100%;
+  top: var(--header-height, 0px);
+  height: calc(100vh - var(--header-height, 0px));
+  max-width: 100%;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.12);
+}
+.drawer--header[active] > .drawer__inner {
+  --translate-y: 0;
+}
 .drawer__header {
   padding-block: 2rem;
   padding-inline: 2rem;
