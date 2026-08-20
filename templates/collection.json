@@ -294,7 +294,7 @@
       "custom_css": [],
       "settings": {
         "color_scheme": "",
-        "products_per_page": 15,
+        "products_per_page": 12,
         "columns_desktop": 3,
         "grid_layout": "standard",
         "pagination": "infinite",
