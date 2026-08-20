@@ -297,7 +297,7 @@
         "products_per_page": 12,
         "columns_desktop": 3,
         "grid_layout": "standard",
-        "pagination": "infinite",
+        "pagination": "load_more",
         "enable_color_swatch": true,
         "enable_filtering": true,
         "filter_type": "vertical",
