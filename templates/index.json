@@ -421,7 +421,7 @@
         "heading_size": "hd2",
         "collection": "necklace",
         "link_label": "View more",
-        "link": "shopify://collections/shop-all",
+        "link": "shopify://collections/all-products",
         "main_image": "shopify://shop_images/Necklaces_1.png",
         "main_image_link": "shopify://collections/necklace",
         "padding_top": 60,
