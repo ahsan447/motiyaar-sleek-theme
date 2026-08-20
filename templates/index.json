@@ -323,7 +323,9 @@
             "quote": "Perfect for wedding season.",
             "customer_name": "Zainab",
             "customer_location": "Lahore",
-            "show_badge": true
+            "show_badge": true,
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/all"
           }
         },
         "photo_bNq2Cd": {
@@ -333,7 +335,9 @@
             "quote": "My everyday stack.",
             "customer_name": "Saba",
             "customer_location": "Karachi",
-            "show_badge": true
+            "show_badge": true,
+            "button_label": "Shop Now",
+            "button_link": ""
           }
         },
         "photo_fRt3Ez": {
@@ -343,7 +347,9 @@
             "quote": "The packaging is 10/10.",
             "customer_name": "Mahnoor",
             "customer_location": "Islamabad",
-            "show_badge": true
+            "show_badge": true,
+            "button_label": "Shop Now",
+            "button_link": ""
           }
         }
       },
@@ -360,6 +366,9 @@
         "heading_highlight_style": "none",
         "description": "<p>Real customers. Real jewellery. Real outfits.</p>",
         "description_size": "text-base",
+        "show_hover_button": true,
+        "button_background_color": "#9f1d35",
+        "button_text_color": "#ffffff",
         "image_ratio": "3/4",
         "columns_desktop": 3,
         "column_gap": "medium",
