@@ -551,7 +551,7 @@
               <aside aria-label="{{ block.settings.heading | escape }}">
                 <div class="complementary-products__container">
                   <h2 class="h4 complementary-products__heading">{{ block.settings.heading | escape }}</h2>
-                  <pair-perfectly-with-slider class="slider-controls--grouped-always block relative">
+                  <pair-perfectly-with-slider class="block relative">
                     <div class="swiper">
                       <div class="swiper-wrapper" role="list">
                         {%- assign pair_index = 0 -%}
@@ -572,24 +572,6 @@
                             %}
                           </div>
                         {%- endfor -%}
-                      </div>
-                    </div>
-                    <div class="slider-controls--group">
-                      <div class="slider-controls">
-                        <button
-                          class="swiper-button-prev"
-                          name="previous"
-                          aria-label="{{ 'general.slider.previous_slide' | t }}"
-                        >
-                          {% render 'icon-slider-prev' %}
-                        </button>
-                        <button
-                          class="swiper-button-next"
-                          name="next"
-                          aria-label="{{ 'general.slider.next_slide' | t }}"
-                        >
-                          {% render 'icon-slider-next' %}
-                        </button>
                       </div>
                     </div>
                   </pair-perfectly-with-slider>

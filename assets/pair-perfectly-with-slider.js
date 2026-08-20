@@ -17,10 +17,6 @@ if (!customElements.get('pair-perfectly-with-slider')) {
           grabCursor: true,
           allowTouchMove: true,
           threshold: 2,
-          navigation: {
-            prevEl: this.querySelector('.swiper-button-prev'),
-            nextEl: this.querySelector('.swiper-button-next'),
-          },
           breakpoints: {
             1024: {
               slidesPerView: 4,
