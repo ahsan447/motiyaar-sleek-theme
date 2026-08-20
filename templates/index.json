@@ -46,7 +46,7 @@
             "description": "",
             "description_size": "text-base",
             "button_label": "",
-            "button_link": "shopify://collections/featured",
+            "button_link": "shopify://collections/featured-collection",
             "button_style": "btn--primary"
           }
         },
@@ -292,7 +292,7 @@
         "featured_collection_ytHAXL": {
           "type": "featured_collection",
           "settings": {
-            "collection": "featured",
+            "collection": "featured-collection",
             "title": "",
             "description": ""
           }
@@ -614,7 +614,7 @@
             "title": "Top Selling",
             "description": "",
             "products": [],
-            "collection": "featured"
+            "collection": "featured-collection"
           }
         },
         "tab_NLRDMg": {
