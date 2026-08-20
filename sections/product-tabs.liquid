@@ -93,7 +93,7 @@
                 endif
               -%}
               <button class="tabs__tab focus-inset{{ nav_button_class }}" role="tab" id="{{- block.id -}}">
-                <span class="tabs__tab-name{{ nav_button_text_class }}">{{- tab_name -}}</span>
+               {{- tab_name -}}
               </button>
             {%- endfor -%}
           </div>
