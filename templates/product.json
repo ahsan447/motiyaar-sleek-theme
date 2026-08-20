@@ -86,13 +86,13 @@
             "badge_1_icon": "seal-check",
             "badge_1_text": "Secure Checkout",
             "badge_2_icon": "currency-circle-dollar",
-            "badge_2_text": "Payment Methods Accepted",
+            "badge_2_text": "",
             "badge_3_icon": "truck",
             "badge_3_text": "Fast Delivery",
             "badge_4_icon": "arrow-up-left",
             "badge_4_text": "Easy Returns",
             "badge_5_icon": "certificate",
-            "badge_5_text": "Customer Satisfaction"
+            "badge_5_text": ""
           }
         },
         "icon_with_text": {
