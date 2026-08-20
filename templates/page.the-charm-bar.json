@@ -96,17 +96,18 @@
         "autoplay_delay": 3,
         "controls_position": "bottom",
         "show_text_below": false,
-        "text_alignment_mobile": "center"
+        "text_alignment_mobile": "center",
+        "accessibility_info": "Slideshow about our brand"
       }
     },
     "custom_liquid_4AnwCk": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
+        "custom_liquid": "<div class=\"page-width text-center charm-bar-heading\">\n  <div class=\"section__header--text\">\n    <h2 class=\"section__heading h1\">The Charm Bar</h2>\n    <div class=\"section__description rte text-base\">Start with a base, then add what matters. Each charm is a personal touch designed to reflect your story, your style, and a little shine.</div>\n  </div>\n</div>\n<style>\n@media screen and (max-width: 600px) {\n  .charm-bar-heading .section__heading.h1 {\n    font-size: 22px;\n  }\n  .charm-bar-heading .section__description {\n    font-size: 12px;\n  }\n}\n</style>",
         "color_scheme": "scheme-10",
         "padding_top": 40,
-        "padding_bottom": 60,
-        "custom_liquid": "<div class=\"page-width text-center charm-bar-heading\">\n  <div class=\"section__header--text\">\n    <h2 class=\"section__heading h1\">The Charm Bar</h2>\n    <div class=\"section__description rte text-base\">Start with a base, then add what matters. Each charm is a personal touch designed to reflect your story, your style, and a little shine.</div>\n  </div>\n</div>\n<style>\n@media screen and (max-width: 600px) {\n  .charm-bar-heading .section__heading.h1 {\n    font-size: 22px;\n  }\n  .charm-bar-heading .section__description {\n    font-size: 12px;\n  }\n}\n</style>"
+        "padding_bottom": 60
       }
     },
     "featured_collection_LftrVk": {
@@ -199,7 +200,9 @@
           }
         }
       },
-      "block_order": ["slide_ee6DPU"],
+      "block_order": [
+        "slide_ee6DPU"
+      ],
       "settings": {
         "container": "full",
         "layout": "standard",
@@ -209,7 +212,8 @@
         "autoplay_delay": 3,
         "controls_position": "bottom",
         "show_text_below": false,
-        "text_alignment_mobile": "center"
+        "text_alignment_mobile": "center",
+        "accessibility_info": "Slideshow about our brand"
       }
     },
     "featured_collection_6CkKHy": {
@@ -281,7 +285,6 @@
     },
     "collection_menu_KgTH6A": {
       "type": "collection-menu",
-      "name": "Collection menu",
       "blocks": {
         "menu_item_1": {
           "type": "menu_item",
@@ -316,11 +319,19 @@
           }
         }
       },
-      "block_order": ["menu_item_1", "menu_item_2", "menu_item_3", "menu_item_4"],
+      "block_order": [
+        "menu_item_1",
+        "menu_item_2",
+        "menu_item_3",
+        "menu_item_4"
+      ],
+      "name": "Collection menu",
       "settings": {
         "color_scheme": "scheme-10",
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 52,
+        "show_section_divider": false,
+        "divider_width": "fixed"
       }
     },
     "trust_badges_Ab12Cd": {
@@ -377,7 +388,7 @@
     "email_capture_pR8tWq": {
       "type": "email-capture",
       "settings": {
-        "color_scheme": "scheme-inverse",
+        "color_scheme": "scheme-578f75db-c702-4c9a-8942-944b4f626aea",
         "box_width": 780,
         "subheading": "",
         "heading": "Get First Access, Not More Spam",

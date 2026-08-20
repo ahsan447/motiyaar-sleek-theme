@@ -159,8 +159,8 @@
         "desktop_content_position": "center",
         "enable_parallax": false,
         "parallax_direction": "vertical",
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 10,
+        "padding_bottom": 20,
         "show_section_divider": false,
         "divider_width": "fixed"
       }
@@ -378,7 +378,7 @@
             "image": "shopify://shop_images/Rings.png",
             "collection": "rings",
             "title": "",
-            "link": "shopify://collections/bundles"
+            "link": "shopify://collections/rings"
           }
         },
         "grid_image_Rt3c4D": {
@@ -396,7 +396,7 @@
             "image": "shopify://shop_images/Earrings.png",
             "collection": "earnings",
             "title": "",
-            "link": "shopify://collections/featured"
+            "link": "shopify://collections/earnings"
           }
         },
         "grid_image_Tu7g8H": {
@@ -405,7 +405,7 @@
             "image": "shopify://shop_images/Anklets.png",
             "collection": "anklets",
             "title": "",
-            "link": "shopify://collections/charm-holders"
+            "link": "shopify://collections/anklets"
           }
         }
       },
@@ -681,7 +681,7 @@
     "email_capture_pR8tWq": {
       "type": "email-capture",
       "settings": {
-        "color_scheme": "scheme-inverse",
+        "color_scheme": "scheme-578f75db-c702-4c9a-8942-944b4f626aea",
         "box_width": 780,
         "subheading": "",
         "heading": "Get First Access, Not More Spam",

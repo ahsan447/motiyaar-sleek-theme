@@ -20,7 +20,7 @@
   }
 
   .trust-hero__heading.hd3 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .trust-hero__wrapper .btn {
@@ -33,7 +33,7 @@
   }
 
   .trust-hero__wrapper .trust-hero__eyebrow {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 @media (min-width: 1024px) {

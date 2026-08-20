@@ -6383,3 +6383,13 @@ body:not(.header-pinned) .header-scrolled .header {
     display: none !important;
   }
 }
+
+@media screen and (max-width: 749px) {
+  ul.product__trust-badges.icon-with-text {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 1.2rem 2.4rem !important;
+    justify-content: space-around !important;
+    align-content: space-between !important;
+  }
+}
