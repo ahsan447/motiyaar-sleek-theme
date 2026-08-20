@@ -337,7 +337,7 @@
             "customer_location": "Karachi",
             "show_badge": true,
             "button_label": "Shop Now",
-            "button_link": ""
+            "button_link": "shopify://products/motiyaar-pearl-flower-studs"
           }
         },
         "photo_fRt3Ez": {
@@ -349,7 +349,7 @@
             "customer_location": "Islamabad",
             "show_badge": true,
             "button_label": "Shop Now",
-            "button_link": ""
+            "button_link": "shopify://products/motiyaar-infinity-muse-statement-ring"
           }
         }
       },
