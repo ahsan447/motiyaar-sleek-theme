@@ -182,6 +182,7 @@
       "blocks": {
         "slide_ee6DPU": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "color_scheme": "scheme-10",
             "background": "shopify://shop_images/Earring_2.webp",
