@@ -23,6 +23,12 @@ class CartDrawer extends DrawerComponent {
 
     if (this.open) {
       FoxTheme.a11y.trapFocus(this, this.focusElement);
+
+      this.querySelectorAll('cart-drawer-products-recommendation').forEach((recommendation) => {
+        if (typeof recommendation.refreshCarousel === 'function') {
+          recommendation.refreshCarousel();
+        }
+      });
     }
   }
 }
@@ -515,6 +521,15 @@ class CartDrawerProductsRecommendation extends HTMLElement {
     );
 
     this.carousel && this.carousel.init();
+  }
+
+  refreshCarousel() {
+    // The cart drawer starts hidden, so if this initialized while the drawer
+    // was still closed, Swiper measured everything at 0 width and autoplay
+    // had nothing to visibly slide. Re-measure now that we're visible.
+    if (this.carousel && this.carousel.slider) {
+      this.carousel.slider.update();
+    }
   }
 }
 
