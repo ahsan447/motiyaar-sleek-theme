@@ -494,6 +494,7 @@ class CartDrawerProductsRecommendation extends HTMLElement {
 
     this.classList.remove('hidden');
     this.initCarousel();
+    this.slidesReady = true;
     this.dispatchEvent(new CustomEvent('recommendations:loaded'));
   }
 
@@ -525,10 +526,21 @@ class CartDrawerProductsRecommendation extends HTMLElement {
 
   refreshCarousel() {
     // The cart drawer starts hidden, so if this initialized while the drawer
-    // was still closed, Swiper measured everything at 0 width and autoplay
-    // had nothing to visibly slide. Re-measure now that we're visible.
+    // was still closed, Swiper measured everything at 0 width and its
+    // autoplay timer never got a valid loop to run against. A plain
+    // `update()` isn't enough to recover autoplay reliably, so rebuild the
+    // instance now that we're actually visible. Skip this if the one-time
+    // slide setup in init() hasn't run yet -- it will build the carousel
+    // itself, and by then the drawer will already be open.
+    if (!this.slidesReady) return;
+
     if (this.carousel && this.carousel.slider) {
-      this.carousel.slider.update();
+      this.carousel.slider.destroy(true, true);
+      this.carousel = null;
+    }
+
+    if (this.slideContainer) {
+      this.initCarousel();
     }
   }
 }
