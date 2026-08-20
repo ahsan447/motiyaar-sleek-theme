@@ -52,7 +52,7 @@
             "button_1_link": "shopify://collections/best-sellers",
             "button_1_style": "btn--primary",
             "button_2_label": "Shop under Rs. 1,500",
-            "button_2_link": "shopify://collections/under-rs-000",
+            "button_2_link": "shopify://collections/under-rs-1500",
             "button_2_style": "btn--secondary"
           }
         },
@@ -183,7 +183,7 @@
             "color_scheme": "",
             "icon": "💎",
             "text": "Under Rs. 1,000",
-            "link": "shopify://collections/under-rs-000"
+            "link": "shopify://collections/under-rs-1500"
           }
         },
         "category_item_vT4mPx": {
@@ -256,7 +256,7 @@
           "type": "tab",
           "settings": {
             "title": "",
-            "collection": "under-rs-000"
+            "collection": "under-rs-1500"
           }
         },
         "tab_EHir3g": {
