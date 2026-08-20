@@ -653,4 +653,8 @@ product-info.section--padding {
   .product__trust-badges .icon-with-text__item {
     gap: 4px;
   }
+
+  .product__info-wrapper {
+    margin-top: 30px;
+  }
 }
