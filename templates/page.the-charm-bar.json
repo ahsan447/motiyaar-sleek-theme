@@ -157,7 +157,7 @@
         "description": "",
         "text_size": "text-base",
         "show_collection_description": false,
-        "collection": "charms",
+        "collection": "shop-all-charms",
         "limit": 12,
         "columns": 4,
         "column_gap": "small",
