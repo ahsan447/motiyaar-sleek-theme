@@ -930,6 +930,66 @@
       ]
     },
     {
+      "type": "pair_perfectly_with",
+      "name": "Pair perfectly with",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Only works for products in the \"Charm Holders\" or \"Charms\" collections: on a Charm Holders product it shows Charms products, and on a Charms product it shows Charm Holders products. Hidden on every other product."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Pair perfectly with",
+          "label": "Heading"
+        },
+        {
+          "type": "range",
+          "id": "product_list_limit",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 4,
+          "label": "Number of products to show"
+        },
+        {
+          "type": "header",
+          "content": "Product card"
+        },
+        {
+          "type": "select",
+          "id": "image_ratio",
+          "options": [
+            {
+              "value": "adapt",
+              "label": "t:settings_schema.global.settings.image_ratio.options__1.label"
+            },
+            {
+              "value": "1/1",
+              "label": "t:settings_schema.global.settings.image_ratio.options__2.label"
+            },
+            {
+              "value": "3/4",
+              "label": "t:settings_schema.global.settings.image_ratio.options__3.label"
+            },
+            {
+              "value": "4/3",
+              "label": "t:settings_schema.global.settings.image_ratio.options__4.label"
+            }
+          ],
+          "label": "t:settings_schema.global.settings.image_ratio.label",
+          "default": "adapt"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_quick_add",
+          "label": "t:sections.main-product.blocks.complementary_products.settings.enable_quick_add.label",
+          "default": false
+        }
+      ]
+    },
+    {
       "type": "icon-with-text",
       "name": "t:sections.main-product.blocks.icon_with_text.name",
       "settings": [

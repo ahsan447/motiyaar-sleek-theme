@@ -158,6 +158,15 @@
             "default_open": false
           }
         },
+        "pair_perfectly_with": {
+          "type": "pair_perfectly_with",
+          "settings": {
+            "heading": "Pair perfectly with",
+            "product_list_limit": 4,
+            "image_ratio": "adapt",
+            "enable_quick_add": true
+          }
+        },
         "addons": {
           "type": "addons",
           "disabled": true,
@@ -184,6 +193,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
+        "pair_perfectly_with",
         "addons"
       ],
       "settings": {

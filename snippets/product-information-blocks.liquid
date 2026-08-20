@@ -518,6 +518,63 @@
               {%- endif -%}
             </product-recommendations>
           </div>
+        {%- when 'pair_perfectly_with' -%}
+          {%- liquid
+            assign pair_collection_holders = collections['charm-holders']
+            assign pair_collection_charms = collections['charms']
+            assign pair_source_collection = blank
+
+            if pair_collection_holders != blank and product.collections contains pair_collection_holders
+              assign pair_source_collection = pair_collection_charms
+            elsif pair_collection_charms != blank and product.collections contains pair_collection_charms
+              assign pair_source_collection = pair_collection_holders
+            endif
+
+            assign pair_products_count = 0
+            if pair_source_collection != blank
+              for pair_product in pair_source_collection.products
+                unless pair_product.id == product.id
+                  assign pair_products_count = pair_products_count | plus: 1
+                endunless
+              endfor
+            endif
+          -%}
+          {%- if pair_products_count > 0 -%}
+            <div
+              class="product__block product__block--{{ block.type }}"
+              {{ block.shopify_attributes }}
+            >
+              {%- if block.settings.enable_quick_add -%}
+                <script src="{{ 'quick-view.js' | asset_url }}" defer="defer"></script>
+              {%- endif -%}
+              <aside aria-label="{{ block.settings.heading | escape }}">
+                <div class="complementary-products__container">
+                  <h2 class="h4 complementary-products__heading">{{ block.settings.heading | escape }}</h2>
+                  <ul class="complementary-products__list list-unstyled flex flex-col gap-4" role="list">
+                    {%- assign pair_index = 0 -%}
+                    {%- for pair_product in pair_source_collection.products -%}
+                      {%- if pair_product.id == product.id -%}
+                        {%- continue -%}
+                      {%- endif -%}
+                      {%- if pair_index >= block.settings.product_list_limit -%}
+                        {%- break -%}
+                      {%- endif -%}
+                      {%- assign pair_index = pair_index | plus: 1 -%}
+                      <li>
+                        {% render 'card-product-list',
+                          section_index: section.index,
+                          index: pair_index,
+                          product: pair_product,
+                          image_ratio: block.settings.image_ratio,
+                          enable_quick_add: block.settings.enable_quick_add
+                        %}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              </aside>
+            </div>
+          {%- endif -%}
         {%- when 'icon-with-text' -%}
           <div
             class="product__block product__block--{{ block.type }} product__block--{{ block.type }}-{{ block.settings.layout }}"
