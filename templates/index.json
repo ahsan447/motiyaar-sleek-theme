@@ -394,9 +394,9 @@
           "type": "grid_image",
           "settings": {
             "image": "shopify://shop_images/Earrings.png",
-            "collection": "earnings",
+            "collection": "earrings",
             "title": "",
-            "link": "shopify://collections/earnings"
+            "link": "shopify://collections/earrings"
           }
         },
         "grid_image_Tu7g8H": {

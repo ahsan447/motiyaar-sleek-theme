@@ -230,7 +230,7 @@
         "description": "",
         "text_size": "text-base",
         "show_collection_description": false,
-        "collection": "earnings",
+        "collection": "earrings",
         "limit": 12,
         "columns": 4,
         "column_gap": "small",
