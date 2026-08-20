@@ -544,33 +544,55 @@
               class="product__block product__block--{{ block.type }}"
               {{ block.shopify_attributes }}
             >
+              <script src="{{ 'pair-perfectly-with-slider.js' | asset_url }}" defer="defer"></script>
               {%- if block.settings.enable_quick_add -%}
                 <script src="{{ 'quick-view.js' | asset_url }}" defer="defer"></script>
               {%- endif -%}
               <aside aria-label="{{ block.settings.heading | escape }}">
                 <div class="complementary-products__container">
                   <h2 class="h4 complementary-products__heading">{{ block.settings.heading | escape }}</h2>
-                  <ul class="complementary-products__list list-unstyled flex flex-col gap-4" role="list">
-                    {%- assign pair_index = 0 -%}
-                    {%- for pair_product in pair_source_collection.products -%}
-                      {%- if pair_product.id == product.id -%}
-                        {%- continue -%}
-                      {%- endif -%}
-                      {%- if pair_index >= block.settings.product_list_limit -%}
-                        {%- break -%}
-                      {%- endif -%}
-                      {%- assign pair_index = pair_index | plus: 1 -%}
-                      <li>
-                        {% render 'card-product-list',
-                          section_index: section.index,
-                          index: pair_index,
-                          product: pair_product,
-                          image_ratio: block.settings.image_ratio,
-                          enable_quick_add: block.settings.enable_quick_add
-                        %}
-                      </li>
-                    {%- endfor -%}
-                  </ul>
+                  <pair-perfectly-with-slider class="slider-controls--grouped-always block relative">
+                    <div class="swiper">
+                      <div class="swiper-wrapper" role="list">
+                        {%- assign pair_index = 0 -%}
+                        {%- for pair_product in pair_source_collection.products -%}
+                          {%- if pair_product.id == product.id -%}
+                            {%- continue -%}
+                          {%- endif -%}
+                          {%- if pair_index >= block.settings.product_list_limit -%}
+                            {%- break -%}
+                          {%- endif -%}
+                          {%- assign pair_index = pair_index | plus: 1 -%}
+                          <div class="swiper-slide" role="listitem" tabindex="-1">
+                            {% render 'card-product',
+                              product: pair_product,
+                              image_ratio: block.settings.image_ratio,
+                              enable_quick_view: false,
+                              enable_quick_add: block.settings.enable_quick_add
+                            %}
+                          </div>
+                        {%- endfor -%}
+                      </div>
+                    </div>
+                    <div class="slider-controls--group">
+                      <div class="slider-controls">
+                        <button
+                          class="swiper-button-prev"
+                          name="previous"
+                          aria-label="{{ 'general.slider.previous_slide' | t }}"
+                        >
+                          {% render 'icon-slider-prev' %}
+                        </button>
+                        <button
+                          class="swiper-button-next"
+                          name="next"
+                          aria-label="{{ 'general.slider.next_slide' | t }}"
+                        >
+                          {% render 'icon-slider-next' %}
+                        </button>
+                      </div>
+                    </div>
+                  </pair-perfectly-with-slider>
                 </div>
               </aside>
             </div>
