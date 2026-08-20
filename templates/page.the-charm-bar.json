@@ -263,7 +263,7 @@
         "description": "",
         "text_size": "text-base",
         "show_collection_description": false,
-        "collection": "featured",
+        "collection": "featured-collection",
         "limit": 12,
         "columns": 4,
         "column_gap": "small",
