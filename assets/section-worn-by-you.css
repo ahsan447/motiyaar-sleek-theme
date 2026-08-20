@@ -53,6 +53,44 @@
   height: 1rem;
 }
 
+.worn-by-you-card__button {
+  position: absolute;
+  left: 50%;
+  bottom: 1.6rem;
+  z-index: 2;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem 2.4rem;
+  border-radius: 999px;
+  font-size: 1.3rem;
+  font-weight: var(--font-body-weight-bold, 600);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--worn-by-you-button-background, #9f1d35);
+  color: var(--worn-by-you-button-color, #fff);
+}
+
+.worn-by-you-card__button[aria-disabled='true'] {
+  cursor: not-allowed;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .worn-by-you-card__button {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(0.8rem);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .worn-by-you-card:hover .worn-by-you-card__button {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
 @media (max-width: 767.98px) {
   .worn-by-you-card__quote {
     font-size: 1.6rem;

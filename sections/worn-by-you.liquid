@@ -29,6 +29,8 @@
           assign quote = block.settings.quote
           assign customer_name = block.settings.customer_name
           assign customer_location = block.settings.customer_location
+          assign button_label = block.settings.button_label
+          assign button_link = block.settings.button_link
         -%}
         <div class="f-column worn-by-you-card" {{ block.shopify_attributes }}>
           <motion-element
@@ -49,6 +51,20 @@
               }}
             {%- else -%}
               {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+            {%- if section.settings.show_hover_button and button_label != blank -%}
+              <a
+                class="worn-by-you-card__button"
+                style="--worn-by-you-button-background: {{ section.settings.button_background_color }}; --worn-by-you-button-color: {{ section.settings.button_text_color }};"
+                {% if button_link != blank %}
+                  href="{{ button_link }}"
+                {% else %}
+                  aria-disabled="true"
+                  disabled
+                {% endif %}
+              >
+                {{- button_label -}}
+              </a>
             {%- endif -%}
           </motion-element>
           <div class="worn-by-you-card__caption">
@@ -167,6 +183,28 @@
     },
     {
       "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hover_button",
+      "default": true,
+      "label": "Show button on image hover"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button background color",
+      "default": "#9F1D35"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
       "content": "Grid"
     },
     {
@@ -282,6 +320,17 @@
           "id": "show_badge",
           "default": true,
           "label": "Show verified badge"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "info": "Leave blank to hide the hover button on this image."
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
         }
       ]
     }
@@ -295,7 +344,8 @@
           "settings": {
             "quote": "Perfect for wedding season.",
             "customer_name": "Zainab",
-            "customer_location": "Lahore"
+            "customer_location": "Lahore",
+            "button_label": "Shop Now"
           }
         },
         {
@@ -303,7 +353,8 @@
           "settings": {
             "quote": "My everyday stack.",
             "customer_name": "Saba",
-            "customer_location": "Karachi"
+            "customer_location": "Karachi",
+            "button_label": "Shop Now"
           }
         },
         {
@@ -311,7 +362,8 @@
           "settings": {
             "quote": "The packaging is 10/10.",
             "customer_name": "Mahnoor",
-            "customer_location": "Islamabad"
+            "customer_location": "Islamabad",
+            "button_label": "Shop Now"
           }
         }
       ]
