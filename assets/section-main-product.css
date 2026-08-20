@@ -38,6 +38,14 @@ product-info.section--padding {
   border-end-end-radius: 0;
 }
 
+/* Keep the gallery's prev/next arrows overlaid on the image on mobile,
+   same as desktop, instead of grouped in a pill below it. Excludes the
+   slider-freemode layout, which intentionally groups a fraction counter
+   with the arrows below the image. */
+.product__media-gallery-viewer-wrap:not(.slider-controls--grouped-always) .swiper-pagination {
+  display: none !important;
+}
+
 .product__media-item {
   width: 100%;
 }

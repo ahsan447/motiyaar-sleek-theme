@@ -41,10 +41,6 @@
 
     if media_layout == 'slider-freemode'
       assign slider_css_class = slider_css_class | append: ' slider-controls--below slider-controls--grouped-always'
-    else
-      if enable_mobile_thumbnails == false
-        assign slider_css_class = slider_css_class | append: ' slider-controls--below slider-controls--grouped-mobile'
-      endif
     endif
   endif
 -%}
