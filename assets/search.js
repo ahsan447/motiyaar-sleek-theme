@@ -145,5 +145,14 @@ class SearchDrawer extends DrawerComponent {
   get focusElement() {
     return this.querySelector('input[type="search"]');
   }
+
+  prepareToShow() {
+    // Measure the header's live, viewport-relative position right before opening
+    // instead of relying on scroll-tracked CSS vars, so it's correct whether the
+    // page is scrolled, the header is pinned/sticky, or still in its initial spot.
+    const headerSection = document.querySelector('.header-section');
+    const offset = headerSection ? Math.round(headerSection.getBoundingClientRect().bottom) : 0;
+    this.style.setProperty('--header-total-offset', `${Math.max(offset, 0)}px`);
+  }
 }
 customElements.define('search-drawer', SearchDrawer);

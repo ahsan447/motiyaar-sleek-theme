@@ -102,18 +102,9 @@ class StickyHeader extends BasicHeader {
             document.body.classList.remove(this.classes.pinned);
           }
         }
-
-        // Header is now stuck at the top of the viewport, so anything anchored
-        // below it (e.g. the search panel) shouldn't add the pre-scroll offset.
-        document.documentElement.style.setProperty('--header-offset-top', '0px');
       } else {
         headerSection.classList.remove('header-scrolled');
         document.body.classList.remove(this.classes.pinned);
-
-        document.documentElement.style.setProperty(
-          '--header-offset-top',
-          `${Math.round(this.parentElement.offsetTop)}px`
-        );
       }
 
       this.currentScrollTop = scrollTop;
