@@ -202,7 +202,9 @@
               target.selectedOptions[0].dataset.optionSwatchFocalPoint || 'unset'
             );
           } else if (tagName === 'INPUT' && target.type === 'radio') {
-            const selectedSwatchValue = target.closest(`.product-form__input`).querySelector('[data-selected-value]');
+            const selectedSwatchValue = target
+              .closest(`.product-form__input`)
+              .querySelector('[data-selected-swatch-value]');
             if (selectedSwatchValue) selectedSwatchValue.innerHTML = value;
           }
         }
