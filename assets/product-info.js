@@ -32,6 +32,10 @@ if (!customElements.get('product-info')) {
           this.handleOptionValueChange.bind(this)
         );
 
+        this.addEventListener('variant:changed', (event) => {
+          this.updateMedia(event.detail.variant);
+        });
+
         this.currentVariant = this.getSelectedVariant(this);
         if (this.currentVariant) {
           this.updateMedia(this.currentVariant);

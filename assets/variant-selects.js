@@ -8,7 +8,16 @@
           this.settings = {
             preorder_threshold: window.preorderThreshold || 0,
           };
-          this.product_variants = window.productVariants || [];
+        }
+
+        get product_variants() {
+          const dataElement = this.querySelector('[data-all-variant]');
+          if (!dataElement) return [];
+          try {
+            return JSON.parse(dataElement.textContent);
+          } catch (e) {
+            return [];
+          }
         }
 
         get selectedOptionValues() {
@@ -42,8 +51,9 @@
               this.updatePreorderUI(currentVariant);
 
               // Dispatch theme's variant change event
-              document.dispatchEvent(
+              this.dispatchEvent(
                 new CustomEvent('variant:changed', {
+                  bubbles: true,
                   detail: {
                     variant: currentVariant,
                   },
@@ -60,16 +70,15 @@
         }
 
         getCurrentVariant() {
-          const options = Array.from(this.querySelectorAll('select')).map((select) => {
-            const value = select.value;
-            const index = Array.from(select.options).findIndex((option) => option.value === value);
-            return { value, index };
+          const optionValues = Array.from(this.querySelectorAll('.product-form__input')).map((wrapper) => {
+            const select = wrapper.querySelector('select');
+            if (select) return select.value;
+            const checkedRadio = wrapper.querySelector('input[type="radio"]:checked');
+            return checkedRadio ? checkedRadio.value : undefined;
           });
 
-          return this.product_variants.find((obj) => {
-            return options.every((option) => {
-              return obj.options[option.index] === option.value;
-            });
+          return this.product_variants.find((variant) => {
+            return variant.options.every((value, index) => value === optionValues[index]);
           });
         }
 
