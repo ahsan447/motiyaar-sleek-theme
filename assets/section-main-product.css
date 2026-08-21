@@ -648,7 +648,7 @@ product-info.section--padding {
 
   .product__trust-badges .text-sm {
     font-size: 12px;
-    line-height: 2.2rem;
+    line-height: 1;
   }
   .product__trust-badges .icon-with-text__item {
     gap: 4px;
