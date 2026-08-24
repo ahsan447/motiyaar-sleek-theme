@@ -6400,7 +6400,7 @@ body:not(.header-pinned) .header-scrolled .header {
   }
 }
 
-@media screen and (max-width: 749px) {
+/* @media screen and (max-width: 749px) {
   ul.product__trust-badges.icon-with-text {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -6408,4 +6408,4 @@ body:not(.header-pinned) .header-scrolled .header {
     justify-content: space-around !important;
     align-content: space-between !important;
   }
-}
+} */
