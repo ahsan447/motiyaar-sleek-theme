@@ -170,7 +170,7 @@
     "product": {
       "add_to_cart": "Add to cart",
       "add_to_bag": "Add to cart",
-      "card_ships_today": "Ships today",
+      "card_ships_today": "3 items left ! ",
       "card_low_stock": "Only {{ quantity }} left in stock",
       "add_all_to_cart": "Add all to cart",
       "buy_it_now": "Buy it now",
